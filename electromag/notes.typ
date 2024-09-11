@@ -1,0 +1,5 @@
+- +- force attraction, -- ou ++ force de répulsion 
+- on peut diviser +- mais pas créer => conservation de la charge
+- la force est inversement proportionnelle à la distance $F=k/(r^alpha)$
+- ...elle dépend aussi des charges des deux corps $F = k (q_1q_2)/(r^alpha)$
+- induction : ex de la balle neutre, quand on approche la barre - ou +, les charges dans la balle se séparent (mais celles qui sont plus près de la barre, donc celles attirées conduisent à une force plus forte (car $F = k/(r^alpha)$) donc la balle est attirée)
