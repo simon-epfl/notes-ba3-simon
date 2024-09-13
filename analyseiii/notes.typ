@@ -1,4 +1,4 @@
-== Euclidean spaces
+== Reminder: Euclidean spaces
 
 - We work in n-dimensional space $x = (x_1, x_2, ..., x_n) $.
 - 2D: $v = (x_1, x_2) = (x, y)$
@@ -134,8 +134,73 @@ Example:
 
 $ F(x) = ||x|| = sqrt(sum_(i = 1)^n x_i^2), x in RR^n $
 
-First derivatives:
+First partial derivatives:
 
 $ partial_i F(x) = partial_i (sum_(i = 1)^n x_i^2)^(1/2) = 1/2 (sum_(i = 1)^n x_i^2)^(-1/2) dot 2x_i = 1/(||x||) x_i = x_i/(||x||) $
 
 Notice the singularity at $x = 0$. It looks like the gradient is not defined but in fact it can be removed by continuous extension of the first derivatives.
+
+Second partial derivatives (case disjunction):
+
+$ partial_i partial_i f(x) = partial_i (x_i/(||x||)) = partial_i (x_i dot ||x||^(-1)) = 1/(||x||) + x_i dot (-1/(||x||^2)(partial_i ||x||)) $
+$ = 1/(||x||) + x_i dot -1/(||x||^2) dot x_i/(||x||) = 1/(||x||) - x^2 dot 1/(||x||^3) $
+
+$ partial_j partial_i f(x) = partial_j (x_i/(||x||)) = 0 + x_i dot -1/(||x||^2)(partial_j ||x||) = x_i dot -1/(||x||^2) (x_j)/(||x||) = (-x_i x_j)/(||x||^3) $
+
+All partial derivatives of order 2, we can build the Hessiam matrix.
+
+We want the Laplacian too:
+
+$ laplace f(x) = sum_(i = 1)^n partial_i partial_i f(x) = sum_(i = i)^n 1/(||x||) - (x_i^2)/(||x||^3) = n/(||x||) - (sum_(i = 1)^n x_i^2)/(||x||^3) $
+$ = n/(||x||) - (||x||^2)/(||x||^3) = (n-1)/(||x||) $
+
+== Divergence
+
+Given a vector field $ F : RR^n arrow.r RR^n, x arrow.r (F_1(x), ..., F_n(x))$
+
+The divergence is the vector field:
+
+$ "div" F = sum_(i = 1)^n partial_i F_i = partial_1 F_1 + partial_2 F_2 + ... + partial_n F_n $
+
+- formally, $"div" F = nabla dot F $
+- the Laplacian is the divergence of the gradient: $laplace F = "div" gradient F$
+
+Example:
+
+$ "div" (x_1^2x_2, x_2^3, e^(x_3)) = 2x_1x_2 + 3x_2^2 + e^(x_3) $
+
+== Rotation or curl of vector fields
+
+If $ F: RR^3 arrow.r RR^3$ is a 3D vector field, $F=(F_1, F_2, F_3)$, then the curl/rotation is a 3D vector field:
+
+$ "curl" F = "rot" F = mat(
+  - partial_3 F_2 + partial_2 F_3;
+  - partial_1 F_3 + partial_3 F_1;
+  - partial_2 F_1 + partial_1 F_2;
+) $
+
+Formally, $ "curl" F = nabla times F$.
+
+Only works in 3D. There is a rotation in 2D:
+
+If $F : RR^2 arrow.r RR^2$ is a 2D vector fireld, then the rotation/curl of $F$ is a scalar field.
+
+$ "curl" F = "rot" F = - partial_2 F_1 + partial_1 F_2 $
+
+Motivation: we formally extend the vector field with a third coordinate $F_3 = 0$.
+
+$ tilde(F) = mat(
+  F_1;
+  F_2;
+  0
+) => "curl" F = mat(
+  - partial_3 F_2 + partial_2 F_3;
+  - partial_1 F_3 + partial_3 F_1;
+  - partial_2 F_1 + partial_1 F_2;
+) = mat(
+  0;
+  0;
+  - partial_2 F_1 + partial_1 F_2;
+) $
+
+Examples: the divergence measures the presence of sinks and sources ("puits et sources"), while rotation measures the presence of a spin.
