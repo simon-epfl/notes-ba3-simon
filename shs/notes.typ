@@ -42,7 +42,7 @@ La constitution européenne prévoit des exceptions : pour empêcher la violence
 #example[
   Ici, un braconnier se fait arrêter par la police puis tente de s'enfuir et se fait tuer de loin par le policier.
 
-  Décision du tribunal fédéral : ça ne s'applique pas ici, ce n'est pas de la légitime défense.
+  Décision du tribunal fédéral : ce n'est pas proportionné donc la légitime défense ne s'applique pas.
 ]
 
 #example[
@@ -53,5 +53,5 @@ La constitution européenne prévoit des exceptions : pour empêcher la violence
 
 #example[
   Un homme veut obtenir une substance pour se tuer.
-  
+
 ]
