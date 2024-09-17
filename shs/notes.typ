@@ -54,4 +54,11 @@ La constitution européenne prévoit des exceptions : pour empêcher la violence
 #example[
   Un homme veut obtenir une substance pour se tuer.
 
+  L'Etat suisse demande à ce que la maladie soit incurable, qu'on ait exposé à la personne toutes les autres possibilités, que le dernier geste doit être accompli par la personne elle-même.
+]
+
+#example[
+  Un docteur aide un homme à se suicider (mais son épouse veut mourir aussi, 86 ans, elle n'envisage pas de vivre sans son mari).
+
+  Le docteur est acquitté car il n'a pas agi dans un but égoiste (en Suisse l'aide au suicide n'est réprimée que s'il y a un but égoiste).
 ]
