@@ -24,7 +24,7 @@
     let serial_label = label(class + " " + serial_num)
         
     v(2pt)
-    text(12pt, weight: "bold")[#class #serial_num #serial_label #block_counter.step()]
+    text(12pt, weight: "bold")[#class #serial_label #block_counter.step()]
     v(-8pt)
 
     block(fill:fill,
