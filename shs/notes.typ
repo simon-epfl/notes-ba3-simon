@@ -82,3 +82,5 @@ La détention préventive est possible si le code de procédure pénale l'autori
 Il faut lire les droits au moment de l'arrestation.
 
 La détention préventive ne peut pas durer indéfiniment, il faut que le procureur apporte de nouveaux éléments pour la maintenir.
+
+Fun fact, 200 francs par jour en cas d'arrestation par erreur en dédommagement :)
