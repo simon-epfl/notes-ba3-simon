@@ -62,3 +62,23 @@ La constitution européenne prévoit des exceptions : pour empêcher la violence
 
   Le docteur est acquitté car il n'a pas agi dans un but égoiste (en Suisse l'aide au suicide n'est réprimée que s'il y a un but égoiste).
 ]
+
+=== La peine de mort
+
+Interdite en Suisse. Il n'est donc pas autorisé de livrer quelqu'un à un autre pays où la peine de mort est autorisée.
+
+#example[
+  p. ex si un état recherche un individu, il est possible de demander l'asile en Suisse pour éviter la peine de mort, la Suisse accordera la protection *s'il n'a pas commis d'infraction aux yeux de la Suisse* (principe de la double incrimination).
+]
+
+== Focus sur la liberté de mouvement 
+
+La détention préventive est possible si le code de procédure pénale l'autorise, c'est-à-dire :
+- il y a des indices suffisants de culpabilité.
+- puis, soit un risque de récidive.
+- soit un risques de collusion contre l'enquête (p. ex faire disparaître des corps...).
+- soit un risque de fuite.
+
+Il faut lire les droits au moment de l'arrestation.
+
+La détention préventive ne peut pas durer indéfiniment, il faut que le procureur apporte de nouveaux éléments pour la maintenir.
