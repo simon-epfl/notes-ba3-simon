@@ -39,3 +39,23 @@ $ sum tau = sum |arrow(r) times F| = d q E sin(theta) $
 ($arrow(r)$ du centre de masse à l'application de la force donc distance $d$)
 
 #image("rot.png")
+
+=== Dipôles
+
+Si on a deux dipôles séparés par une distnce $d$, on a $arrow(p) = q arrow(d)$
+$ arrow(F) = (arrow(p) dot arrow(nabla)) arrow(E) $
+$ F = q d (d E)/(d x) + ... + q d (d E)/(d n) $
+
+=== Flux
+
+$ "volume" = v dot d t dot A $
+
+Produit scalaire entre la quantité et la surface?
+
+$ Phi_E = arrow(E) dot arrow(S) = E dot S = 1/(4 pi epsilon_0) q/r^2 4 pi r^2 = q/(epsilon_0) $
+
+==== Loi de Gauss
+
+$ Phi_E |_S = q_"intérieure"/(epsilon_0) $
+
+on peut utiliser Gauss au lieu d'intégrer
