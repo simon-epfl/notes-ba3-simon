@@ -204,3 +204,95 @@ $ tilde(F) = mat(
 ) $
 
 Examples: the divergence measures the presence of sinks and sources ("puits et sources"), while rotation measures the presence of a spin.
+
+== Curve
+
+$ integral_a^b f(x) d x = "integrate f over interval " [a,b] $
+
+Now we generalize this:
+
+$ integral_gamma f d l = "integrate f over curve " gamma $
+
+#image("curvey.png", width: 50%)
+
+A curve is a function
+
+$ gamma: [a, b] arrow RR^n, t arrow gamma(t) $
+
+We may also think as $gamma(t)$ as a position in time.
+The image of $gamma(t)$ is written $Gamma(t)$.
+
+Some examples:
+
+$gamma(t): [0, T] arrow RR^3$ can be the 3D position of a drone flying.
+
+$gamma(t): [0, 1] arrow RR^2$ can be the position at $t$% of a car travel on a map.
+
+$gamma(t): [0, 2 pi] arrow RR^2, t arrow (cos(t), sin(t))$ is the parametrization of the unit circle (as $t$ progresses, we travel the unit circle).
+
+Two functions can represent the same curve!
+
+$gamma_1(t): [0, 1] arrow RR^2, t arrow (t, t^2)$ \
+$gamma_2(t): [0, 1] arrow RR^2, t arrow (sqrt(t), t)$
+
+#image("graphx^2.png", width: 50%)
+
+=== Notions and definitions
+
+We call a curve 
+
+$gamma(t): [a, b] arrow RR^n, t arrow (gamma_1(t), gamma_2(t), ..., gamma_n(t))$
+
+- *simple*: if it does not self-intersect (formally, $gamma: [a, b] arrow RR^n$ is injective)
+
+- *closed*: if $gamma(a) = gamma(b)$
+
+- *differentiable* if $gamma_1(t), ..., gamma_n(t)$ are differentiable
+
+- *regular* if the curve is differentiable and the vector $forall t (dot(gamma_1(t)), ..., dot(gamma_n(t))) eq.not arrow(0)$ (the derivatives are never 0 all together). It means that curve never comes to a full stop, they always keep moving.
+
+=== Tangential vectors and speed
+
+The tangent vector of a curve $gamma(t)$ is:
+$dot(gamma(t)) = (dot(gamma_1(t)), ..., dot(gamma_2(t)))$
+and the speed is:
+$|dot(gamma(t))| = sqrt((dot(gamma_1(t))^2, ..., dot(gamma_2(t))^2))$
+
+#image("velocity.png", width: 50%)
+
+Similar to the definition of the derivative:
+
+$ dot(gamma(t)) = lim_(h arrow 0)  (gamma(t + h) - gamma(t))/(h) $
+
+#image("tplush.png", width: 30%)
+
+Example:
+
+$gamma: [0, 2 pi] arrow RR^2, t arrow (cos(t), sin(t)) $ \
+$dot(gamma(t)) = (-sin(t), cos(t)) $
+
+#image("unitcircder.png", width: 50%)
+
+#pagebreak()
+
+== Curve Integrals
+
+#image("newintegrals.png")
+
+Let $gamma: [a, b] arrow RR^n$ be a curve
+Let $f: RR^n arrow R$ be a scalar field
+
+The integral of $f$ over $Gamma$ is:
+$ integral_Gamma f d l := integral_a^b (f compose gamma)(t) |dot(gamma(t))| d t $
+$ = integral_a^b (f compose gamma)(t) sqrt((dot(gamma_1(t))^2 + ... + dot(gamma_n(t)^2))) d t $
+
+The curve integral only depends on the curve $Gamma$, not $gamma$ (which is what we want, we need the curve, not the parametrization, see eg. where we had 2 functions for one curve).
+
+- where $gamma$ is slow, $dot(gamma)$ is small
+- where $gamma$ is fast, $dot(gamma)$ is large
+
+En fait si la fonction va très lentement, on va "utiliser" une grande partie de notre portion de a vers b pour la tracer, mais on réduit dcp le facteur.
+
+If $gamma : [a, b] arrow RR^n$ is a simple regular curve, then $integral_Gamma F d l$ only depends on $Gamma$.
+
+And it should! After all, $gamma$ is just a parametrization and $Gamma$ is the "physical" object.
