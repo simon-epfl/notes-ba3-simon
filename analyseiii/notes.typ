@@ -284,7 +284,7 @@ Let $f: RR^n arrow R$ be a scalar field
 
 The integral of $f$ over $Gamma$ is:
 $ integral_Gamma f d l := integral_a^b (f compose gamma)(t) |dot(gamma(t))| d t $
-$ = integral_a^b (f compose gamma)(t) sqrt((dot(gamma_1(t))^2 + ... + dot(gamma_n(t)^2))) d t $
+$ = integral_a^b (f compose gamma)(t) sqrt((dot(gamma_1(t))^2 + ... + dot(gamma_n)(t)^2)) d t $
 
 The curve integral only depends on the curve $Gamma$, not $gamma$ (which is what we want, we need the curve, not the parametrization, see eg. where we had 2 functions for one curve).
 
