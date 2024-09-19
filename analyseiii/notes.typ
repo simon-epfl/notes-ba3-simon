@@ -296,3 +296,20 @@ En fait si la fonction va très lentement, on va "utiliser" une grande partie de
 If $gamma : [a, b] arrow RR^n$ is a simple regular curve, then $integral_Gamma F d l$ only depends on $Gamma$.
 
 And it should! After all, $gamma$ is just a parametrization and $Gamma$ is the "physical" object.
+
+== Curve integrals of vector fields
+
+Given a curve $ gamma: [a,b] arrow RR^n$ and a vector field $ F: RR^n arrow RR^n$ we define:
+
+$ integral_(Gamma) arrow(F) d l := integral_a^b arrow(F)(gamma(t)) dot dot(y)(t) d t $
+$ = integral_a^b F_1(gamma(t)) dot dot(y_1)(t) + ... + F_n (gamma(t)) dot dot(y_n)(t) d t $
+
+Example:
+
+Suppose $arrow(F) = nabla f$ is the gradient of scalar field
+
+$ integral_Gamma arrow(F) d l = integral_(Gamma) nabla f d l = integral_a^b nabla f(gamma(t)) dot dot(gamma)(t) d t $
+
+We observe $ (f compose y)' = nabla f(gamma(t)) dot dot(gamma)(t) "     (see Analysis II)" $
+
+$ = integral_a^b (f compose gamma)'(t) d t = f(gamma(t)) - f(gamma(a)) $
