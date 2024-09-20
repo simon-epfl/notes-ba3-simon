@@ -4,6 +4,15 @@
 - 2D: $v = (x_1, x_2) = (x, y)$
 - 3D: $v = (x_1, x_2, x_3) = (x, y, z)$
 
+Calculer un produit vectoriel :
+
+$ det mat(
+   "", "+", "-", "+";
+   "+", "axe1", "axe2", "axe3";
+   "-", "vect1x", "vect1y", "vect1z";
+   "+", "vect2x", "vect2y", "vect2z";
+) $
+
 === Scalar product
 
 If we have $x = (x_1, ..., x_n) $ and $y = (y_1, ..., y_n) $, then:
