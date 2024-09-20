@@ -28,3 +28,18 @@ With RISCV we can simply use `jal offset` and `ret` instead of specifying the re
 == Passing Arguments
 
 #image("passing_arg.png")
+
+== Little/Big Endian
+
+#image("little.png")
+
+Little endian is used by RISCV and is cool because when using:
+if `t0 = 1`:
+```yasm
+sw t0, 0(t1)
+```
+writes the same in memory as:
+```yasm
+sb t0, 0(t1)
+```
+!
