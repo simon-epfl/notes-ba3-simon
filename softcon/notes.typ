@@ -49,3 +49,19 @@ FunctionType = SimpleType '=>' Type
 SimpleType = Ident
 Types = Type { ' , ' Type }
 ```
+
+=== Several ways of writing functions that return functions
+
+```scala
+def isGreaterThanBasic(x: Int, y: Int): Boolean =
+  x > y
+val isGreaterThanAnon: (Int, Int) => Boolean =
+  (x, y) => x > y
+val isGreaterThanCurried: Int => Int => Boolean =
+  x => y => x > y // Same as `x => (y => x > y)`
+def isGreaterThanCurriedDef(x: Int)(y: Int): Boolean =
+  x > y
+```
+
+#sym.triangle Curried signifie que la fonction prend ses arguments un par un ! (en fait elle renvoie une nouvelle fonction à chaque fois)
+C'est utile si on veut appliquer des transformations partielles (fixer le premier argument et retarder l'application du second).
