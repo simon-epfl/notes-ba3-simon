@@ -65,3 +65,19 @@ def isGreaterThanCurriedDef(x: Int)(y: Int): Boolean =
 
 #sym.triangle Curried signifie que la fonction prend ses arguments un par un ! (en fait elle renvoie une nouvelle fonction à chaque fois)
 C'est utile si on veut appliquer des transformations partielles (fixer le premier argument et retarder l'application du second).
+
+== Week 3
+
+#image("classsub.png", width: 80%)
+#image("classsub2.png", width: 80%)
+
+#image("extension.png", width: 80%)
+#image("uextension.png", width: 80%)
+
+#image("infixmethods.png", width: 80%)
+
+Déterminée en fonction du caractère qui démarre l'opérateur:
+
+#image("precedencerules.png", width: 80%)
+
+#image("functionmethods.png", width: 80%)
