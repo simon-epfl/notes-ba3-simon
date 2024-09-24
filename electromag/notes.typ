@@ -59,3 +59,21 @@ $ Phi_E = arrow(E) dot arrow(S) = E dot S = 1/(4 pi epsilon_0) q/r^2 4 pi r^2 = 
 $ Phi_E |_S = q_"intérieure"/(epsilon_0) $
 
 on peut utiliser Gauss au lieu d'intégrer
+
+== 1ère équation de Maxwell
+
+$ integral.cont arrow(E) d arrow(S) = Q_"intérieure"/epsilon_0 = integral.cont rho/epsilon_0 d V $
+
+== Energie potentielle electrique
+
+Le travail est lié à cette énergie potentielle par le fait que, pour déplacer une charge q dans un champ électrique créé par Q, il faut fournir ou récupérer une certaine quantité d'énergie. Ce travail est directement relié à la variation de l'énergie potentielle.
+
+$ U = (q Q)/(4 pi epsilon_0 r) $
+
+$ W = U(r_1) - U(r_2) $
+
+comme en méca, au lieu de calculer l'intégrale pour le travail on peut clculer la différence de potentiel electrique 
+
+deux sujets (deux charges) => en découle le potentiel électrique, qui ne dépend que d'une des deux
+
+à cause de la conservation de l'énergie comme en méca on peut faire la différence pour retrouver le champ électrique (E = dV/dr)
