@@ -52,10 +52,54 @@ Let ${B_i}_(i = 1)^infinity$ be pairwise disjoint events, and let $A subset unio
 
 $ P(A) = sum_(i = 1)^(infinity) P(A sect B_i) = sum_(i = 1)^(infinity) PP(A|B_i)PP(B_i) $
 
-Bayes' Theorem:
+=== Bayes' Theorem:
 
 $ PP(A|B) = (PP(B|A)PP(A))/(PP(B)) $
 
 but we can replace $P(B)$ by what we know, low of total probability:
 
 $ PP(A|B) = (PP(B|A)PP(A))/PP(B) = (PP(B|A)PP(A))/(PP(B|A)PP(A) + PP(B|A^c)PP(A^c)) $
+
+=== Derangement
+
+$ !n = sum_(i = 0)^n ((-1)^i)/(i!), n >= 0 $
+
+Si on veut un élément non dérangé parmis $n$:
+
+$n dot 1/n dot !(n-1)$
+
+Si on en veut $r$:
+
+(comment on choisit les $r$ bien rangés $dot$ le fait qu'ils soient bien rangés et que les restants soient dérangés)
+
+$ binom(n, r) dot (n-r)!/n! dot !(n - r) $
+
+=== Independence
+
+If $A$ and $B$ are independent then $PP(A|B) = PP(A)$.
+
+They are independent iff $PP(A union B) = PP(A)PP(B)$.
+
+If two events are disjoint they can not be independent unless their respective probabilities are 0.
+
+==== Pairwise Independence
+
+If you take any two events, they are independent.
+
+=== Random variable (notation)
+
+We will use $Y$ to denote a random variable. \
+We will use $y$ to denote a specific value that $Y$ can take.
+
+$PP(Y = y) equiv p(y)$
+
+A probability distribution is a table or a graph that provides $p(y) forall y$.
+
+For everything to hold, $sum_y p(y) = 1$.
+
+=== Expected Value
+
+$ E(Y) = sum_y y p(y) $
+
+=== Binomial Distribution
+
