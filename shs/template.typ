@@ -8,6 +8,11 @@
 #let h1_marker = counter("h1")
 #let h2_marker = counter("h2")
 
+#let stick-together(a, threshold: 3em) = {
+  block(a + v(threshold), breakable: false)
+  v(-1 * threshold)
+}
+
 #let note_block(body, class: "Block", fill: rgb("#FFFFFF"), stroke: rgb("#000000")) = {
   let block_counter = counter(class)
 
@@ -24,15 +29,17 @@
     let serial_label = label(class + " " + serial_num)
         
     v(2pt)
-    text(12pt, weight: "bold")[#class #serial_label #block_counter.step()]
-    v(-8pt)
 
-    block(fill:fill,
-    width: 100%,
-    inset:8pt,
-    radius: 4pt,
-    stroke:stroke,
-    body)
+    stick-together(
+      text(12pt, weight: "bold")[#class #serial_label #block_counter.step()] +
+      v(-8pt) +
+      block(fill:fill,
+        width: 100%,
+        inset:8pt,
+        radius: 4pt,
+        stroke:stroke,
+        body)
+    )
   })
 }
 
