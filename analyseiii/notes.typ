@@ -321,4 +321,58 @@ $ integral_Gamma arrow(F) d l = integral_(Gamma) nabla f d l = integral_a^b nabl
 
 We observe $ (f compose y)' = nabla f(gamma(t)) dot dot(gamma)(t) "     (see Analysis II)" $
 
-$ = integral_a^b (f compose gamma)'(t) d t = f(gamma(t)) - f(gamma(a)) $
+$ = integral_a^b (f compose gamma)'(t) d t = f(gamma(b)) - f(gamma(a)) $
+
+One more perspective of curve integrals fo vector fields. Suppose $ F : RR^n arrow RR^n$ and a curve $ gamma: [a, b] arrow RR^n$.
+
+$ integral F d l = integral_a^b F(gamma(t) dot dot(gamma(t))) = integral_a^b F(gamma(t)) dot dot(gamma(t))/(||dot(gamma(t))||) ||dot(gamma(t))|| d t $
+
+At any time $t$, the vector $tau(t) = dot(gamma(t))/(||dot(gamma(t))||)$ is the unit tangent vector at time $t$.
+
+$ integral_Gamma F d l = integral_a^b F(gamma(t)) dot tau(t) dot ||dot(gamma(t))|| d t = integral_gamma F dot tau d l $
+
+We can break our integral into pieces of simple and regular differentiable curves.
+
+$ integral_Gamma f d l = integral_a^b f dot y |dot(gamma)| d t = integral_b^c f dot y dot |dot(gamma)| d t + integral_c^d f dot gamma dot |dot(gamma)| d t $
+
+== Conservative vector fields and their potentials
+
+Let $ F : Omega arrow RR^n$ be a vector field, $ Gamma subset RR^n$ open.
+
+Does there exist a potential $f$ of $F$ over $Omega$, i.e. $f in C'(Omega, RR)$ such that $nabla f = F$?
+
+*Theorem*: Let $Omega subset RR^n$ be open and $arrow(F) in C'(Omega, RR^n), F = (F_1, F_2, ..., F_n)$. If $arrow(F)$ has a potential then $partial_i F_j = partial_j F_i, 1 <= i,j <= n$.
+
+*Proof*: if $F$ admits a potential $f in C'(Omega, RR)$, then already $f in C^2(Omega, RR)$. Given $1 <= i,j <= n$, we see:
+$ partial_i F_j = partial_i partial_j f = partial_j partial_i f = partial_j F_i $
+using Schwarz.
+
+*Remark*: This is a necessary condition but not a sufficient one. We use that $"Hess"(f)$ is symmetric.
+
+We call $F in C'(Omega, RR^n)$ conservative if $partial_j F_i = partial_i F_j, i <= i,j <= n$.
+
+Let $Omega in RR^n$. We call this set:
+
+- *convex* if $forall (x, y) in Omega$ the line segment from $x$ to $y$ is within $Omega$.
+
+- *star-shaped* if $exists z in Omega forall x in Omega$ the line segment from $z$ to $x$ is within $Omega$.
+
+Formally:
+
+$ [x,y] := { t x + (1 - t)y : t in [0, 1] } $
+
+line segment from $x$ to $y$. Image of the curve $gamma : [0, 1] arrow RR^n, t arrow t x + (1 - t)y $
+
+$ Omega$ convex $:arrow.double.l.r forall (x, y) in Omega : [x, y] in Omega$ \
+$ Omega$ star-shaped $:arrow.double.l.r exists z forall x in Omega : [z, x] in Omega$
+
+Theorem: let $Omega subset RR^n$ be open and star-shaped with respect to $z in Omega$. If $F in C'(Omega, RR^n)$ is conservative, then $arrow(F)$ has a potential $f in C^2(Omega, RR)$.
+
+$ f(x) := integral_0^1 F(z + t(x - z)) dot (x - z) d t $
+$ = integral_y F d l " where "  y: [0, 1] arrow RR^n : t arrow z + t(x - z) $
+
+It depends on the choice of $z$!
+
+Convex and star-shaped domains are important but simple. What if the domain has holes?
+
+$ Omega = { x in RR^3 | ||x|| > 1 }, Omega = RR^2 \\ {(0, 0)} $
