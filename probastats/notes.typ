@@ -91,7 +91,15 @@ If you take any two events, they are independent.
 We will use $Y$ to denote a random variable. \
 We will use $y$ to denote a specific value that $Y$ can take.
 
-$PP(Y = y) equiv p(y)$
+$Y : Omega arrow RR$ is a function.
+
+$ D_Y = { x in RR : exists omega in Omega " s.t. " X(omega) = y } $
+
+$D_Y$ is called the support of X. If $D_Y$ is countable, then $Y$ is a discrete random variable.
+
+$PP(Y = y) equiv p_Y (y)$
+
+$p_Y$ is called the probability mass function.
 
 A probability distribution is a table or a graph that provides $p(y) forall y$.
 
@@ -101,5 +109,31 @@ For everything to hold, $sum_y p(y) = 1$.
 
 $ E(Y) = sum_y y p(y) $
 
-=== Binomial Distribution
+=== Binomial Random Variable
+
+A binomial random variable $X$ has PMF:
+
+$ f(x) = binom(n, x)p^x(1-p)^(n - x), x = 0,1,...,n, n in NN, 0 <= p <= 1 $
+
+We write $ X tilde B(n,p)$ and call $n$ the denomiator and $p$ probability of success.
+
+#image("distrib.png")
+
+== Geometric distribution
+
+$ f_X(x) = p(1-p)^(x-1) $
+
+1 success and $x-1$ failures. the probability to have exactly one success
+
+Memorylessness : $ P(X > n + m | X > m) = P(X > n) $
+
+Thanks to independence.
+
+== Negative binomial distribution
+
+#image("binneg.png")
+
+== Discrete uniform distribution
+
+== Poisson random variable
 
