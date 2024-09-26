@@ -376,3 +376,30 @@ It depends on the choice of $z$!
 Convex and star-shaped domains are important but simple. What if the domain has holes?
 
 $ Omega = { x in RR^3 | ||x|| > 1 }, Omega = RR^2 \\ {(0, 0)} $
+
+Example:
+
+Can we find a potentiel for 
+
+$ F(x, y) = (x/(sqrt(x^2 + y^2)), y/sqrt(x^2 + y^2)) $
+
+Smooth vector field over $Omega = RR^2 \\ {(0, 0)}$
+
+we check that it is curl-free and that $ integral_y F d l = 0 $ for some simple closed regular curve around $(0, 0)$.
+
+- check whether $partial_x F_y = partial_y F_x$
+- consider closed simple regular curve $gamma : [0, 2pi] arrow RR^2, t arrow (cos(t), sin(t)), integral_gamma F d l = 0$
+
+There exists a potential! How to find it?
+
+Suppose $f in C'(Omega, RR)$ with $nabla f = F$. For any closed simple regular curve $gamma integral_gamma F d l = f(gamma(b)) - f(gamma(a))$.
+
+We construct a potential. Here we use a piecewise regular curves.
+
+- We pick $f(1,0) = C$.
+- For any $x > 0$, let $gamma_X : [0, 1] arrow RR^2, t arrow (1 + t(x + 1), 0)$. Obviously the straight line from $(1, 0)$ to $(x, 0)$.
+
+$f(x, 0) - f(1, 0) = integral_gamma_X F d l = ... = x - 1$
+then $f(x, 0) = x + f(1, 0) - 1$
+
+- Next, suppose $(x, y) = (r cos (theta), r sin (theta))$ for $r > 0$, and $0 <= theta < 2pi$. Let $delta_(x, y) $
