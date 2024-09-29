@@ -133,7 +133,29 @@ Thanks to independence.
 
 #image("binneg.png")
 
+k-1 parce que le dernier doit être un succès.
+
+== Hypergeometric distribution
+
+#image("hypgeo.png")
+
 == Discrete uniform distribution
 
+#image("discreteunif.png")
+
+Chaque évènement a la même probabilité de se produire.
+
 == Poisson random variable
+
+#image("poisson.png")
+
+Le nombre d'événements qui se produisent dans un intervalle de temps ou d'espace fixe, lorsque ces événements se produisent avec une certaine moyenne (taux d'évènements $lambda$) et de manière indépendante.
+
+Par exemple le nombre d'appels téléphoniques reçus par un centre d'appel en une heure.
+
+== Cumulative Distribution Function
+
+#image("cdf.png")
+
+La probabilité que $X$ prenne une valeur inférieure ou égale à $x$.
 
