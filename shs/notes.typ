@@ -11,9 +11,17 @@
 
 = Introduction
 
+== Convention européenne des droits de l'homme (CEDH)
+
+47 Etats européens y ont adhéré. La CEDH institue une Cour européenne des droits de l'homme que les particuliers peuvent saisir lorsqu'ils estiment qu'une décision rendue par leurs tribunaux nationaux ne respecte pas la Convention. Si la Cour constate qu'un Etat a effectivement violé la Convention, celui-ci a l'obligation d'y remédier.
+
+== Restriction des droits fondamentaux
+
 - Base légale.
 - Intérêt public.
 - Proportionnalité.
+
+Examen : résumés de cours + constitution
 
 = La liberté personnelle
 
@@ -200,4 +208,96 @@ Surveillance vidéo :
   Il y a un intêrét public, donc mis en place (mais pas jusqu'au nom, rester dans la proportion).
 ]
 
-=
+= L'égalité dans la constitution
+
+Article 8 de la constitution fédérale.
+
+== Égalité devant la loi
+
+Article 14 de la CEDH, qui précise l'égalité devant la loi, existe aussi, mais ne peut s'appliquer que sur les articles de la CEDH, tandis qu'en Suisse on peut évoquer l'égalité de traitement par exemple.
+
+Deux aspects : devant la loi et dans la loi.
+
+#example[
+  Le montant de la redevance pour la chasse était de 900 francs pour les suisses et de 1500 francs pour les étrangers.
+
+  Rien ne justifie cette différence donc le tribunal juge cette inégalité en contradiction avec la constitution.
+]
+
+Question : pourquoi l'EPFL taxe différemment les étrangers et les suisses ? Le prof. va regarder et y répondre la semaine prochaine.
+
+#example[
+  Un jeune homme de 17 ans ne peut pas aller en prison avec des adultes (il y a un établissement pour jeunes détenus).
+
+  La constitution demande que deux situations identiques soient traitées de la même façons *ET* que deux situations dissemblables ne soient pas traitées de la même façon.
+]
+
+#example[
+  La pratique du barreau (ordre professionnel des avocats) était interdite en Suisse aux femmes. En 1927, la loi change.
+]
+
+#example[
+  Les couples mariés sont parfois désavantagés en termes de fiscalité (on additionne les revenus 50k + 50k = 100k imposés d'un coup, car l'impôt est progressif).
+
+  Actuellement débattu, car le principe d'égalité entre les personnes mariées et pas mariées semble bafoué.
+]
+
+Conditions d'application de l'égalité devant la loi :
+- être en présence de plusieurs de décisions, comparables
+- elles doivent avoir été rendues par la même instance (chaque instance à sa marge d'appréciation, si l'EPFL décide d'ajouter un demi-point à un étudiant dans une situation, un autre élève dans la même situation peut demander aussi, tandis qu'à l'ETHZ ce ne serait pas possible)
+- les décisions doivent respecter le droit (si une des décisions est fausse, on ne peut pas évoquer l'égalité de traitement - _"il n'y a pas d'égalité dans l'illégalité"_)
+
+#example[
+  Deux prévenus qui ont commis des vols à la carte de crédit. Le premier a pris 2 ans de prison, le premier a pris 4 ans de prison. Injuste, alors que la même activité ? Effectivement, il y a une différence non soutenable, mais c'est plutôt l'autre qui a eu trop peu, que le second qui a eu trop.
+]
+
+Si le procureur fait appel (il veut une peine plus lourd) et que le prévenu fait aussi appel, il risque une peine plus lourde - _"reformatio in pejus"_. Sinon si le procureur ne fait pas appel et que le prévenu oui, la peine ne peut pas être aggravée.
+
+Revirement de jurisprudence : quand le tribunal "change d'avis", on ne va plus juger les choses de la même façon.
+
+== Égalité et discrimination
+
+On ne peut pas rendre une situation plus désavantageuse pour une personne en raison de certains critères (alinéa 2 de l'art. 8).
+
+à l'inverse, des traitements qui vont avantager certaines personnes sont acceptés (p. ex on ajoute des cours de langue pour les étrangers en fonction de leur origine).
+
+Conditions pour que ce soit considéré comme une discrimination :
+- ça doit être un désavantage pour les personnes visées
+- il doit s'agir d'un traitement différent
+- et il faut le critère de discrimination : sexe, origine, race, déficience morale ou psychique, le mode de vie, situation sociale, ses convictions religieuses, etc.
+
+#example[
+  Tous les noms des gens qui viennent des balkans se font refuser pour avoir la nationalité suisse (sans motif valable).
+
+  Principe de discrimination bafoué.
+]
+
+#example[
+  Interdire l'exercion de certaines fonctions publiques à un certain âge. C'est possible parfois (un canton demande à ce que les notaires aient au plus 70 ans - après on a peut-être plus les capacités, intérêt public).
+]
+
+#example[
+  Les Tisganes sont nomades, ils doivent pouvoir exercer leur mode de vie. C'est pour cela qu'ils doivent avoir leur place dans un village par exemple pour s'installer.
+]
+
+#example[
+  Le port de l'abaya est interdit en France à l'école, en Suisse même si on considère que l'enseignant représente l'Etat donc doit rester neutre, pour les étudiants ça ne pose pas de problème.
+
+  Pas de discrimination selon la religion.
+]
+
+== Égalité des sexes
+
+Un point tellement important qu'il a son propre alinéa (art. 8 alinéa 3).
+
+Égalité salariale : cette fois-ci pas seulement applicable contre l'Etat mais vers contre son employeur (en effet la plupart des citoyens sont employés par des entreprises privées).
+
+#example[
+  Pour toutes les entreprises de plus de 100 employés, elles doivent faire une analyse globale de la politique salariale et ces analyses doivent être étudiés par des organismes indépendants et ces résultats seront communiqués aux employés et aux investisseurs.
+]
+
+#example[
+  Introduction de quota dans les grandes entreprises suisses.
+
+  Pour aller plus loin que l'égalité *de droit*, on veut l'égalité dans les *faits*, et pour cela non seulement l'Etat ne va pas *interdire* la discrimination, mais aussi proposer des prestations positives.
+]
