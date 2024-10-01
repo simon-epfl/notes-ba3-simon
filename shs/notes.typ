@@ -2,7 +2,7 @@
 
 #let title = "État et droits humains"
 #let author = "Cours de SHS @ EPFL"
-#let professor = "Patrick Stoudmann"
+#let professor = "Patrick Stoudmann, Guillaume Lammers"
 #let creater = "Simon Lefort"
 #let time = "Automne 2024"
 #let abstract = ""
@@ -199,3 +199,5 @@ Surveillance vidéo :
 
   Il y a un intêrét public, donc mis en place (mais pas jusqu'au nom, rester dans la proportion).
 ]
+
+=
