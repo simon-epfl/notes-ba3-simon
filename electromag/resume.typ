@@ -71,3 +71,13 @@ $ arrow.double.r.l arrow(nabla) dot arrow(E) integral_V d V = rho/epsilon_0 inte
 *$ arrow.double.r.l arrow(nabla) dot arrow(E) = rho/epsilon_0 $*
 
 $ arrow.double.r.l arrow(nabla)^2dot arrow(V) = rho/epsilon_0 $
+
+== Capacité
+
+Dans le cas d'un condensateur
+
+$ C = (epsilon A)/d  $
+
+$d$ distance entre les plaques (en mètres) \
+$A$ l'aire des plaques (en mètres carrés) \ 
+$epsilon$ permissivité du milieu entre les plaques
