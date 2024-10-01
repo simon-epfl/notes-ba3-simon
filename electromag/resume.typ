@@ -2,7 +2,7 @@
 
 Seule la direction importe, le sens sera apporté par la charge sur laquelle on "appliquera" le champ.
 
-Quand on a une surface avec une forme facile on peut faire :
+Quand on a une surface avec une forme facile (symmétrique) on peut faire :
 
 $ Phi_E = integral arrow(E(r)) dot d arrow(S) = Q_"int"/epsilon_0 $
 
@@ -74,10 +74,20 @@ $ arrow.double.r.l arrow(nabla)^2dot arrow(V) = rho/epsilon_0 $
 
 == Capacité
 
-Dans le cas d'un condensateur
+Dans le cas d'un condensateur, $Q = C dot V$
+
+Ou $Q = C/(Delta V)$ pour un condensateur, avec $Delta V$ la différence de potentiel entre les deux plaques.
 
 $ C = (epsilon A)/d  $
+
+donc C ne dépend que de la géométrie du condensateur
 
 $d$ distance entre les plaques (en mètres) \
 $A$ l'aire des plaques (en mètres carrés) \ 
 $epsilon$ permissivité du milieu entre les plaques
+
+quand est-ce que ça s'applique le Q/V ? condensateur, terre ?
+
+
+dielectrique => capacite pas uniquement en fonction de la geometrie mais aussi du facteur xi
+la charge ne change pas
