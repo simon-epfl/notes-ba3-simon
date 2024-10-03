@@ -159,3 +159,12 @@ Par exemple le nombre d'appels téléphoniques reçus par un centre d'appel en u
 
 La probabilité que $X$ prenne une valeur inférieure ou égale à $x$.
 
+== Moments 
+
+$ E(X^r) = sum_x (x_i)^r f_X (x_i) $
+
+== Variance
+
+On pourrait étudier la différence entre $X$ et la moyenne pour voir à quel point X "varie" (une fonction constante aurait 0) : $E|X - E(X)|$.
+
+Cependant on met un carré pour éviter les problèmes avec l'utilisation de la valeur absolue.
