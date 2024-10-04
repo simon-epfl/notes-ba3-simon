@@ -84,10 +84,22 @@ donc C ne dépend que de la géométrie du condensateur
 
 $d$ distance entre les plaques (en mètres) \
 $A$ l'aire des plaques (en mètres carrés) \ 
-$epsilon$ permissivité du milieu entre les plaques
+$epsilon$ permissivité du milieu entre les plaques (la capacité ne dépend donc pas uniquement de la géométrie mais aussi du facteur $chi_i$ du matériau)
 
-quand est-ce que ça s'applique le Q/V ? condensateur, terre ?
+$ E = E_0 / K $
 
+$E_0$ le champ électrique si on était dans l'air \
+$K$ la constante diélectrique du milieu
 
-dielectrique => capacite pas uniquement en fonction de la geometrie mais aussi du facteur xi
-la charge ne change pas
+Calculer une différence de potentiel avec différents milieux:
+
+$ V(A) - V(B) = integral_0^("fin du milieu A") arrow(E) d arrow(l) + integral_"fin du milieu A"^"fin du milieu B" arrow(E) d arrow(l) $
+$ arrow.double.r.l V(A) - V(B) = E_0/K_A(d_A) + E_0/K_B(d_B) $
+
+Calculer la capacité des condensateurs en série :
+
+$ 1/C_"tot" = sum_"capacité du condensateur i" 1/C_i $
+
+Calculer la capacité des condensateurs en parallèle :
+
+$ C_"tot" = sum_"capacité du condensateur i" C_i $

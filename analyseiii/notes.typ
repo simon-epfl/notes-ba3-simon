@@ -397,7 +397,7 @@ Suppose $f in C'(Omega, RR)$ with $nabla f = F$. For any closed simple regular c
 We construct a potential. Here we use a piecewise regular curves.
 
 - We pick $f(1,0) = C$.
-- For any $x > 0$, let $gamma_X : [0, 1] arrow RR^2, t arrow (1 + t(x + 1), 0)$. Obviously the straight line from $(1, 0)$ to $(x, 0)$.
+- For any $x > 0$, let $gamma_X : [0, 1] arrow RR^2, t arrow (1 + t(x - 1), 0)$. Obviously the straight line from $(1, 0)$ to $(x, 0)$.
 
 $f(x, 0) - f(1, 0) = integral_gamma_X F d l = ... = x - 1$
 then $f(x, 0) = x + f(1, 0) - 1$
