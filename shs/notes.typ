@@ -315,7 +315,7 @@ On peut regrouper les deux sous la liberté d'expression.
 
 L'équivalent dans la CEDH est dans l'article 10 sous le nom de liberté d'expression (portée plus large).
 
-== Liberté d'opinion
+== Liberté d'expression
 
 La notion d'opinon englobe tout jugement, toute appréciation, toute idée, toute création artistique et littéraire.
 
@@ -332,4 +332,16 @@ Poster sur un blog, dans un journal, à la télé, etc. toute forme de média es
 
 #example[
   La mendicité était interdite dans le canton de Vaud. Les mendiants sont allés jusqu'au tribunal fédéral en invoquant la liberté économique, et le fait que les mendiants donnaient un cri de détresse envers la pauvreté.
+
+  Transaction financière #sym.arrow "ce n'est pas une communication d'un message".
 ]
+
+Le droit à l'information permet à toute personne de demander les informations qui sont stockées à son sujet auprès de l'Etat, mais également toutes les informations liées à l'administration.
+
+== Les restrictions de la liberté d'expression
+
+Le droit ordinaire encadre la liberté d'expression.
+
+Les députés sont immunisés contre ces restrictions de la liberté d'expression au parlement (ils peuvent prononcer des propos racistes). En contrepartie, les citoyens peuvent s'exprimer de façon plus tranchée sur ces députés que sur les autres citoyens (ce sera pris en compte si un député porte plainte car il s'est fait alpagué dans la rue par exemple).
+
+Les détenus ont une liberté d'expression restreinte, les courriers écrits sont vérifiés par exemple.
