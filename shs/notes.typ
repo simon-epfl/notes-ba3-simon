@@ -342,6 +342,12 @@ Le droit à l'information permet à toute personne de demander les informations 
 
 Le droit ordinaire encadre la liberté d'expression.
 
-Les députés sont immunisés contre ces restrictions de la liberté d'expression au parlement (ils peuvent prononcer des propos racistes). En contrepartie, les citoyens peuvent s'exprimer de façon plus tranchée sur ces députés que sur les autres citoyens (ce sera pris en compte si un député porte plainte car il s'est fait alpagué dans la rue par exemple).
+#example[
+  Les députés sont immunisés contre ces restrictions de la liberté d'expression au parlement (ils peuvent prononcer des propos racistes). En contrepartie, les citoyens peuvent s'exprimer de façon plus tranchée sur ces députés que sur les autres citoyens (ce sera pris en compte si un député porte plainte car il s'est fait alpagué dans la rue par exemple).
+]
 
-Les détenus ont une liberté d'expression restreinte, les courriers écrits sont vérifiés par exemple.
+#example[
+  Les détenus ont une liberté d'expression restreinte, les courriers écrits sont vérifiés par exemple.
+]
+
+Quand l'honneur d'une personne est touchée, elle peut déposer plainte pour diffamation (ça peut être vrai mais ça rabaisse l'honneur de la personne) et calomnie (on sait que c'est faux).
