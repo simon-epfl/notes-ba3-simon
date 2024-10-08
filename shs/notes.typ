@@ -351,3 +351,16 @@ Le droit ordinaire encadre la liberté d'expression.
 ]
 
 Quand l'honneur d'une personne est touchée, elle peut déposer plainte pour diffamation (ça peut être vrai mais ça rabaisse l'honneur de la personne) et calomnie (on sait que c'est faux).
+
+TODO: orientation sexuelle, communauté, etc. voir article deux six un bis
+
+#example[
+  Un nationaliste turc affirme que le génocide arménien est un mensonge international. Il a été condamné par la Suisse.
+  La Suisse a été condamnée par la CEDH, le contexte de ces propos n'est pas marqué par des fortes tensions, les propos ne peuvent pas être regardés comme atteignants à la communauté arménienne.
+]
+
+#example[
+  Alain S. a été condamné pour avoir tenu des propos en lien avec une journaliste queer (orientation sexuelle).
+]
+
+Le fait de bafouer les convictions d'autri, incitation au crime et à la violence, interdiction de la pornographie (exception pour le contexte artistique).
