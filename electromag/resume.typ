@@ -96,6 +96,8 @@ Calculer une différence de potentiel avec différents milieux:
 $ V(A) - V(B) = integral_0^("fin du milieu A") arrow(E) d arrow(l) + integral_"fin du milieu A"^"fin du milieu B" arrow(E) d arrow(l) $
 $ arrow.double.r.l V(A) - V(B) = E_0/K_A(d_A) + E_0/K_B(d_B) $
 
+$U_"stocké"/V = 1/2 epsilon_0 E^2$ ???
+
 Calculer la capacité des condensateurs en série :
 
 $ 1/C_"tot" = sum_"capacité du condensateur i" 1/C_i $

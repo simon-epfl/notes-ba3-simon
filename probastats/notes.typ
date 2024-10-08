@@ -168,3 +168,9 @@ $ E(X^r) = sum_x (x_i)^r f_X (x_i) $
 On pourrait étudier la différence entre $X$ et la moyenne pour voir à quel point X "varie" (une fonction constante aurait 0) : $E|X - E(X)|$.
 
 Cependant on met un carré pour éviter les problèmes avec l'utilisation de la valeur absolue.
+
+$ "var"(X) = E(X^2) - E(X)^2 $
+
+== Expected value
+
+$ E(X) = E(X|B)P(B) + E(X|B^c)P(B^c) $

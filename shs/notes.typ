@@ -17,6 +17,8 @@
 
 == Restriction des droits fondamentaux
 
+Article 36 de la constitution.
+
 - Base légale.
 - Intérêt public.
 - Proportionnalité.
@@ -300,4 +302,34 @@ Un point tellement important qu'il a son propre alinéa (art. 8 alinéa 3).
   Introduction de quota dans les grandes entreprises suisses.
 
   Pour aller plus loin que l'égalité *de droit*, on veut l'égalité dans les *faits*, et pour cela non seulement l'Etat ne va pas *interdire* la discrimination, mais aussi proposer des prestations positives.
+]
+
+= Liberté d'opinion et d'information
+
+Article 16 de la constitution.
+
+- Se former une opinion, puis l'exprimer et la répandre, aspect actif
+- Le droit de récolter des informations sur des faits (pour se former une opinion), aspect passif
+
+On peut regrouper les deux sous la liberté d'expression.
+
+L'équivalent dans la CEDH est dans l'article 10 sous le nom de liberté d'expression (portée plus large).
+
+== Liberté d'opinion
+
+La notion d'opinon englobe tout jugement, toute appréciation, toute idée, toute création artistique et littéraire.
+
+Ces opinions sont protégées quelle que soit la réaction qu'elles provoquent auprès du public ou de l'Etat (même les opinions qui ne sont pas la vérité).
+Le conseil fédéral décide de garantir la liberté d'opinion même pour les fake news (trop de risque de dérive contre la liberté d'expression).
+
+Poster sur un blog, dans un journal, à la télé, etc. toute forme de média est une forme d'expression mais aussi le fait de porter un drapeau, un insigne, etc.
+
+#example[
+  Une association naturiste veut défiler dans Paris en étant nus, "une manifestation à vêtements facultatifs". Elle affirme que c'est un moyen d'exprimer la fragilité du corps humain, de se reconnecter avec la nature.
+
+  La CEDH a rejeté (intérêt public) mais a rappelé que le fait d'être nu est en effet une forme d'expression.
+]
+
+#example[
+  La mendicité était interdite dans le canton de Vaud. Les mendiants sont allés jusqu'au tribunal fédéral en invoquant la liberté économique, et le fait que les mendiants donnaient un cri de détresse envers la pauvreté.
 ]
