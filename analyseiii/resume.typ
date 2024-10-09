@@ -15,3 +15,5 @@ Notre fonction aurait pu être comme ça, mais on veut juste être sur les point
 Ici on veut l'aire donc $ A_k = f(x_k, y_k)Delta s_k $
 $ A_k = f(x_k, y_k)sqrt((Delta x_k)^2 + (Delta y_k)^2) $
 $ arrow.double.r d A = f(g(t), h(t))sqrt(g'(t)^2 + h'(t)^2 )d t $
+
+#image("gaussgreen.png")
