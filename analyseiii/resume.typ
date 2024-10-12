@@ -17,3 +17,14 @@ $ A_k = f(x_k, y_k)sqrt((Delta x_k)^2 + (Delta y_k)^2) $
 $ arrow.double.r d A = f(g(t), h(t))sqrt(g'(t)^2 + h'(t)^2 )d t $
 
 #image("gaussgreen.png")
+#image("rotations.png")
+#image("liresume.png")
+
+#pagebreak()
+
+== Trouver un potentiel
+
+- compute  $integral_0^x F(t) d t$
+- compute $integral_x^y F(t) d t$
+- sum them
+

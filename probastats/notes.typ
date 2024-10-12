@@ -174,3 +174,13 @@ $ "var"(X) = E(X^2) - E(X)^2 $
 == Expected value
 
 $ E(X) = E(X|B)P(B) + E(X|B^c)P(B^c) $
+
+== Probability density function
+
+=== Uniformly distributed variable
+
+$ f(x) = 1/(b - a) $
+
+=== Exponential random variable
+
+$ f(x) = lambda e^-(lambda x), forall x > 0, 0 "otherwise" $

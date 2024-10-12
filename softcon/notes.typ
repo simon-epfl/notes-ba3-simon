@@ -81,3 +81,17 @@ Déterminée en fonction du caractère qui démarre l'opérateur:
 #image("precedencerules.png", width: 80%)
 
 #image("functionmethods.png", width: 80%)
+
+== Types
+
+Contravariance : quand un type plus général est utilisé pour un autre type
+Covariance : quand un type plus précis est utilisé pour un autre type
+
+```Scala
+trait Printer[-A] {
+  def print(value: A): Unit
+}
+
+val animalPrinter: Printer[Animal] = (animal: Animal) => println(s"Printing an animal: $animal")
+val dogPrinter: Printer[Dog] = animalPrinter // ok, Printer[Animal] is a supertype of Printer[Dog]
+```

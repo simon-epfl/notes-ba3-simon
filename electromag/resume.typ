@@ -105,3 +105,21 @@ $ 1/C_"tot" = sum_"capacité du condensateur i" 1/C_i $
 Calculer la capacité des condensateurs en parallèle :
 
 $ C_"tot" = sum_"capacité du condensateur i" C_i $
+
+== Circuits
+
+On choisit un sens pour compter.
+
+=== Règle des noeuds (pour un noeud donné)
+$sum_k i_k = 0$
+
+=== Règle des mailles (autour de chaque maille fermée)
+
+$sum_k Delta V_k = 0$ \ 
+On choisit un sens pour compter. \
+On ajoute les tensions (de batterie par exemple) dans le sens dans lequel on va. \
+On ajoute les résistances comme $plus.minus i_k dot R_k " "ohm$ en fonction du sens (si on compte dans le sens opposé au courant, on ajoute, sinon on enlève). donc le + des résistances est le - des tensions de batteries
+
+=== Loi d'ohm
+
+$U = R i$ (ça s'applique aux bornes d'un dipôle)
