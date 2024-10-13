@@ -11,11 +11,21 @@
 
 = Introduction
 
-== Convention européenne des droits de l'homme (CEDH)
+== Les droits fondamentaux
+
+Ils sont garantis par la Constitution et dirigés contre l'Etat, protégés par le juge.
+
+*Les libertés classiques*, aussi appelées idéales (le droit à la vie, au respect de l'intégrité physique et de la vie privée, la liberté de mouvement, etc.). Ici l'Etat a plutôt un devoir d'abstention, de ne pas faire de loi qui vont à l'encontre de ces libertés.
+
+*Les droits politiques*, qui permettent au citoyen de participer à l'exercice du pouvoir politique (le droit de vote, le droit d'élire et d'être élu, etc.).
+
+*Les droits sociaux*, qui permettent d'exiger de l'Etat des prestations (droit à l'éducation, au travail, etc.). Ici ce n'est pas un devoir d'abstention mais une obligation de le faire.
+
+== La convention européenne des droits de l'homme (CEDH)
 
 47 Etats européens y ont adhéré. La CEDH institue une Cour européenne des droits de l'homme que les particuliers peuvent saisir lorsqu'ils estiment qu'une décision rendue par leurs tribunaux nationaux ne respecte pas la Convention. Si la Cour constate qu'un Etat a effectivement violé la Convention, celui-ci a l'obligation d'y remédier.
 
-== Restriction des droits fondamentaux
+== Les restrictions des droits fondamentaux
 
 Article 36 de la constitution.
 
@@ -23,7 +33,9 @@ Article 36 de la constitution.
 - Intérêt public.
 - Proportionnalité.
 
-Examen : résumés de cours + constitution
+== L'examen ?
+
+Examen : imprimer les résumés de cours, prendre la constitution. Ce sera des case studies.
 
 = La liberté personnelle
 
