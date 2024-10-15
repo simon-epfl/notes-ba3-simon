@@ -108,10 +108,10 @@ $ C_"tot" = sum_"capacité du condensateur i" C_i $
 
 == Circuits
 
-On choisit un sens pour compter.
-
 === Règle des noeuds (pour un noeud donné)
-$sum_k i_k = 0$
+$sum_k i_k = 0$ \
+$sum_n i_"in" = sum_n
+ i_"out"$ 
 
 === Règle des mailles (autour de chaque maille fermée)
 
@@ -122,4 +122,8 @@ On ajoute les résistances comme $plus.minus i_k dot R_k " "ohm$ en fonction du 
 
 === Loi d'ohm
 
-$U = R i$ (ça s'applique aux bornes d'un dipôle)
+$V = R i$ (elle s'applique aux bornes d'un dipôle)
+
+== Charger un condensateur
+
+temps caractéristique d'un condensateur $tau = R C$.
