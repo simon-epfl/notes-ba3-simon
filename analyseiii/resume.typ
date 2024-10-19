@@ -28,3 +28,4 @@ $ arrow.double.r d A = f(g(t), h(t))sqrt(g'(t)^2 + h'(t)^2 )d t $
 - compute $integral_x^y F(t) d t$
 - sum them
 
+== Calculer une intégrale avec le Green's theorem2

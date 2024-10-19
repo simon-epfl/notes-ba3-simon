@@ -127,3 +127,8 @@ $V = R i$ (elle s'applique aux bornes d'un dipôle)
 == Charger un condensateur
 
 temps caractéristique d'un condensateur $tau = R C$.
+
+On a qu'à l'état d'équilibre (quand le condensateur est chargé), le courant est nul :
+
+$ C V = q arrow.r.double C (d V)/(d t) = (d q)/(d t) = i $
+$ "donc " i = C (d q)/(d t) $
