@@ -34,6 +34,15 @@
 
 Donc quand on nous demande la distribution function d'une variable c'est la fonction qui $forall t " donne " P(X <= t)$.
 
+Quand on demande la PDF souvent c'est plus simple de trouver la CDF puis de dériver.
+
+== Indicator function
+
+$ I("some expression") = cases(
+  1 "if the expression is true",
+  0 "otherwise"
+) $
+
 === Distribution Exponentielle et Poisson
 
 Poisson est utilisé pour des variables aléatoires discrète. Il modélise la probabilité qu'un certain nombre d'évènements se produise durant une période de temps ou d'espace, à partir d'un taux $lambda$.
@@ -54,6 +63,9 @@ $ f_D (t) = cases(
   Si un client arrive toutes les 2 minutes, $lambda = 1/2$. La probabilité qu'un client arrive durant une période de 7 minutes est $1 - e^(-0.5 dot 7)$. La probabilité qu'un client arrive durant une période de 7 minutes *sachant que* 8 minutes se sont déjà écoulées est identique. Car les évènements sont *indépendants* entre eux (peu importe qui est venu avant au magasin).
 ]
 
+== Moments
+
+- the $r$th moment of $X$ is $E(X^r)$.
 
 == P.D.F #sym.arrow.double.r.l CDF
 
