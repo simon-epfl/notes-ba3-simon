@@ -1,6 +1,9 @@
 == Tricks généraux
 
 - utiliser le principe de superposition : quand il n'y a pas de charge, on peut dire qu'il y a en fait une charge positive et une négative.
+- toujours justifier que le champ est uniforme car la distance entre les plaques est faible et les plaques sont grandes
+- $P = E/(d t)$
+- faire des matrices pour les équations loi mailles/noeuds
 
 == Force électrostatique
 
@@ -43,6 +46,10 @@ $d arrow(S)$ est toujours orthogonal à la surface par laquelle les charges pass
 
 Ce n'est pas un vecteur. C'est comparable à la hauteur en méca.
 
+$ E = - nabla V arrow.double.r.l V = integral E arrow(d l) $
+
+On en déduit :
+
 Comment calculer $V$ *en un point* ? Charge(s) ponctuelle(s) :
 
 $ V(r) = sum_i^n k Q_i/r_i $
@@ -52,8 +59,6 @@ Pour une surface avec une distribution de charges continue :
 $ V(r) = integral_S k d_q/r $
 
 Attention $V$ est un scalaire, pas un vecteur !
-
-$ E - nabla V $
 
 == Conservation de l'énergie
 
@@ -126,8 +131,6 @@ Calculer une différence de potentiel avec différents milieux:
 $ V(A) - V(B) = integral_0^("fin du milieu A") arrow(E) d arrow(l) + integral_"fin du milieu A"^"fin du milieu B" arrow(E) d arrow(l) $
 $ arrow.double.r.l V(A) - V(B) = E_0/K_A(d_A) + E_0/K_B(d_B) $
 
-$U_"stocké"/V = 1/2 epsilon_0 E^2$ ???
-
 Calculer la capacité des condensateurs en série :
 
 $ 1/C_"tot" = sum_"capacité du condensateur i" 1/C_i $
@@ -137,6 +140,8 @@ Calculer la capacité des condensateurs en parallèle :
 $ C_"tot" = sum_"capacité du condensateur i" C_i $
 
 == Circuits
+
+La tension va généralement du - au + d'un générateur.
 
 === Règle des noeuds (pour un noeud donné)
 $sum_k i_k = 0$ \
@@ -162,3 +167,16 @@ On a qu'à l'état d'équilibre (quand le condensateur est chargé), le courant 
 
 $ C V = q arrow.r.double C (d V)/(d t) = (d q)/(d t) = i $
 $ "donc " i = C (d q)/(d t) $
+
+- partir de la loi $U_c$ (le générateur) $ + U_r$ (la tension générée par la résistance du condensateur) $ = 0$.
+- $ U_c + R C (d U)/(d t) = 0 $
+- $ Q / (R C) = (d U)/(d t) $
+Résoudre. 
+
+=== Charge
+
+$ V_C(t) = epsilon (1 - exp(-t / (R C))) $
+
+=== Décharge
+
+$ V_C(t) = epsilon exp(-t / (R C)) $
