@@ -75,13 +75,14 @@ D'abord on définit nos fonctions pour passer de $x$ à $y$ :
 
 $ r(x) = 1/x " et " s(y) = 1/y $
 
-$ G(y) = F(s(y)) = F(1/y) $
+$ G(y) = P(Y <= y) = P(1/X <= y) = P(X >= 1/y) = 1 - P(X < 1/y) $
+$ G(y) = 1 - F(1/y) $
 
-$ (d G(y)) / (d y) = d(F(1/y))/(d y) $
+$ (d G(y)) / (d y) = d(1 - F(1/y))/(d y) $
 
-$ g(y) = (d F)/(d y)(1/y)dot|-1/(y^2)| "(on s'intéresse à la vitesse, on enlève le signe -") $
+$ g(y) = - (d F)/(d y)(1/y)dot|-1/(y^2)| "(on s'intéresse à la croissance, on enlève le signe -") $
 
-$ g(y) = f(1/y) dot 1/y^2 $
+$ g(y) = - f(1/y) dot 1/y^2 $
 
 Et ensuite pour trouver $G(y)$ on intègre.
 
@@ -96,3 +97,33 @@ Attention, c'est la P.D.F. qu'on intègre, parfois il faut dériver la C.D.F.
 $E(X^2) - E(X)^2$
 
 donc, quand continue : $intinf f_D (x) x^2 d x - E(X)^2$
+
+== Normal distribution
+
+Impossible de calculer la CDF $Phi$ ! c'est pour ça qu'il existe des tables
+
+aussi appelée "courbe de Gauss", en cloche :
+
+$ f_D (x) = 1/(sigma sqrt(2 pi)) exp(-(x - mu)^2/(2 sigma^2)) $
+
+
+$mu$ est la moyenne, l'espérance de la distribution \
+$sigma$ est l'écart-type
+
+=== Standard Normal Distribution
+
+$ f_D (x) = phi(x) $
+
+quand $mu = 0$ (donc centré autour de 0), et que $sigma = 1$.
+
+$ Phi(x) = integral f_D (x) "  (la cdf)" $
+
+==== Convertir en Standard Normal Distrib.
+
+$ F(x) = Phi((x - mu)/sigma) $
+
+== Joint random variables
+
+=== Conditional pdf (2 variables)
+
+$ f_(X \/ Y) (x \/ y) = integral_(- infinity)^(+ infinity) f_(X, Y)(x, y)f_Y (y) d y $
