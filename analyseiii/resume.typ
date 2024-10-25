@@ -35,3 +35,23 @@ $ arrow.double.r d A = f(g(t), h(t))sqrt(g'(t)^2 + h'(t)^2 )d t $
 #image("./posts/int_sens.png", width: 40%)
 
 - $ integral_(delta Omega) F dot d arrow(s) = integral integral_omega "div"(F) d omega $
+
+== Calculer une aire d'un graph
+
+$ "par exemple, " Phi(t) = sqrt(s^2 + t^2) $
+$ "on définit " arrow(r) = (s, t, Phi(t)) $
+
+Calculer l'aire du graphe de $Phi$ sur $Omega$:
+
+$ integral_Omega 1 norm((d arrow(r))/(d s) times (d arrow(r))/(d t)) d s d t $
+
+$ (d arrow(r))/(d s) times (d arrow(r))/(d t) = 
+mat(
+  arrow(i), arrow(j), arrow(k);
+  1, 0, (d Phi)/(d s);
+  0, 1, (d Phi)/(d t)
+) = (-(d Phi)/(d s), -(d Phi)/(d t), 1) $
+
+$ arrow.double.r " (when taking the norm) " integral_omega sqrt(1 + ((d Phi)/(d s))^2 + ((d Phi)/(d t))^2) d s d t $
+
+

@@ -1,8 +1,38 @@
+== Tricks généraux
+
+- utiliser le principe de superposition : quand il n'y a pas de charge, on peut dire qu'il y a en fait une charge positive et une négative.
+
+== Force électrostatique
+
+$ arrow(F) = k (q_a q_b)/(r^2) $
+
+Méthode pour calculer la force exercée par la barre sur $q_0$.
+
+#image("posts/exo1.png", width: 40%)
+
+- écrire l'expression de la force selon un vecteur $arrow(r)$.
+- ici, on sait que la force sur $y$ va se compenser, donc on intègre la force selon $arrow(x)$ pour trouver $F_"tot"$.
+
+Attention, quand on intègre, il ne faut pas oublier de décomposer le vecteur $arrow(r)$ selon les différentes composantes (qui seront dans le calcul de l'intégrale !) :
+$ arrow(r) = (D_1 arrow(e_r) + D_2 arrow(e_z))/(sqrt(D_1^2 + D_2^2)) $
+
+== Dipôle électrique
+
+Moment dipolaire : $ arrow(p) = q arrow(d)$,  décrit la séparation des charges
+
+La force sur un dipôle dans un champ électrique E (externe): $arrow(F) = (arrow(p) dot arrow(nabla)) arrow(E)$
+
+Moment de force : $arrow(tau) = arrow(r) times arrow(E)$, permet de décrire la rotation du dipôle (une fois que le dipôle est parallèle à E, le moment de force devient nul).
+
+Théorème du moment cinétique : $arrow(tau) = (d L_O)/(d t)$
+
+$arrow(L_O) = sum_i arrow(r_i) times m_i arrow(v_i)$
+
 == Champ électrique
 
 Seule la direction importe, le sens sera apporté par la charge sur laquelle on "appliquera" le champ.
 
-Quand on a une surface avec une forme facile (symmétrique) on peut faire :
+Quand on a une surface avec une forme facile (symmétrique) on peut utiliser Gauss :
 
 $ Phi_E = integral arrow(E(r)) dot d arrow(S) = Q_"int"/epsilon_0 $
 
