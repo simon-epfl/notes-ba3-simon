@@ -94,9 +94,11 @@ Attention, c'est la P.D.F. qu'on intègre, parfois il faut dériver la C.D.F.
 
 == Variance
 
-$E(X^2) - E(X)^2$
+$"var"(X) = E(X^2) - E(X)^2$
 
 donc, quand continue : $intinf f_D (x) x^2 d x - E(X)^2$
+
+Standard deviation : $ sigma = sqrt("var"(X)) $
 
 == Normal distribution
 
@@ -121,6 +123,10 @@ $ Phi(x) = integral f_D (x) "  (la cdf)" $
 ==== Convertir en Standard Normal Distrib.
 
 $ F(x) = Phi((x - mu)/sigma) $
+
+#image("posts/tablenorm.png")
+
+Si on veut $Phi(1.51)$, on prend la ligne $1.5"(colonne)"$ et la colonne 1.
 
 == Joint random variables
 
