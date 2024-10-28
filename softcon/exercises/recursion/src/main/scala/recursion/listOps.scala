@@ -141,4 +141,13 @@ val Add = -1
 val Multiply = -2
 
 def polishEval(l: IntList): (Int, IntList) =
-  ???
+  l match
+    case IntCons(head, tail) =>
+      val (resLeft, remainingRight) = polishEval(tail)
+      val (resRight, remainingRemainingRight) = polishEval(remainingRight)
+      if head == Add then
+        (resLeft + resRight, remainingRemainingRight)
+      else if head == Multiply then
+        (resLeft * resRight, remainingRemainingRight)
+      else (head, tail)
+    case IntNil() => (0, IntNil())
