@@ -83,7 +83,7 @@ def eqBoolBool(
     f: Boolean => Boolean,
     g: Boolean => Boolean
 ) =
-  ???
+  f(true) == g(true) && f(false) == g(false)
 
 val a = (x: Int) => x
 val b = (x: Int) => -x
@@ -99,7 +99,9 @@ val g = (x: Int) => /* 🔥 */ /* assuming x > 0 */
 import scala.annotation.tailrec
 
 def fixedPoint(f: Int => Int, start: Int): Int =
-  ???
+  val v = f(start)
+  if (v == start) then start
+  else fixedPoint(f, f(start))
 
 def mapAsFoldRight(f: Int => Int): IntList => IntList =
   ???
