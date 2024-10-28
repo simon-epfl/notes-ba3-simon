@@ -29,3 +29,33 @@ lw s1, 4(sp)
 lw s2, 8(sp)
 addi sp, sp, 12
 ```
+
+=== Sign Extend
+
+Quand on veut faire un `andi`, `xori`, etc. ce qui compte c'est la valeur du 12ème bit pour savoir si on sign-extend ou pas.
+
+donc 0x3 va donner 000000...011
+
+=== Interrupt handler
+
+#emoji.warning Écrire avec le register `zero` ou l'immediate `0` dans le interrupt handler ne va jamais modifier les valeurs des CSRs.
+
+```yasm
+interrupt_handler:
+  # fait par le CPU automatiquement :
+  # MPIE = MIE
+  # MIE = 0
+
+  # là le CPU clear le MIP.
+
+  # là on doit (nous) save les registers
+
+  # là on doit (nous) gérer les service routines
+
+  # là on doit (nous) restaurer les registers
+
+  mret
+  # fait par le CPU :
+  # MIE = MPIE
+  # PC = MEPC
+```
