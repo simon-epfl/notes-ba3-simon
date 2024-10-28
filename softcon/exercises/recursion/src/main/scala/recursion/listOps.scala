@@ -1,7 +1,9 @@
 package recursion
 
 def length(l: IntList): Int =
-  ???
+  l match 
+    case IntCons(head, tail) => 1 + length(tail)
+    case IntNil => 0
 
 def allPositiveOrZero(l: IntList): Boolean =
   ???

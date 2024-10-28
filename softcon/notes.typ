@@ -68,19 +68,19 @@ C'est utile si on veut appliquer des transformations partielles (fixer le premie
 
 == Week 3
 
-#image("classsub.png", width: 80%)
-#image("classsub2.png", width: 80%)
+#image("./posts/classsub.png", width: 80%)
+#image("./posts/classsub2.png", width: 80%)
 
-#image("extension.png", width: 80%)
-#image("uextension.png", width: 80%)
+#image("./posts/extension.png", width: 80%)
+#image("./posts/uextension.png", width: 80%)
 
-#image("infixmethods.png", width: 80%)
+#image("./posts/infixmethods.png", width: 80%)
 
 Déterminée en fonction du caractère qui démarre l'opérateur:
 
-#image("precedencerules.png", width: 80%)
+#image("./posts/precedencerules.png", width: 80%)
 
-#image("functionmethods.png", width: 80%)
+#image("./posts/functionmethods.png", width: 80%)
 
 == Types
 
