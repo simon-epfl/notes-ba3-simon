@@ -30,13 +30,11 @@ val DivideTrivide2 = TODO
 val IncrementDeuxcrement2 = TODO
 
 def andThen(f: Int => Double, g: Double => String) =
-  ???
+  (x: Int) => g(f(x))
 
-val id: Int => Int =
-  TODO
+val id: Int => Int = (x: Int) => x
 
-def flip(f: (Int, Int) => Int): (Int, Int) => Int =
-  ???
+def flip(f: (Int, Int) => Int): (Int, Int) => Int = (x, y) => f(y, x)
 
 val square = (x: Int) => x * x
 val plusOne = (x: Int) => x + 1
@@ -52,22 +50,24 @@ val squareSquareSquare = (x: Int) =>
   ((x * x) * (x * x)) * ((x * x) * (x * x))
 
 def adder(f: Int => Double, g: Int => Double): Int => Double =
-  ???
+  (x) => f(x) + g(x)
 
 def multiplier(f: Int => Double, g: Int => Double): Int => Double =
-  ???
+  (x) => f(x) * g(x)
 
 def lifter(op: (Double, Double) => Double): (Int => Double, Int => Double) => (Int => Double) =
-  ???
+  (f, g) => (x) => op(f(x), g(x))
 
-val adder2 = TODO
-val multiplier2 = TODO
+val adder2 = lifter((x, y) => x + y)
+val multiplier2 = lifter((x, y) => x * y)
 
 def meet(f: Int => Boolean, g: Int => Boolean): (Int => Boolean) =
-  ???
+  (x) => f(x) && g(x)
 
 def Meet(l: IntPredicateList): (Int => Boolean) =
-  ???
+  l match
+    case IntPredicateCons(head, tail) => (x) => head(x) && Meet(tail)(x)
+    case IntPredicateNil() => (x) => true
 
 val f0 = (x: Long) => x
 val f1 = (x: Long) => if x > 0 then x else -x
