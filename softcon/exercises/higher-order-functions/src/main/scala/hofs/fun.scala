@@ -134,57 +134,55 @@ def incrHeadByXBasic(x: Int, l: IntList): IntList =
   else IntCons(l.head + x, l.tail)
 
 val incrHeadByXAnon: (Int, IntList) => IntList =
-  TODO
+  (x, l) => if l.isEmpty then l else IntCons(l.head + x, l.tail)
 
 val incrHeadByXCurried: Int => IntList => IntList =
-  TODO
+  (x) => (l) => if l.isEmpty then l else IntCons(l.head + x, l.tail)
 
 def incrHeadByXCurriedDef(x: Int)(l: IntList): IntList =
-  ???
+  if l.isEmpty then l else IntCons(l.head + x, l.tail)
 
 def addToFrontBasic(x: Int, y: Int, l: IntList): IntList =
   IntCons(x, IntCons(y, l))
 
 val addToFrontAnon: (Int, Int, IntList) => IntList =
-  TODO
+  (x, y, l) => IntCons(x, IntCons(y, l))
 
 val addToFrontPartlyCurried: (Int, Int) => IntList => IntList =
-  TODO
+  (x, y) => (l) => IntCons(x, IntCons(y, l))
 
 val addToFrontCurried: Int => Int => IntList => IntList =
-  TODO
+  x => y => l => IntCons(x, IntCons(y, l))
 
 def addToFrontCurriedDef(x: Int)(y: Int)(l: IntList): IntList =
-  ???
+  IntCons(x, IntCons(y, l))
 
 def containsBasic(l: IntList, n: Int): Boolean =
   !l.isEmpty && (n == l.head || contains(l.tail, n))
 
 def containsAnon: (IntList, Int) => Boolean =
-  TODO
+  (l, n) => !l.isEmpty && (n == l.head || contains(l.tail, n))
 
 def containsCurried: IntList => Int => Boolean =
-  TODO
+  l => n => !l.isEmpty && (n == l.head || contains(l.tail, n))
 
 def containsCurriedDef(l: IntList)(n: Int): Boolean =
-  ???
+  !l.isEmpty && (n == l.head || contains(l.tail, n))
 
 def headHasPropertyBasic(p: Int => Boolean, l: IntList): Boolean =
   !l.isEmpty && p(l.head)
 
 val headHasPropertyAnon: ((Int => Boolean), IntList) => Boolean =
-  TODO
+  (f, l) => !l.isEmpty && f(l.head)
 
 val headHasPropertyCurried: (Int => Boolean) => IntList => Boolean =
-  TODO
+  f => l => !l.isEmpty && f(l.head)
 
 def headHasPropertyCurriedDef(p: Int => Boolean)(l: IntList): Boolean =
-  ???
+  !l.isEmpty && p(l.head)
 
-val headIsEven2 =
-  TODO
-val headIsPositive2 =
-  TODO
+val headIsEven2 = headHasPropertyCurried(_ % 2 == 0)
+val headIsPositive2 = headHasPropertyCurried(_ >= 0)
 
 val headHasPropertyCurried0: (Int => Boolean) => IntList => Boolean =
   (p: Int => Boolean) => (l: IntList) => !l.isEmpty && p(l.head)
@@ -201,14 +199,11 @@ val cs214All =
 val cs214Staff =
   IntCons(654321, IntCons(333444, IntNil()))
 
-def isRegisteredForCS214Def(sciper: Int): Boolean =
-  ???
+def isRegisteredForCS214Def(sciper: Int): Boolean = containsBasic(cs214All, sciper)
 
-val isRegisteredForCS214Val =
-  TODO
+val isRegisteredForCS214Val = containsCurried(cs214All)
 
-def isCS214StudentDef(sciper: Int): Boolean =
-  ???
+def isCS214StudentDef(sciper: Int): Boolean = containsBasic(cs214All, sciper) && !containsBasic(cs214Staff, sciper)
 
 def andLifter(f: Int => Boolean, g: Int => Boolean): Int => Boolean =
   n => f(n) && g(n)
@@ -216,8 +211,8 @@ def andLifter(f: Int => Boolean, g: Int => Boolean): Int => Boolean =
 def notLifter(f: Int => Boolean): Int => Boolean =
   n => !f(n)
 
-val isCS214StudentVal =
-  TODO
+val isCS214StudentVal = andLifter(containsCurried(cs214All), notLifter(containsCurried(cs214Staff)))
 
 def isCourseStudentDefPartlyCurried(all: IntList, staff: IntList): Int => Boolean =
-  ???
+  val diff = difference(all, staff)
+  containsCurried(diff)
