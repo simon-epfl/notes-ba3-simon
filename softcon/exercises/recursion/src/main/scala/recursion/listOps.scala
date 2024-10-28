@@ -114,7 +114,10 @@ def init(l: IntList): IntList =
   ???
 
 def contains(l: IntList, n: Int): Boolean =
-  ???
+  l match
+    case IntCons(head, tail) if n == head => true
+    case IntCons(head, tail) => contains(tail, n)
+    case IntNil() => false
 
 def isSubset(l: IntList, L: IntList): Boolean =
   ???
@@ -123,7 +126,10 @@ def intersection(l: IntList, L: IntList): IntList =
   ???
 
 def difference(l: IntList, L: IntList): IntList =
-  ???
+  l match
+    case IntCons(head, tail) if !contains(L, head) => IntCons(head, difference(tail, L))
+    case IntCons(head, tail) => difference(tail, L)
+    case IntNil() => IntNil()
 
 def minMax(l: IntList): (Int, Int) =
   def minMaxHelper (l: IntList, currentMin: Int, currentMax: Int): (Int, Int) =
