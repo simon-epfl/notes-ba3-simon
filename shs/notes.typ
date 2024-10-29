@@ -434,6 +434,8 @@ Quand la consitution est révisée, un vote par referendum est obligatoire. Cert
 
 Il intervient si 50,000 personnes avec le droit de vote signent la demande de referendum.
 
+== Les conditions de validité du vote
+
 Il y a les mêmes conditions que l'initiative mais aussi le fait que la question soit formulée de manière à ne pas influencer les électeurs et ne pas les induire en erreur.
 
 #example[
@@ -455,3 +457,7 @@ Les autorités doivent donner des informations objectives, transparentes, propor
 ]
 
 La constatation d'un manquement, d'une irrégularité lors d'un vote n'implique pas forcément que le vote est invalidé, le résultat doit être serré.
+
+Vote par correspondance : nécessite deux enveloppes.
+
+Le principe n'est pas absolu, dans le canton d'Appenzell, les votations ont lieu sur la place du village, et les chefs de famille votent avec leur épée => pas de secret.
