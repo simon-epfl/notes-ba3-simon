@@ -3,6 +3,7 @@ package poly
 import poly.MyList.*
 import scala.annotation.tailrec
 import cs214.TODO
+import java.util.function.IntConsumer
 
 def map[A, B](l: MyList[A])(f: A => B): MyList[B] =
   l match
@@ -88,7 +89,7 @@ def flatMap[A, B](l: MyList[A])(f: A => MyList[B]): MyList[B] =
 def flatten[A](l: MyList[MyList[A]]): MyList[A] = flatMap(l)(identity)
 
 def crossProduct[A, B](l1: MyList[A], l2: MyList[B]): MyList[(A, B)] =
-  ???
+  flatMap(l1)(el => flatMap(l2)(el2 => Cons((el, el2), Nil)))
 
 def allThreeLetterWords(words: MyList[String]): MyList[String] =
   filter(words)(_.length == 3)
