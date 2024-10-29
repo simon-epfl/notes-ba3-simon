@@ -34,5 +34,7 @@
 
 If verilator can not be built on your computer, you can use the docker image:
 ```bash
-sudo docker run -ti -v ${PWD}:/work --user root:root verilator/verilator:latest --timescale 1ns/1ns --top-module tb --cc --exe --binary --timing --trace --trace-underscore -O2 lu.sv tb.sv
+sudo docker run -ti -v ${PWD}:/work --user root:root \ 
+verilator/verilator:latest --timescale 1ns/1ns --top-module tb \
+--cc --exe --binary --timing --trace --trace-underscore -O2 lu.sv tb.sv
 ```
