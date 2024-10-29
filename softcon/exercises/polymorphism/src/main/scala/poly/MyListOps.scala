@@ -61,15 +61,17 @@ def last[A](l: MyList[A]): A =
 
 val capitalizeString: MyList[Char] => MyList[Char] = (l) => map(l)(_.toUpper)
 
+case class WordCountState(count: Int, lastWasWS: Boolean)
+
 def wordCount(l: MyList[Char]): Int =
-  def discardWord(l: MyList[Char]): MyList[Char] =
-    if l.isEmpty || l.head.isWhitespace then l
-    else discardWord(l.tail)
-
-  if l.isEmpty then 0
-  else if l.head.isWhitespace then wordCount(l.tail)
-  else 1 + wordCount(discardWord(l))
-
+  (foldLeft(l)(
+    WordCountState(0, true),
+    (state, charact) =>
+      if charact.isWhitespace then WordCountState(state.count, true)
+      else
+        if state.lastWasWS then WordCountState(state.count+1, false)
+        else WordCountState(state.count, false)
+  )).count
 
 def append[A](l1: MyList[A], l2: MyList[A]): MyList[A] = l1 match
   case Nil         => l2
@@ -106,13 +108,14 @@ def sum0(l: MyList[Int]): Int = l match
 
 def sum1(l: MyList[Int]): Int =
   // @tailrec // Uncomment this line.
-  def sum(l: MyList[Int], acc: Int): Int =
-  ???
+  def sum(l: MyList[Int], acc: Int): Int = ???
   sum(l, 0)
 
 // @tailrec // Uncomment this line.
 def foldLeft[A, B](l: MyList[A])(base: B, f: (B, A) => B): B =
-  ???
+  l match
+    case Nil => base
+    case Cons(x, xs) => foldLeft(xs)(f(base, x), f)
 
 def sum0Fold(l: MyList[Int]): Int =
   ???

@@ -51,3 +51,11 @@ object Humain {
   def descriptionGenerale(): String = "Les humains sont des êtres vivants qui respirent et peuvent marcher."
 }
 ```
+
+=== Case class
+
+```scala
+case class WordCountState(count: Int, lastWasWS: Boolean)
+```
+
+automatiquement l'égalité par valeur (pas référence)
