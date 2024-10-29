@@ -110,7 +110,9 @@ def sum0(l: MyList[Int]): Int = l match
 
 def sum1(l: MyList[Int]): Int =
   // @tailrec // Uncomment this line.
-  def sum(l: MyList[Int], acc: Int): Int = ???
+  def sum(l: MyList[Int], acc: Int): Int =
+    if l.isEmpty then acc
+    else sum(l.tail, l.head + acc)
   sum(l, 0)
 
 // @tailrec // Uncomment this line.
@@ -120,20 +122,18 @@ def foldLeft[A, B](l: MyList[A])(base: B, f: (B, A) => B): B =
     case Cons(x, xs) => foldLeft(xs)(f(base, x), f)
 
 def sum0Fold(l: MyList[Int]): Int =
-  ???
+  foldRight(l)((el, acc) => el + acc, 0)
 def sum1Fold(l: MyList[Int]): Int =
-  ???
+  foldLeft(l)(0, (acc, el) => el + acc)
 
 def reverseAppend[A](l1: MyList[A], l2: MyList[A]): MyList[A] =
-  ???
+  foldLeft(l1)(l2, (cList, el) => Cons(el, cList))
 
 def reverse[A](l: MyList[A]): MyList[A] = reverseAppend(l, Nil)
 
-val countEven: MyList[Int] => Int =
-  TODO
+val countEven: MyList[Int] => Int = (l) => foldLeft(l)(0, (sum, el) => if el % 2 == 0 then sum + 1 else sum)
 
-val totalLength: MyList[String] => Int =
-  TODO
+val totalLength: MyList[String] => Int = (strings) => foldLeft(strings)(0, (sum, el) => el.length() + sum)
 
 // A polymorphic method:
 def foo[A](xs: List[A]): List[A] = ???
