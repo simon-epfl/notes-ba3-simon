@@ -376,3 +376,82 @@ TODO: orientation sexuelle, communauté, etc. voir article deux six un bis
 ]
 
 Le fait de bafouer les convictions d'autri, incitation au crime et à la violence, interdiction de la pornographie (exception pour le contexte artistique).
+
+= La démocratie en Suisse
+
+On peut voter au niveau communal, cantonal, ou fédéral.
+
+Article 136 de la constitution, droit politique : le droit d'élire et d'être élu
+
+== TODO: système bicaméral ?
+
+Système bicaméral : les deux chambres du parlement ont les deux compétences.
+
+#example[
+  Une candidate décide de changer de partie juste après avoir été élue.
+
+  Certains citoyens affirment qu'ils ont été trompés.
+  Le tribunal fédéral décide de tout de même autoriser ce changement de parti.
+]
+
+Élections qui se jouent sur deux tours.
+
+== Initiative populaire (au niveau fédéral)
+
+Le droit d'initiative populaire "pouvoir de premier mot", et le referendum "pouvoir de dernier mot".
+
+L'initiative populaire permet de lancer une réforme, de demander à ce que le parlement adopte un projet.
+
+Au niveau fédéral, l'initiative populaire est limitée à la constitution (on peut demander à la modifier, à ajouter un article p. exemple, etc.).
+
+Ce sont des personnes qui vont se mettre ensemble autour d'un projet. Ils doivent récolter 100,000 signatures pour le faire aboutir. Au début c'était 50,000 mais ça a changé.
+
+=== Conditions de validité
+
+*Unité de la forme :* l'initiative populaire peut être sous la forme du projet rédigé (un comité soumet un article déjà écrit), ou sous la forme d'un projet général (le parlement doit rédiger l'article).
+
+*Unité de la matière :* : l'initiative populaire ne porte que sur un aspect.
+
+#example[
+  Une initiative du PDC (parti démocrate chrétien) contre la fiscalisation du mariage, qui vise à supprimer la fiscalisation des couples mariés comme une seule personne fiscale. (ils voulaient que + de gens soient mariés).
+
+  Cet article commençait par "le mariage est l'union d'un homme et d'une femme" #sym.arrow on mélange tout, ça ne respecte pas l'unité de la matière.
+]
+
+*Conformité* au droit internationale.
+
+*Réalisabilité* de l'initiative.
+
+#example[
+  Une initiative portait sur des questions budgétaires pour l'année 1955, déposée en décembre 1954. On ne peut pas revenir sur le budget, pas réalisable, on annule.
+]
+
+== Referendum obligatoire
+
+Quand la consitution est révisée, un vote par referendum est obligatoire. Certains traités (de sécurité collective, supranationaux, d'importance fondamentale), sont soumis au vote obligatoire. P. ex si la Suisse aidérait à l'OTAN ou à l'UE.
+
+== Referendum facultatif
+
+Il intervient si 50,000 personnes avec le droit de vote signent la demande de referendum.
+
+Il y a les mêmes conditions que l'initiative mais aussi le fait que la question soit formulée de manière à ne pas influencer les électeurs et ne pas les induire en erreur.
+
+#example[
+  Une votation populaire à Zurich, la question était "voulez-vous recommander aux ". TODO
+
+  En matière d'énergie nucléaire, les cantons doivent donner leur avis (via une votation).
+  La présence de "dans l'intérêt" donne un argument dans la question #sym.arrow refusée.
+]
+
+Les autorités doivent donner des informations objectives, transparentes, proportionnées (brochure explicative, etc.). Ça ne s'applique pas au privé.
+
+#example[
+  Une votation pour la fiscalité des couples mariés.
+
+  Les chiffres donnés par le conseil fédéral dans leur brochure étaient faux.
+  Ils avaient affirmés que le nombre de couples mariés concernés était de 80,000 alors qu'en fait c'était 400,000.
+
+  Donc la votation de 2016 a été annulée.
+]
+
+La constatation d'un manquement, d'une irrégularité lors d'un vote n'implique pas forcément que le vote est invalidé, le résultat doit être serré.
