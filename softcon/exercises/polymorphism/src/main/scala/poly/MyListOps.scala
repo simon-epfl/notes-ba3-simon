@@ -81,10 +81,11 @@ extension [A](l: MyList[A])
   def ++(that: MyList[A]): MyList[A] = append(l, that)
 
 def flatMap[A, B](l: MyList[A])(f: A => MyList[B]): MyList[B] =
-  ???
+  l match
+    case Nil => Nil
+    case Cons(x, xs) => f(x) ++ flatMap(xs)(f)
 
-def flatten[A](l: MyList[MyList[A]]): MyList[A] =
-  ???
+def flatten[A](l: MyList[MyList[A]]): MyList[A] = flatMap(l)(identity)
 
 def crossProduct[A, B](l1: MyList[A], l2: MyList[B]): MyList[(A, B)] =
   ???
