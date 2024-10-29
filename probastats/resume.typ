@@ -92,6 +92,10 @@ Continue : $intinf f_D (x) x d x$
 
 Attention, c'est la P.D.F. qu'on intègre, parfois il faut dériver la C.D.F.
 
+$ "Cov"(X, Y) := E(X Y) - E(X)E(Y) $
+
+if the covariance is zero, then $X, Y$ are independent.
+
 == Variance
 
 $"var"(X) = E(X^2) - E(X)^2$
