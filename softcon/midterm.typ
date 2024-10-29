@@ -5,3 +5,11 @@
 - on utilise pas `Math.max` mais `scala.math.max`.
 
 - ne pas oublier que les chaînes de caractères `String` disposent des propriétés `.head`, `.tail`, etc.
+
+- on peut créer des contextes :
+```scala
+enum Context:
+  case Empty
+  case Cons(name: String, value: Int, rem: Context)
+```
+Une clef associée à une valeur dans un contexte est appelée un "Binding".
