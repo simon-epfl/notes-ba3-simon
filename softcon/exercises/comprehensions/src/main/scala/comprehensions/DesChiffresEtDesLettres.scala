@@ -4,19 +4,29 @@ import java.util.Locale
 
 object DesLettres:
   def scramble(word: String): String =
-    ???
+    word.toUpperCase().sorted
 
   def scrambleList(allWords: Set[String]): Map[String, Set[String]] =
-    ???
+    allWords.groupBy(scramble)
 
   def exactWord(allWords: Set[String], letters: String): Set[String] =
-    ???
+    scrambleList(allWords).getOrElse(scramble(letters), Set.empty)
 
   def compatible(small: String, large: String): Boolean =
-    ???
+    (small, large) match
+      case ("", _) => true
+      case (_, "") => false
+      case (_, _) =>
+        if small.head  == large.head then compatible(small.tail, large.tail)
+        else if small.head > large.head then compatible(small, large.tail)
+        else false
 
   def longestWord(allWords: Set[String], letters: String): Set[String] =
-    ???
+    val scrambled = scramble(letters)
+    (for
+      (word, subwords) <- scrambleList(allWords)
+      if compatible(word, scrambled)
+    yield subwords).maxByOption(_.head.length).getOrElse(Set.empty)
 
 object DesChiffres:
   trait Expr:
@@ -60,8 +70,27 @@ object DesChiffres:
       if n2 != 0 && n1 % n2 == 0 then Some(n1 / n2) else None
     val opStr = "/"
 
+
+/* 
+
+(1, 2, 3)
+
+
+(1), (2, 3)
+(1, 2), (3)
+(2, 3), (1)
+(1, 2, 3), ()
+
+ */
+
   def partitions[A](l: List[A]): List[(List[A], List[A])] =
-      ???
+    l match
+      case Nil => List((Nil, Nil))
+      case head :: next =>
+        for
+          (l1, l2) <- partitions(next)
+          p <- List((head :: l1, l2), (head :: l2, l1))
+        yield p
 
   def allTrees(ints: List[Int]): List[Expr] =
       ???

@@ -6,6 +6,8 @@
 
 - ne pas oublier que les chaînes de caractères `String` disposent des propriétés `.head`, `.tail`, etc.
 
+- ne pas oublier les `.toList` sur les `for comprehensions`.
+
 - on peut créer des contextes :
 ```scala
 enum Context:

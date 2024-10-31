@@ -47,6 +47,7 @@ interrupt_handler:
   # MIE = 0
 
   # là le CPU clear le MIP.
+  # mais nous on lit le MIP.
 
   # là on doit (nous) save les registers
 
@@ -59,3 +60,9 @@ interrupt_handler:
   # MIE = MPIE
   # PC = MEPC
 ```
+
+==== Service routines
+
+Toujours sauver les registers si pas de handler.
+
+Quand on des nested interrupts, on sauvegarde dans le `mepc` dans `t0`, puis `t0` dans le stack. 

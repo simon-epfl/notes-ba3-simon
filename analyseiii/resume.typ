@@ -55,3 +55,26 @@ mat(
 $ arrow.double.r " (when taking the norm) " integral_omega sqrt(1 + ((d Phi)/(d s))^2 + ((d Phi)/(d t))^2) d s d t $
 
 
+== Divergence Theorem
+
+$ integral integral_(partial Omega) arrow(F) dot arrow(n) " " d arrow(S) = integral integral integral_(Omega) "div"(F) d x_1 d x_2 d x_3 $
+
+$ integral integral_(partial Omega) arrow(F(Phi(arrow(x)))) dot arrow(n) dot norm(arrow(partial_s Phi) times arrow(partial_t Phi)) " " d arrow(S) = integral integral integral_(Omega) "div"(F) d x_1 d x_2 d x_3 $
+
+On définit une paramétrisation du volume $phi(x, y)$, et $Phi(x, y) = (x, y, phi(x, y))$. 
+
+Pour trouver le vecteur normal :
+
+$ arrow(n) = (partial_x Phi(arrow(x)) times partial_y Phi(arrow(x)))/(norm(partial_x Phi(arrow(x)) times partial_y Phi(arrow(x)))) $
+
+$ arrow(n) = (partial_phi Phi(arrow(x)) times partial_y Phi(arrow(x)))/(norm(partial_x Phi(arrow(x)) times partial_y Phi(arrow(x)))) $
+
+== Déterminant Jacobienne
+
+En coordonnées sphériques :
+
+$ det = r^2 sin(theta)$
+
+En coordonées polaires 
+
+$ det = r$

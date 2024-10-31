@@ -92,10 +92,6 @@ Continue : $intinf f_D (x) x d x$
 
 Attention, c'est la P.D.F. qu'on intègre, parfois il faut dériver la C.D.F.
 
-$ "Cov"(X, Y) := E(X Y) - E(X)E(Y) $
-
-if the covariance is zero, then $X, Y$ are independent.
-
 == Variance
 
 $"var"(X) = E(X^2) - E(X)^2$
@@ -115,6 +111,11 @@ $ f_D (x) = 1/(sigma sqrt(2 pi)) exp(-(x - mu)^2/(2 sigma^2)) $
 
 $mu$ est la moyenne, l'espérance de la distribution \
 $sigma$ est l'écart-type
+
+Si on a une suite $arrow(X)$ de $n$ IID $X$ :
+
+$ E(arrow(X)) = 1/n dot n dot E(X_i) = mu $
+$ "var"(arrow(X)) = (1/n)^2 dot n dot ("var"(X_i))^2 = 1/n sigma^2 $
 
 === Standard Normal Distribution
 
@@ -137,3 +138,11 @@ Si on veut $Phi(1.51)$, on prend la ligne $1.5"(colonne)"$ et la colonne 1.
 === Conditional pdf (2 variables)
 
 $ f_(X \/ Y) (x \/ y) = integral_(- infinity)^(+ infinity) f_(X, Y)(x, y)f_Y (y) d y $
+
+== Covariance
+
+$ "Cov"(X, Y) := E(X Y) - E(X)E(Y) $
+
+if $X, Y$ are independent then the covariance is zero (the converse is false!).
+
+$ "corr"(X, Y) = "cov"(X, Y)/({"var"(X)"var"(Y)}^(1/2)) $
