@@ -9,6 +9,8 @@
 
 $ arrow(F) = k (q_a q_b)/(r^2) $
 
+$ k = 1/(4 pi epsilon_0) $
+
 Méthode pour calculer la force exercée par la barre sur $q_0$.
 
 #image("posts/exo1.png", width: 40%)
@@ -42,6 +44,8 @@ $ Phi_E = integral arrow(E(r)) dot d arrow(S) = Q_"int"/epsilon_0 $
 En fait on va entourer nos charges avec une forme (par exemple une sphère), donc on aura $Q_"int"$ et on va calculer 
 $d arrow(S)$ est toujours orthogonal à la surface par laquelle les charges passent (donc si le champ est dans le même sens alors le produit scalaire fera 1).
 
+Dans le cas d'un condensateur plan : $E = sigma/(2 epsilon_0)$.
+
 == Potentiel électrique 
 
 Ce n'est pas un vecteur. C'est comparable à la hauteur en méca.
@@ -59,6 +63,8 @@ Pour une surface avec une distribution de charges continue :
 $ V(r) = integral_S k d_q/r $
 
 Attention $V$ est un scalaire, pas un vecteur !
+
+TODO clarify avec Valerio : Si dans un circuit on a une différence de potentiel entre la borne + d'une résistance et la borne -, on sait qu'elle augmente/diminue linéairement (le champ est constant).
 
 == Conservation de l'énergie
 
@@ -80,6 +86,10 @@ $ W_(A arrow B) = Delta U $
 (par exemple en méca $W_(A arrow B) = m g h_a - m g h_b$)
 
 Si $nabla V = 0$, le potentiel est constant, ça signifie que le champ est nul dans la direction dans laquelle on effectue le travail, mais on peut avoir un champ perpendiculaire à la direction.
+
+=== Puissance dissipée
+
+$P = R i^2$
 
 == Propriété des conducteurs dans un cas électrostatique
 
@@ -114,6 +124,8 @@ Dans le cas d'un condensateur, $Q = C dot V$
 Ou $Q = C/(Delta V)$ pour un condensateur, avec $Delta V$ la différence de potentiel entre les deux plaques.
 
 $ C = (epsilon A)/d  $
+plus exactement :
+$ C = (epsilon K_f A)/d $
 
 donc C ne dépend que de la géométrie du condensateur
 
@@ -145,8 +157,7 @@ La tension va généralement du - au + d'un générateur.
 
 === Règle des noeuds (pour un noeud donné)
 $sum_k i_k = 0$ \
-$sum_n i_"in" = sum_n
- i_"out"$ 
+$sum_n i_"in" = sum_n i_"out"$ 
 
 === Règle des mailles (autour de chaque maille fermée)
 
@@ -168,9 +179,9 @@ On a qu'à l'état d'équilibre (quand le condensateur est chargé), le courant 
 $ C V = q arrow.r.double C (d V)/(d t) = (d q)/(d t) = i $
 $ "donc " i = C (d q)/(d t) $
 
-- partir de la loi $U_c$ (le générateur) $ + U_r$ (la tension générée par la résistance du condensateur) $ = 0$.
-- $ U_c + R C (d U)/(d t) = 0 $
-- $ Q / (R C) = (d U)/(d t) $
+- partir de la loi $V_c$ (le générateur) $ + V_r$ (la tension générée par la résistance du condensateur) $ = 0$.
+- $ V_c + R C (d V)/(d t) = 0 $
+- $ Q / (R C) = (d V)/(d t) $
 Résoudre. 
 
 === Charge
