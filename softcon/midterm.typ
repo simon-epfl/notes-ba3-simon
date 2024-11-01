@@ -61,3 +61,70 @@ case class WordCountState(count: Int, lastWasWS: Boolean)
 ```
 
 automatiquement l'égalité par valeur (pas référence)
+
+== Variance
+
+=== Covariance
+
+```scala
+enum MyList[+A] {
+  case Nil
+  case Cons(head: A, tail: MyList[A])
+}
+```
+
+ça nous permet d'écrire :
+
+```scala
+MyList[Chien] listeChiens = ... // blabla
+MyList[Animal] listeAnimaux = listeChiens;
+// compile ! ne compilerait pas en Java, ou sans le `+`. 
+```
+
+=== Contravariance
+
+```scala
+class Veterinaire[-A] {
+  def heal(animal: A): Unit = animal.heal()
+}
+```
+
+ça nous permet d'écrire :
+
+```scala
+class Animal {
+  def heal(): Unit = println("Animal heals")
+}
+
+class Dog extends Animal {
+  override def heal(): Unit = println("Dog heals")
+}
+
+val animalVeterinaire: Veterinaire[Animal] = new Veterinaire[Animal]
+val dogVeterinaire: Veterinaire[Dog] = animalVeterinaire
+
+dogVeterinaire.heal(new Dog()) // accepte des dog!
+```
+
+=== Invariance
+
+```scala
+class Container[A](value: A) {
+  def get: A = value
+}
+```
+
+Par défaut, les types en scala sont invariants :
+
+```scala
+val dogContainer: Container[Dog] = new Container(new Dog)
+val animalContainer: Container[Animal] = dogContainer  // Erreur de compilation
+```
+
+=== Bounds
+
+```scala
+S <: IntSet // S est un sous-type de IntSet ou un InSet lui-même
+S >: IntSet // S est un super-type de IntSet ou un IntSet lui-même
+S >: NonEmpty <: IntSet // S est un super-type de NonEmpty mais un sous-type de IntSet
+```
