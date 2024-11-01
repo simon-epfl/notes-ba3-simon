@@ -66,3 +66,16 @@ interrupt_handler:
 Toujours sauver les registers si pas de handler.
 
 Quand on des nested interrupts, on sauvegarde dans le `mepc` dans `t0`, puis `t0` dans le stack. 
+
+
+== Caches
+
+On veut à la fois pouvoir mettre des keys partout dans notre cache (fully associative), sans avoir une place dédiée #sym.arrow objectif est d'éviter les conflits
+
+mais en même temps on veut avoir une place dédiée pour chaque key #sym.arrow ça évite de devoir chercher où elle est (direct-mapped)
+
+par contre on peut mélanger les deux (k-way set associative), avoir une place dédiée pour un set (le hash des 4 derniers bits par exemple) puis le remplir comme on veut (on minimise la recherche mais il y en a un peu au sein du bloc)
+
+k-way sera toujours un k de power of 2
+
+pareil, la taille du cache sera toujours un power de 2, parce qu'on utilise une fonction de hashage qui part d'un nombre n de *bits*
