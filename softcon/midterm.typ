@@ -16,6 +16,8 @@ enum Context:
 ```
 Une clef associée à une valeur dans un contexte est appelée un "Binding".
 
+- quand on a une fonction qui a besoin d'être polymorphique mais que les paramètres disposent d'une propriété (par exemple comparer les éléments entre eux comme dans le `mergeSort`, c'est bien de prendre en paramètre une fonction en plus, comme `mergeSort(t: List[T], lt: (x: T, y: T) => Boolean))`.
+
 == Folds
 
 #image("posts/folds.png")
@@ -108,6 +110,8 @@ dogVeterinaire.heal(new Dog()) // accepte des dog!
 
 === Invariance
 
+Par défaut les `Array` scala sont invariants.
+
 ```scala
 class Container[A](value: A) {
   def get: A = value
@@ -128,3 +132,26 @@ S <: IntSet // S est un sous-type de IntSet ou un InSet lui-même
 S >: IntSet // S est un super-type de IntSet ou un IntSet lui-même
 S >: NonEmpty <: IntSet // S est un super-type de NonEmpty mais un sous-type de IntSet
 ```
+
+=== Functions
+
+Le sous-typage est en effet contravariant sur le type des paramètres et covariant sur le type de retour.
+
+If `A2 <: A1` and `B1 <: B2`, alors `A1 => B1 <: A2 => B2`. \
+"si ce que tu prends en entrée est plus large, et ce que tu donnes en sortie est plus précis, tu es un type plus large".
+
+=== Variance in class
+
+- covariant type parameters can only appear in method results.
+- contravariant type parameters can only appear in method parameters.
+```scala
+val cats: List[Cat] = new List[Cat] { /* implémentation */ }
+val animals: List[Animal] = cats  // Possible grâce à la covariance
+
+animals.add(new Dog)  // Ceci serait permis si `add` acceptait un `T`
+```
+- invariant type parameters can appear anywhere.
+
+== Tail recursion
+
+(reverse )

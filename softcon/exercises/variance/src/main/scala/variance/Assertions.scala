@@ -1,4 +1,4 @@
 package variance
 
-def assertSubtype = ???
+def assertSubtype[A, B >: A]: Unit = {}
 def assertSupertype = ???

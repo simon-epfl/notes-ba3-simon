@@ -93,7 +93,19 @@ object DesChiffres:
         yield p
 
   def allTrees(ints: List[Int]): List[Expr] =
-      ???
+    ints match
+      case List(n) => List(Num(n))
+      case Nil => Nil
+      case _ =>
+        for
+          partition <- partitions(ints)
+          if !partition._1.isEmpty && !partition._2.isEmpty
+          tree <- allTrees(partition._1)
+          tree2 <- allTrees(partition._2)
+          op <- List(Add(_, _), Div(_, _), Mul(_, _), Sub(_, _)) // nice trick
+          r = op(tree, tree2)
+          if !r.value.isEmpty
+        yield r
 
   def leCompteEstBon(ints: List[Int], target: Int): Option[Expr] =
-      ???
+    allTrees(ints).find(_.value == Some(target))

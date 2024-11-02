@@ -9,17 +9,26 @@ trait Stack[T]:
   /** Separate the top entry from the rest of the stack */
   def pop(): (Option[T], Stack[T])
 
+class MyStack[+T](data: List[T] = Nil) extends Stack[T] {
+
+  def peek(): Option[T] = if data.isEmpty then None else Some(data.head)
+
+  def pop(): (Option[T], Stack[T]) =
+    return (peek(), MyStack(data.tail))
+
+  def push[S >: T](t: S): Stack[S] =
+    return MyStack(t :: data)
+
+}
+
 def joinStacks[T](l: List[Stack[T]]): Stack[T] =
-  ???
+  MyStack(l.map(subL => subL.peek()).filter(el => el.isDefined).map(el => el.get))
 
-def mkStackInt(): Stack[Int] =
-  ???
+def mkStackInt(): Stack[Int] = MyStack((0 until 8).toList)
 
-def mkStackString(): Stack[String] =
-  ???
+def mkStackString(): Stack[String] = MyStack((0 until 8).toList.map(el => "coucou"))
 
-// Does this work?
-// val tops = joinStacks(List(mkStackInt(), mkStackString()))
+//val tops = joinStacks(List(mkStackInt(), mkStackString()))
 
 trait Drawer[T]:
   def get(): T
