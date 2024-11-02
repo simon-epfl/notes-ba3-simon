@@ -12,7 +12,14 @@ def merge(xs: List[Int], ys: List[Int]): List[Int] =
   ???
 
 def split[A](l: List[A]): (List[A], List[A]) =
-  ???
+  def splitHelper(l: List[A], i: Int): (List[A], List[A]) =
+    l match
+      case head :: next =>
+        val s = splitHelper(next, i + 1)
+        if i %2 == 0 then (head :: s._1, s._2) else (s._1, head :: s._2)
+      case Nil => (Nil, Nil)
+
+  splitHelper(l, 0)
 
 def mergeSort(xs: List[Int]): List[Int] =
     ???
@@ -22,7 +29,8 @@ def decimalToBaseN(number: Int, base: Int, acc: List[Int] = Nil): List[Int] =
   else decimalToBaseN(number/base, base, number % base :: acc)
 
 def coinChange(coins: List[Int], amount: Int): Int =
-  coins match
-    case List(n) => if n == amount then 1 else 0
+  if (amount < 0 ) then 0
+  else if (amount == 0) then 1
+  else coins match
     case Nil => 0
-    case head :: next => coinChange(next, amount) + coinChange(next, amount - head)
+    case head :: next => coinChange(next, amount) + coinChange(coins, amount - head)
