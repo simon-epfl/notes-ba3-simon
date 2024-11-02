@@ -156,4 +156,19 @@ animals.add(new Dog)  // Ceci serait permis si `add` acceptait un `T`
 
 == Tail recursion
 
-(reverse )
+Souvent on reverse la liste à la fin pour pouvoir utiliser `::` qui est en O(1) et pas `:+` qui est en O(n).
+
+== Parallelisation
+
+Un bon exemple :
+
+```scala
+def reducePar(op: (A, A) => A): A =
+  l match
+    case head :: Nil => head
+    case head :: next =>
+      val (left, right) = l.splitAt(l.length / 2)
+      val List(leftV, rightV) = List(left, right).par.map(_.reducePar(op)).toList
+      op(leftV, rightV)
+    case Nil => throw new Exception()
+```
