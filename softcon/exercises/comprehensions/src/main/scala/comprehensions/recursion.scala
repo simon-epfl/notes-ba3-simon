@@ -22,4 +22,7 @@ def decimalToBaseN(number: Int, base: Int, acc: List[Int] = Nil): List[Int] =
   else decimalToBaseN(number/base, base, number % base :: acc)
 
 def coinChange(coins: List[Int], amount: Int): Int =
-    ???
+  coins match
+    case List(n) => if n == amount then 1 else 0
+    case Nil => 0
+    case head :: next => coinChange(next, amount) + coinChange(next, amount - head)
