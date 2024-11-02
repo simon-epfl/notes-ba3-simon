@@ -9,7 +9,12 @@ def fastExp(base: Int, exp: Int): Int =
   else if exp % 2 == 0 then fastExp(math.pow(base, 2).toInt, exp/2) else base * fastExp(base, exp - 1)
 
 def merge(xs: List[Int], ys: List[Int]): List[Int] =
-  ???
+  (xs, ys) match
+    case (Nil, _) => ys
+    case (_, Nil) => xs
+    case (xHead :: xTail, yHead :: yTail) =>
+      if (xHead < yHead) xHead :: merge(xTail, ys)
+      else yHead :: merge(xs, yTail)
 
 def split[A](l: List[A]): (List[A], List[A]) =
   def splitHelper(l: List[A], i: Int): (List[A], List[A]) =
@@ -22,7 +27,12 @@ def split[A](l: List[A]): (List[A], List[A]) =
   splitHelper(l, 0)
 
 def mergeSort(xs: List[Int]): List[Int] =
-    ???
+  xs match
+    case head :: Nil => List(head)
+    case Nil => Nil
+    case head :: next =>
+      val (left, right) = split(xs)
+      merge(mergeSort(left), mergeSort(right))
 
 def decimalToBaseN(number: Int, base: Int, acc: List[Int] = Nil): List[Int] =
   if (number == 0) then acc
