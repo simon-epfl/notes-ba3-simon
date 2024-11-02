@@ -22,4 +22,10 @@ object FoldReduce:
 
   extension [A](l: List[A])
     def aggregate[B](z: B)(seqop: (B, A) => B, combop: (B, B) => B): B =
-      ???
+      l match
+        case head :: Nil => seqop(z, head)
+        case head :: next =>
+          val (left, right) = l.splitAt(l.length / 2)
+          val List(leftV, rightV) = List(left, right).par.map(_.aggregate(z)(seqop, combop)).toList
+          combop(leftV, rightV)
+        case Nil => z
