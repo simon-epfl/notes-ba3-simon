@@ -18,6 +18,8 @@ Une clef associée à une valeur dans un contexte est appelée un "Binding".
 
 - quand on a une fonction qui a besoin d'être polymorphique mais que les paramètres disposent d'une propriété (par exemple comparer les éléments entre eux comme dans le `mergeSort`, c'est bien de prendre en paramètre une fonction en plus, comme `mergeSort(t: List[T], lt: (x: T, y: T) => Boolean))`.
 
+- ne pas oublier le `seq.splitAt`.
+
 == Folds
 
 #image("posts/folds.png")
