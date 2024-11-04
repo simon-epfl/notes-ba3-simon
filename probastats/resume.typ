@@ -100,6 +100,13 @@ donc, quand continue : $intinf f_D (x) x^2 d x - E(X)^2$
 
 Standard deviation : $ sigma = sqrt("var"(X)) $
 
+if $X_1$ et $X_2$ independent:
+$ "var"(X_1 + a X_2) = "var"(X_1) + a^2"var"(X_2) $
+
+=== Variance de la distrib binomiale
+
+$"var"(X) = n p (1 - p)$
+
 == Normal distribution
 
 Impossible de calculer la CDF $Phi$ ! c'est pour ça qu'il existe des tables
@@ -141,8 +148,13 @@ $ f_(X \/ Y) (x \/ y) = integral_(- infinity)^(+ infinity) f_(X, Y)(x, y)f_Y (y)
 
 == Covariance
 
+Linéarité de la covariance : 
+$ "cov"(X+Y,Z+W)="cov"(X,Z)+"cov"(X,W)+"cov"(Y,Z)+"cov"(Y,W) $
+
 $ "Cov"(X, Y) := E(X Y) - E(X)E(Y) $
 
 if $X, Y$ are independent then the covariance is zero (the converse is false!).
 
 $ "corr"(X, Y) = "cov"(X, Y)/({"var"(X)"var"(Y)}^(1/2)) $
+
+$ "var"(a + b X + c Y) = b^2"var"(X) + 2 b c "cov"(X, Y) + c 2 "var"(Y) $
