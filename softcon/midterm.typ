@@ -20,6 +20,10 @@ Une clef associée à une valeur dans un contexte est appelée un "Binding".
 
 - ne pas oublier le `seq.splitAt`.
 
+- `to` is inclusive while `until` is exclusive.
+
+- associativity : peu importe les parenthèses (concaténation par exemple), commutatitivity : peu importe l'ordre (par exemple la somme).
+
 == Folds
 
 #image("posts/folds.png")

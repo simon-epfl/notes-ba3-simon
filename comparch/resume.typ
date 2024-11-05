@@ -50,9 +50,14 @@ interrupt_handler:
   # mais nous on lit le MIP.
 
   # là on doit (nous) save les registers
+  # attention à bien sauvegarder le mepc et mstatus
 
+  # avant d'appeler les service routines
+  # on doit pop les registers modifiés
+  # (entre le début de l'interrupt_handler) du stack
   # là on doit (nous) gérer les service routines
 
+  # avant on disable le MIE si on l'a remis
   # là on doit (nous) restaurer les registers
 
   mret
@@ -65,8 +70,7 @@ interrupt_handler:
 
 Toujours sauver les registers si pas de handler.
 
-Quand on des nested interrupts, on sauvegarde dans le `mepc` dans `t0`, puis `t0` dans le stack. 
-
+Quand on des nested interrupts, on sauvegarde le `mepc` dans `t0`, puis `t0` dans le stack. 
 
 == Caches
 
@@ -79,3 +83,23 @@ par contre on peut mélanger les deux (k-way set associative), avoir une place d
 k-way sera toujours un k de power of 2
 
 pareil, la taille du cache sera toujours un power de 2, parce qu'on utilise une fonction de hashage qui part d'un nombre n de *bits*
+
+=== Trouver où placer
+
+- block size, combien de words par tag
+- k-way, combien de block par ligne
+- une ligne est le résultat d'une fonction de hashage
+
+Par exemple on veut placer 20, on fait une division entière par $2^("block_size")$, puis un modulo du nombre de lignes.
+
+$20 $
+
+== Endianess
+
+=== Little endian
+
+Le moins significatif est stocké en premier. Exemple pour la valeur : `0x12345678`
+
+`0x100` stocke `0x78` \
+`0x101` stocke `0x56` \
+etc.

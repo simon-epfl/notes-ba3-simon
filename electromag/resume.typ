@@ -4,6 +4,7 @@
 - toujours justifier que le champ est uniforme car la distance entre les plaques est faible et les plaques sont grandes
 - $P = E/(d t)$
 - faire des matrices pour les équations loi mailles/noeuds
+- dans une trajectoire circulaire, une force de $(m v^2)/R$ doit tirer vers le centre (centripète).
 
 == Force électrostatique
 
@@ -191,3 +192,42 @@ $ V_C(t) = epsilon (1 - exp(-t / (R C))) $
 === Décharge
 
 $ V_C(t) = epsilon exp(-t / (R C)) $
+
+== Champ magnétique
+
+=== Unités
+
+$arrow(B)$ en Tesla (T) \
+Gauss $equiv 10^(-4) T$ 
+
+Si on a un courant i dans un fil de longueur $L$ et un champ magnétique $B$. La force est perpendiculaire au courant *et* au champ.
+
+$ arrow(F_B) = i arrow(L) times arrow(B) $
+$ =  (d q)/(d t) d arrow(l) times arrow(B) $
+$ = (d q) arrow(v) times arrow(B) $
+
+La force de Lorentz ne change pas la norme du vecteur vitesse mais la direction (pas de travai).
+
+$ arrow(F_("Lorentz")) = q arrow(v) times arrow(B) $
+
+Dans une trajectoire circulaire d'une charge de masse $m$:
+$ (m v^2)/r = q v B $
+donc :
+$ R = (m v)/(q B) " et " "freq" = 1/T = v/(2 pi r) = (q B)/(2 pi m) $
+
+à distance $r$ d'une charge, on a le champ magnétique $ arrow(B(r)) = mu_0/(4 pi) q 
+(arrow(v) times arrow(r))/(r^2) $
+
+$mu_0 = 4 pi 10^(-2)$ (en Tm/A).
+
+$ d B = mu_0/(4 pi) i (d arrow(l) times arrow(r))/(r^2) $
+
+$ B_"tot" = integral_(- L)^(+ L) d B $ 
+
+Norme du champ magnétique à distance $x$ du fil :
+
+$ B = (mu_0 i)/(2 pi x sqrt(x^2 + L^2)) $
+
+Pour $x << L$:
+
+$ B = (mu_0 i)/(2 pi x) $
