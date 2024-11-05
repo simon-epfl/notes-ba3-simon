@@ -461,3 +461,107 @@ La constatation d'un manquement, d'une irrégularité lors d'un vote n'implique 
 Vote par correspondance : nécessite deux enveloppes.
 
 Le principe n'est pas absolu, dans le canton d'Appenzell, les votations ont lieu sur la place du village, et les chefs de famille votent avec leur épée => pas de secret.
+
+= Le droit international et le droit interne
+
+== Rappel sur l'organisation interne de la Suisse
+
+L'Assemblée fédérale (le parlement) adopte les lois fédérales, et le Conseil fédéral (le gouvernement) adopte les ordonnances. La Confédération Helvétique (CH) englobe les cantons, qui englobent eux-mêmes des communes.
+
+Le droit international est l'ensemble des lois qui s'appliquent à la CH. Un des traités les plus importants est la CEDH.
+
+== La validité du droit international
+
+- les Etats *dualistes* considèrent qu'il y a d'un côté le droit international et d'un autre côté le droit interne et que pour que le droit international s'applique il doit être transposé dans une loi interne.
+- les Etats *monistes* considèrent qu'il y a un seul ordre juridique qui contient à la fois la Consitution, le droit cantonal, etc. et aussi le droit international.
+
+Voir article 190 de la cst.
+
+#example[
+  La Suisse, moniste, condamnée sous l'angle de l'art. 6, les personnes ont pu directement utiliser cet article de la CEDH.
+]
+
+#example[
+  La Grande-Bretagne, Danemark, Norvège, Suède sont des pays dualistes.
+]
+
+== Le rang du droit international
+
+Quel est la primauté entre le droit international et le droit interne en cas de conflit ?
+
+Le principe général est la primauté du droit international... mais pas absolu :
+
+#example[
+  La Suisse a été condamné par la cour européenne des droits de l'homme, par les ainées pour le climat (manquement dans l'action de la Suisse pour le climat et manquement dans le droit de recours des associations). Or, la CEDH ne peut pas contraindre la Suisse à adopter une loi spécifique, et le conseil fédéral a communiqué via la presse que le droit était jugé suffisant.
+]
+
+4 méthodes *d'interprétation d'une norme* :
+- son texte (les mots qui la composent)
+- la systématique (le texte dans lequel elle se situe)
+- l'historique de la norme
+- le but de la norme
+
+Le principe d'interprétation d'une norme interne, en cas de conflit avec le droit international, est de favoriser une interprétation de cette norme interne de façon à ce qu'elle soit conforme au droit international
+
+=== Droit international impératif
+
+Un noyau de règles internationales impératives, tellement importantes que l'état ne peut pas dire qu'il ne veut pas s'y soumettre.
+
+#example[
+  Interdiction de l'esclavage, la torture, le génocide, le principe du non-refoulement (interdiction de renvoyer des personnes dans leur pays si dans ce pays les personnes risquent de subir la mort, la torture, etc.).
+  
+  (mais pas la peine de mort, même si #underline[en Europe] c'est considéré comme impératif)
+]
+
+Le droit international impératif est aussi un critère pour la validité d'une initiative populaire.
+
+=== D'autres critères
+
+Certains traités forcent les participants à ne pas introduire de normes internes à l'encontre de ce traité.
+
+Art 5 alinéa 4 : la confédération des cantons respecte le droit international (respecte #sym.arrow un terme pas aussi fort que si on veut évoquer une primauté absolue). \
+les autorités sont tenues d'appliquer le droit international.
+
+On considère une primauté absolue entre le droit international et le droit cantonal, et entre le droit international et les ordonnances du conseil fédéral. Par contre, il peut y avoir des exceptions entre le droit international et les lois fédérales ou la constitution.
+
+*Jurisprudence Schubert :* si une loi fédérale a été appliquée en connaissance de cause de violation du droit international, la loi fédérale prime.
+
+=== Constitution fédérale
+
+Si la norme constitutionnelle existait avant l'arrêt du traité international, la norme constitutionnelle doit se retirer. Dans le cas inverse, comme lorsqu'une initiative populaire viole potentiellement le droit international, les choses sont plus compliquées.
+
+Le conseil fédéral affirme que l'adoption d'une initiative populaire contre un traité international est considérée comme un mandat implicite pour dénoncer le traité (c'est à dire que le conseil fédéral devrait le résilier).
+
+#example[
+  En 2014, lors de l'initiative concernant la gestion de l'immigration, le conseil fédéral affirmait qu'il y avait un risque que le traité soit dénoncé.
+
+  En cas d'acceptation, le conseil fédéral devait renégocier tous les traités allant à l'encontre de cette initiative. (par exemple renégocier le traité sur la libre circulation #sym.arrow ça n'a pas abouti)
+
+  L'assemblée fédérale a décidé de ne pas mettre en place toute l'initiative (de mettre en place l'esprit de l'initiative mais on préserve comme on peut le droit international).
+
+  Nouvel article, 121. a.
+  (alinéa 4) : #emph[Aucun traité international contraire au présent article ne sera conclu]
+]
+
+#example[
+  En 2020, l'initiative de limitation, qui visait à dénoncer complètement l'ALCP (l'accord de libre circulation des personnes), refusée par le peuple et les cantons.
+]
+
+#example[
+  L'initiative pour le renvoi des étrangers qui ont commis des infractions, prévoit de retirer *automatiquement* le titre de séjour s'ils ont été commis pour un acte de violence, d'infraction, de viol, d'abus social, etc.
+
+  Pose des questions sous l'angle de la proportionnalité. Aussi en conflit avec l'ALCP.
+]
+
+#example[
+  Une dame de 60 ans qui fait des petits ménages à droite à gauche, son mari oubli de déclarer les revenus, en tout 3,000 francs perçus en trop #sym.arrow pas renvoyée finalement mais si on appliquait à la lettre l'initiative populaire, elle aurait dû être renvoyée.
+]
+
+L'intêrét privé de la personne à rester est plus important que l'intérêt public du départ de la personne.
+La peine doit être faite en Suisse puis la personne est expulsée.
+
+#example[
+  Introduction en 2018 d'une base légale permettant aux assureurs (publics) d'effectuer la surveillance des assurés (détectives privés, GPS, ...).
+
+  La Suisse avait été condamnée par la CEDH car une assurée avait fait recours car cette surveillance était dépourvue de base légale suffisante pour justifier de cette restriction de vie privée.
+]
