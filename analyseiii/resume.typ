@@ -57,17 +57,34 @@ $ arrow.double.r " (when taking the norm) " integral_omega sqrt(1 + ((d Phi)/(d 
 
 == Divergence Theorem
 
+Il fonctionne en 2D et en 3D.
+
 $ integral integral_(partial Omega) arrow(F) dot arrow(n) " " d arrow(S) = integral integral integral_(Omega) "div"(F) d x_1 d x_2 d x_3 $
 
 $ integral integral_(partial Omega) arrow(F(Phi(arrow(x)))) dot arrow(n) dot norm(arrow(partial_s Phi) times arrow(partial_t Phi)) " " d arrow(S) = integral integral integral_(Omega) "div"(F) d x_1 d x_2 d x_3 $
 
+Avec $arrow(n)$ le vecteur normal par rapport à la surface en chaque point. \
 On définit une paramétrisation du volume $phi(x, y)$, et $Phi(x, y) = (x, y, phi(x, y))$. 
+
+Note : on ajoute $norm(arrow(partial_s Phi) times arrow(partial_t Phi))$ comme on ajoute la dérivée, parce que comme $s$ et $t$ sont perpendiculaires, le cross-product $arrow(a) times arrow(b) = norm(a) dot norm(b) dot sin(hat(a b))$ avec $hat(a b) = pi/2$ donc juste $norm(partial_s Phi) dot norm(partial_t Phi)$. 
 
 Pour trouver le vecteur normal :
 
 $ arrow(n) = (partial_x Phi(arrow(x)) times partial_y Phi(arrow(x)))/(norm(partial_x Phi(arrow(x)) times partial_y Phi(arrow(x)))) $
 
 $ arrow(n) = (partial_phi Phi(arrow(x)) times partial_y Phi(arrow(x)))/(norm(partial_x Phi(arrow(x)) times partial_y Phi(arrow(x)))) $
+
+== Green's Theorem
+
+Il fonctionne en 2D uniquement. On regarde sur la bordure comment ça tourne.
+
+$ integral_(partial Omega) arrow(F) dot arrow(J) d l  = integral integral "curl" arrow(F)(x_1, x_2) d x_1 d x_2  $
+
+avec $arrow(J)$ la dérivée de la 
+
+== Stoke's Theorem
+
+Il fonctionne en 3D.
 
 == Déterminant Jacobienne
 
