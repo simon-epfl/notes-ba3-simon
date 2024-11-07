@@ -6,7 +6,7 @@
 
 - ne pas oublier que les chaînes de caractères `String` disposent des propriétés `.head`, `.tail`, etc.
 
-- ne pas oublier les `.toList` sur les `for comprehensions`.
+- ne pas oublier les `.toList` sur les `for comprehensions` quand on commence à boucler à partir d'une séquence.
 
 - on peut créer des contextes :
 ```scala
