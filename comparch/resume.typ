@@ -50,7 +50,7 @@ interrupt_handler:
   # mais nous on lit le MIP.
 
   # là on doit (nous) save les registers
-  # attention à bien sauvegarder le mepc et mstatus
+  # attention à bien sauvegarder le mepc et mstatusp
 
   # avant d'appeler les service routines
   # on doit pop les registers modifiés
@@ -59,6 +59,9 @@ interrupt_handler:
 
   # avant on disable le MIE si on l'a remis
   # là on doit (nous) restaurer les registers
+
+  # parfois on doit faire address + 4
+  # quand l'exception vient d'une faulty exception
 
   mret
   # fait par le CPU :
