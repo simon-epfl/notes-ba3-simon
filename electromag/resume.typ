@@ -195,6 +195,8 @@ $ V_C(t) = epsilon exp(-t / (R C)) $
 
 == Champ magnétique
 
+#emoji.warning le champ créé par un objet c'est comme $omega$ (le vecteur rotation), ça dit dans quel sens ça tourne, pas vers quoi l'objet est attiré
+
 === Unités
 
 $arrow(B)$ en Tesla (T) \

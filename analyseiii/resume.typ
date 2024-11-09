@@ -78,13 +78,15 @@ $ arrow(n) = (partial_phi Phi(arrow(x)) times partial_y Phi(arrow(x)))/(norm(par
 
 Il fonctionne en 2D uniquement. On regarde sur la bordure comment ça tourne.
 
-$ integral_(partial Omega) arrow(F) dot arrow(J) d l  = integral integral "curl" arrow(F)(x_1, x_2) d x_1 d x_2  $
+$ integral_(partial Omega) arrow(F) dot arrow(J) d l  = integral integral_(Omega) "curl" arrow(F)(x_1, x_2) d x_1 d x_2  $
 
-avec $arrow(J)$ la dérivée de la 
+avec $arrow(tau)$ la dérivée de la 
 
 == Stoke's Theorem
 
 Il fonctionne en 3D.
+
+#image("posts/rotr.png")
 
 == Déterminant Jacobienne
 
