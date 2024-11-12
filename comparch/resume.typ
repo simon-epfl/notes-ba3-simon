@@ -146,4 +146,4 @@ On a $2^32 dot "4 bytes" = 2^30 dot 4 dot 4 " bytes" = 16 "G bytes !"$
 
 === TLB
 
-#image("./posts/schematlb.png", width: 80%)
+#image("./posts/schematlb.png", width: 88%)
