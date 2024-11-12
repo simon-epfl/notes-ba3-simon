@@ -565,3 +565,112 @@ La peine doit être faite en Suisse puis la personne est expulsée.
 
   La Suisse avait été condamnée par la CEDH car une assurée avait fait recours car cette surveillance était dépourvue de base légale suffisante pour justifier de cette restriction de vie privée.
 ]
+
+= Libertés de conscience et de croyance
+
+Art. 15 de la cst
+
+L'éducation religieuse est gérée par les parents jusqu'à 16 ans, puis après les enfants décident pour eux-mêmes.
+
+#example[
+  Dans la constitution, une loi sur l'interdiction de la dissimulation du visage (mais les lieux de culte ne sont pas visés) #sym.arrow amende de 1,000 francs.
+
+]
+
+Double aspect : individuel et institutionnel (neutralité religieuse de l'Etat).
+
+== Le plan individuel
+
+=== Aspect positif
+
+Art 15, alinéa 2-3.
+
+Chaque titulaire de la liberté religieuse peut :
+- avoir la religion de son choix
+- la pratiquer
+- exprimer ses convictions
+
+Qui sont les titulaires ? Toutes les personnes physiques, qu'importe la nationalité. Les personnes morales ne peuvent pas se prévaloir de la liberté religieuse pour éviter de payer l'impôt. Les personnes morales de droit privé (associations, église protestante) peuvent demander à ne pas payer l'impôt écclésiastique. (une distinction qui est faite pour signifier que les personnes morales de droit public sont des émanations de l'Etat).
+
+Qu'est-ce qu'une religion ? Il faut un contexte de conviction, de conception spirituelle relative à l'être humain et la divinité
+
+Une secte rentre effectivement dans ce cadre, mais elles demandent un engagement excessif, donc sont tout de même interdites.
+
+#example[
+  Affaire du temple solaire, suicide collectif.
+
+  Intérêt public #sym.arrow interdire ces sectes.
+]
+
+#example[
+  Refus de construction d'une église mais qui ne respectent pas les droits de construction (liées à la zone, à la taille, etc) #sym.arrow la communauté ne peut pas invoquer la liberté religieuse.
+]
+
+#example[
+  Personne communauté sikh, avec un turban, ne peut pas porter de casque à moto #sym.arrow sécurité routière prime sur sécurité religieuse.
+]
+
+=== Aspect négatif
+
+Art 15, alinéa 4.
+
+Nul ne peut être contraint d'adhérer à une communauté religieuse, de la pratiquer ou de recevoir une éducation religieuse.
+
+L'impôt ecclésiastique n'est pas obligatoire, il est possible de le demander à la commune.
+
+La commune ne peut pas imposer la croix comme seul monument funéraire dans les cimetières.
+
+== Plan institutionnel
+
+L'aspect de la neutralité religieuse de l'Etat.
+
+=== Une neutralité non absolue
+
+Préambule de la consitution : "au nom de Dieu tout puissant".
+
+Les cantons peuvent reconnaître certaines églises comme d'utilité publique, et qui bénéficient de certaines prestations. (ex. Canton de Vaud reconnaît comme d'util. pub. l'église catholique et l'église protestante).
+
+alors la communauté
+- peut percevoir des subventions de l'Etat
+- accès au mission d'aumonerie (accompagner les gens dans les hôpitaux)
+- accès au contrôle des habitants
+
+=== Laïcité des écoles publiques
+
+L'Etat surveille les écoles privées qui donnent un enseignement religieux, pour éviter les dérives.
+
+#example[
+  Question en France de l'abaya #sym.arrow interdiction de ces habits là.
+]
+
+La neutralité religieuse de l'Etat s'applique... à l'Etat. Et à l'école, l'Etat est représenté par les enseignants. Les étudiants ont donc normalement la possibilité de s'habiller comme ils le veulent.
+
+CEHD : les états peuvent imposer le crucifix en classe. En Suisse, ce n'est pas autorisé (plus de neutralité de l'Etat).
+
+#example[
+  Cours de natation : question de la dispense éventuelle. Arrêt rendu dans les années 1990 : oui il faut que les parents puissent se voir accorder une dispense s'ils demandent que l'enfant ne suive pas les cours pour des raisons religieuses.
+
+  Maintenant c'est l'inverse, pas d'obligation d'accorder la dispense.
+
+  Intérêt public, sécurité : tous les enfants doivent savoir nager. Aussi favoriser l'intégration de personnes d'autres religions.
+]
+
+Fonctions étatiques :
+- le mariage en Suisse est un mariage civil (le mariage religieux n'a pas d'effet sur l'état civil)
+- il y a des cimetières neutres (avec ou sans motifs religieux)
+
+#example[
+  Il y a 25 ans, une personne à Zurich a demandé à pouvoir être enterrée dans le cimetière communal avec le rite musulman. Tout était bon, sauf le fait de pouvoir reposer illimité dans le cimetière (à durée indéterminée).
+
+  Impossible d'obtenir une tombe sous ces conditions, le roulement des tombes permet d'obtenir de la place.
+]
+
+#example[
+  Gymnasien membre de l'église adventiste du 7ème jour. Les membres ne sont pas censés travailler le samedi. 
+
+  3 de ses 5 examens écrits tombent le samedi. Les autorités cantonales ont refusé sa dispense (dispense seulement en cas de force majeure).
+
+  Recours fait au tribunal fédéral.
+
+  Le tribunal fédéral lui a donné raison.
+]

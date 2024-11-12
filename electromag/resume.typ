@@ -233,3 +233,13 @@ $ B = (mu_0 i)/(2 pi x sqrt(x^2 + L^2)) $
 Pour $x << L$:
 
 $ B = (mu_0 i)/(2 pi x) $
+
+== Loi d'ampère
+
+$ integral.cont_C arrow(B) arrow(d l) = mu_0 sum i_"entourés" $
+Pour un cercle :
+$ B(r) 2 pi r = mu_0 i $
+
+== Moment magnétique
+
+$ arrow(mu) = i arrow(A) $
