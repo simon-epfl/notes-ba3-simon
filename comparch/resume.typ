@@ -115,16 +115,16 @@ etc.
 
 == Pages
 
-Chaque programme a plusieurs pages 0, 1, 2, 3, ... stockées un peu n'importe où dans la mémoire.
+Chaque programme a plusieurs pages 0, 1, 2, 3, ... stockées un peu n'importe où dans la mémoire (RAM *et* disque).
 Une page table permet de nous dire où se trouve chaque page dans la mémoire.
 
-Si on veut convertir une adresse virtuelle en adresse physique, il faut trouver la page. Pour ça on fait *numéro de la page* = `adresse_virtuelle / taille_page`. Ensuite on va voir dans la *Page Table* l'adresse de la page, et on ajoute `adresse_virtuelle mod taille_page` (*offset*).
+=== Adresse Virtuelle vers Adresse Physique
 
-Page table entry size, page table size?
+Si on veut convertir une adresse virtuelle en adresse physique, il faut trouver la page. Pour ça on fait *numéro de la page* = `adresse_virtuelle / taille_page` (ça revient à enlever $log("taille_page")$ bits de l'adresse virtuelle). Ensuite on va voir dans la *Page Table* l'adresse de la page (`page_table_base_address + page_table_entry_size * numero_page`), et on ajoute `adresse_virtuelle mod taille_page` (*offset*).
 
 Page table entry size = la taille que prend le fait de stocker une virtual address to physical address dans la mémoire. Cela peut inclure des informations additionnelles.
 
-Nombre d'adresse virtuelles = 
+Il y a donc plus de pages virtuelles que de pages physiques (ça compte le disque + la RAM).
 
 == Conversions
 
