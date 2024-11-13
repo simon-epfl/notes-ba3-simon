@@ -12,6 +12,17 @@ Toutes les adresses doivent être alignées sur la taille des données qu'elles 
 
 `li` supporte le chargement d'un immediate de 32 bits (tandis que toutes les autres opérations comme `addi`, la constante devant `lw`, etc.) ne supportent que des 12 bits.
 
+donc si on veut faire un AND avec 12 bits on ne doit pas faire ça :
+```yasm
+andi t0, t0, 0xFFF # sera -1 !
+# mais ça
+li t1, 0xFFF # sera 111..11 pendant 12 bits
+and t0, t0, t1
+```
+
+car ce qui compte quand on veut faire un `andi`, `xori`, etc. c'est la valeur du 12ème bit pour savoir si on sign-extend ou pas.
+donc 0x3 va donner 000000...011
+
 === Convention d'appel
 
 Même si on sait que la fonction `b` que notre fonction `a` va appeler ne modifie pas les saved registers, la fonction appelante doit *TOUJOURS* utiliser et sauvegarder les saved registers
@@ -30,11 +41,6 @@ lw s2, 8(sp)
 addi sp, sp, 12
 ```
 
-=== Sign Extend
-
-Quand on veut faire un `andi`, `xori`, etc. ce qui compte c'est la valeur du 12ème bit pour savoir si on sign-extend ou pas.
-
-donc 0x3 va donner 000000...011
 
 === Interrupt handler
 
@@ -85,14 +91,14 @@ mais en même temps on veut avoir une place dédiée pour chaque key #sym.arrow 
 
 par contre on peut mélanger les deux (k-way set associative), avoir une place dédiée pour un set (le hash des 4 derniers bits par exemple) puis le remplir comme on veut (on minimise la recherche mais il y en a un peu au sein du bloc)
 
-k-way sera toujours un k de power of 2
+k-way n'a pas besoin d'être un power of 2 mais si ce n'est pas le cas la taille totale ne sera pas un power of 2 donc c'est pas fou
 
 pareil, la taille du cache sera toujours un power de 2, parce qu'on utilise une fonction de hashage qui part d'un nombre n de *bits*
 
 === Trouver où placer
 
-- block size, combien de words par tag
-- k-way, combien de block par ligne
+- block size, ou line size, c'est combien d'éléments dans chaque ligne
+- k-way, combien de blocks par ligne
 - une ligne est le résultat d'une fonction de hashage
 
 nb de lignes = (nb de words total)/(block_size fois k)
@@ -126,11 +132,13 @@ Page table entry size = la taille que prend le fait de stocker une virtual addre
 
 Il y a donc plus de pages virtuelles que de pages physiques (ça compte le disque + la RAM).
 
+Quand on a un k-way cache et qu'on nous donne la taille d'une ligne, la taille associée à une ligne est k fois la taille donnée.
+
 == Conversions
 
-$2^30 = 1" GBytes"$ \
-$2^20 = 1" MBytes"$ \
-$2^10 = 1" KBytes"$
+$2^30 "bytes" = 1" GBytes"$ \
+$2^20 "bytes" = 1" MBytes"$ \
+$2^10 "bytes" = 1" KBytes"$
 
 On a $2^32 dot "4 bytes" = 2^30 dot 4 dot 4 " bytes" = 16 "G bytes !"$
 
