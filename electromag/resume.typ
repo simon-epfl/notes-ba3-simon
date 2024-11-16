@@ -76,6 +76,9 @@ L'énergie cinétique et l'énergie potentielle d'une charge $q$ dans un potenti
 $ K = 1/2 m v^2 $
 $ U = V dot q $
 
+dans un circuit on considère que la vitesse est nulle dans un conducteur donc :
+$ P = E/(d t) = (d U)/(d t) = V dot i $
+
 U s'exprime toujours comme une énergie potentielle entre une charge et une ou plusieurs autres charges.
 
 En méca, l'énergie potentielle dépend du champ dans lequel la charge est introduite (en méca $U = m g h$). En électromag pareil, elle dépend des autres charges présentes autour.
@@ -243,3 +246,16 @@ $ B(r) 2 pi r = mu_0 i $
 == Moment magnétique
 
 $ arrow(mu) = i arrow(A) $
+
+où $norm(arrow(A))$ est la surface que le câble entoure et $arrow(A)$ pointe hors de la surface (comme le vecteur de rotation).
+
+== Loi de Lenz (flux magnétique)
+
+$ epsilon = -d(Phi_B)/(d t) $
+$ Phi_B = integral_S arrow(B) d arrow(S) $
+Si B est constant sur la surface $Phi_B = B dot S$.
+
+== Vitesse angulaire
+
+$ omega = (2 pi)/T $
+$ f = 1/T $

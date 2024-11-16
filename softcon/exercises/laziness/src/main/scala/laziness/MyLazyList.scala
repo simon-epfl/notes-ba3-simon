@@ -67,12 +67,18 @@ object MyLazyList:
       else
         MyLazyList(() =>
           self.state match
-            case LZNil => ???
-            case LZCons(x, xs) => ???
+            case LZNil => LZNil
+            case LZCons(x, xs) => LZCons(x, xs.take(n - 1))
         )
 
     def drop(n: Int): MyLazyList[A] =
-      ???
+      if n <= 0 then empty
+      else
+        MyLazyList(() =>
+          self.state match
+            case LZNil => LZNil
+            case LZCons(x, xs) => if n <= 0 then self.state else xs.drop(n - 1).state
+        )
 
     def map[B](f: A => B): MyLazyList[B] =
       ???

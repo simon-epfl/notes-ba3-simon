@@ -97,3 +97,26 @@ $ det = r^2 sin(theta)$
 En coordonées polaires 
 
 $ det = r$
+
+#pagebreak()
+
+== Distributions
+
+$D$ c'est l'ensemble des fonctions infinement dérivables (lisses) dont le support est contenu dans un certain intervalle.
+
+montrer que $T$ est finite :
+$ forall phi in D : |T(phi)| < infinity $
+
+montrer que $T$ est continue :
+$ forall [a, b] subset R " " exists C > 0 " (peut dépendre de a, b) t.q " forall phi in D " t.q supp" (phi) subset [a, b] : $
+
+$ |T(phi)| <= C sum_(i >= 0) max_(x in RR) |partial_x^i phi(x)| $
+
+Pour montrer ça on peut par exemple prendre $i = 0$ et si ça suffit on peut s'arrêter là.
+
+$ abs(integral_(-infinity)^(infinity) phi(x) d x) = abs(integral_a^b phi(x) d x) $
+$ <= max_(x in RR) abs(phi(x)) integral_a^b 1 d x = (b - a) max_(x in RR) abs(phi(x)) $
+$ <= (b - a) sum_(i >= 0) max_(x in RR) abs(partial_x^i phi(x)) $
+
+Note : le support c'est le domaine de la fonction n'est pas zéro. \
+Note 2 : $T$ peut être négative et $phi$ aussi.
