@@ -51,8 +51,24 @@ object FormulaWire extends Wire[Formula]:
   import Formula.*
 
   def serialize(e: Formula): ujson.Value =
-    ???
+    e match
+      case Lit(b) => ujson.Arr("lit", ujson.Bool(b))
+      case FnCall(fn, args) => ujson.Arr("fncall", ujson.Str(fn), ujson.Arr(args.map(a => serialize(a))))
+      case Var(name) => ujson.Arr("var", ujson.Str(name))
 
   def deserialize(js: ujson.Value): Try[Formula] =
-    ???
+    def loop(js: ujson.Value): Formula =
+      val arr = js.arr
+      val tag = arr(0).str
+      if tag == "lit" then
+        val value = arr(1)
+        Lit(value.bool)
+      else if tag == "fncall" then
+        val value = arr(1)
+        FnCall(value.str, value.arr.toList.map(loop))
+      else if tag == "var" then
+        val value = arr(1)
+        Var(value.str)
+      else throw new Exception()
+    Try(loop(js))
 
