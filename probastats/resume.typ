@@ -28,46 +28,26 @@
   body, class: "Exemple", fill: rgb("#FFF4E0"), stroke: rgb("#F4B183")
 )
 
-== Distributions
+= Rappels utiles
 
-"distribution function" #sym.equiv "cumulative distribution function"
+== Valeur d'une somme
 
-Donc quand on nous demande la distribution function d'une variable c'est la fonction qui $forall t " donne " P(X <= t)$.
+$ sum_(x=0)^(∞) q^x = 1/(1 - q) " si " |q| < 1 $
 
-Quand on demande la PDF souvent c'est plus simple de trouver la CDF puis de dériver.
-
-== Indicator function
+== Indicator Function
 
 $ I("some expression") = cases(
   1 "if the expression is true",
   0 "otherwise"
 ) $
 
-=== Distribution Exponentielle et Poisson
+= Distributions
 
-Poisson est utilisé pour des variables aléatoires discrète. Il modélise la probabilité qu'un certain nombre d'évènements se produise durant une période de temps ou d'espace, à partir d'un taux $lambda$.
+- *probability mass function* pour les distributions discrètes (binomiale, poisson, etc), *probability density function* pour les distributions continues (exponentielle, normale, etc).
+- "distribution function" #sym.equiv "cumulative distribution function". Donc quand on nous demande la distribution function d'une variable c'est la fonction qui $forall t " donne " P(X <= t)$.
+- Quand on demande la PDF souvent c'est plus simple de trouver la CDF puis de dériver.
 
-$ f_X (x) = lambda^x/x! e^(-lambda) $
-
-Poisson est une approximation de la loi binomiale pour un $p$ très petit et un $n$ très grand (on a $lambda = n p$).
-
-Le temps entre deux occurences est modélisé par une distribution exponentielle.
-La distribution exponentielle est *memoryless*.
-
-$ f_D (t) = cases(
-  lambda e^(-lambda t) " pour " t > 0,
-  0 " sinon "
-) arrow.double.r F(t) = 1 - e^(-lambda t) $
-
-#example[
-  Si un client arrive toutes les 2 minutes, $lambda = 1/2$. La probabilité qu'un client arrive durant une période de 7 minutes est $1 - e^(-0.5 dot 7)$. La probabilité qu'un client arrive durant une période de 7 minutes *sachant que* 8 minutes se sont déjà écoulées est identique. Car les évènements sont *indépendants* entre eux (peu importe qui est venu avant au magasin).
-]
-
-== Moments
-
-- the $r$th moment of $X$ is $E(X^r)$.
-
-== P.D.F #sym.arrow.double.r.l CDF
+= P.D.F #sym.arrow.double.r.l CDF
 
 On a la P.D.F $f(x)$ et on veut la C.D.F $G(y)$, avec $Y = 1/X$.
 
@@ -86,59 +66,75 @@ $ g(y) = - f(1/y) dot 1/y^2 $
 
 Et ensuite pour trouver $G(y)$ on intègre.
 
-== Expected Value
+#pagebreak()
 
-Continue : $intinf f_D (x) x d x$
+= Expected Value
+
+Continue : $ intinf f_D (x) x d x $
 
 Attention, c'est la P.D.F. qu'on intègre, parfois il faut dériver la C.D.F.
 
-== Variance
+= Variance
 
-$"var"(X) = E(X^2) - E(X)^2$
+$ "var"(X) = E(X^2) - E(X)^2 $
 
-donc, quand continue : $intinf f_D (x) x^2 d x - E(X)^2$
+donc, quand continue : $ "var"(X) = intinf f_D (x) x^2 d x - E(X)^2 $
 
 Standard deviation : $ sigma = sqrt("var"(X)) $
 
 if $X_1$ et $X_2$ independent:
 $ "var"(X_1 + a X_2) = "var"(X_1) + a^2"var"(X_2) $
 
-=== Variance de la distrib binomiale
+== Covariance
 
-$"var"(X) = n p (1 - p)$
+$ "cov"(X, Y) = E(X Y) - E(X)E(Y) $
 
-== Normal distribution
+if $X, Y$ are independent then the covariance is zero (the converse is false!).
 
-Impossible de calculer la CDF $Phi$ ! c'est pour ça qu'il existe des tables
+Linearité de la covariance :
+$ "cov"(X+Y,Z+W)="cov"(X,Z)+"cov"(X,W)+"cov"(Y,Z)+"cov"(Y,W) $
 
-aussi appelée "courbe de Gauss", en cloche :
+Nous permet de réécrire la variance de la somme de variables aléatoires :
+$ "var"(a + b X + c Y) = b^2"var"(X) + 2 b c "cov"(X, Y) + c 2 "var"(Y) $
 
-$ f_D (x) = 1/(sigma sqrt(2 pi)) exp(-(x - mu)^2/(2 sigma^2)) $
+== Correlation
 
+$ "corr"(X, Y) = "cov"(X, Y)/({"var"(X)"var"(Y)}^(1/2)) $
 
-$mu$ est la moyenne, l'espérance de la distribution \
-$sigma$ est l'écart-type
+#pagebreak()
 
-Si on a une suite $arrow(X)$ de $n$ IID $X$ :
+= Moments
 
-$ E(arrow(X)) = 1/n dot n dot E(X_i) = mu $
-$ "var"(arrow(X)) = (1/n)^2 dot n dot ("var"(X_i))^2 = 1/n sigma^2 $
+On appelle $E(X^r)$ le $r$th moment de $X$.
 
-=== Standard Normal Distribution
+== Moment Generating Function 
 
-$ f_D (x) = phi(x) $
+$ psi(t) = E(e^(t X)) $
 
-quand $mu = 0$ (donc centré autour de 0), et que $sigma = 1$.
+$ = integral_(-infinity)^(+infinity) e^(t x) f_X (x) d x $
 
-$ Phi(x) = integral f_D (x) "  (la cdf)" $
+Comme on sait que dériver l'espérance de X revient à prendre l'espérance de la dérivée de X (ça apparemment ça marche pas dans tous les cas mais ici oui) :
 
-==== Convertir en Standard Normal Distrib.
+$ E(X^n) = phi^((n)) (0) $
 
-$ F(x) = Phi((x - mu)/sigma) $
+Comme ça le `t` s'annule et il reste juste tous les facteurs $X$ devant qui s'accumulent.
 
-#image("posts/tablenorm.png")
+$ E(X) = psi' (0) " et " E(X^2) = psi^'' (0) $
+$ "var"(X) = psi''(0) - (ψ'(0))^2 $
 
-Si on veut $Phi(1.51)$, on prend la ligne $1.5"(colonne)"$ et la colonne 1.
+On sait que si $X$ et $Y$ sont indépendantes alors $E(f(X) dot g(Y)) = E(f(X)) dot E(g(Y))$ (prouver avec l'intégrale de $x y f_(X,Y)(x, y)$) donc on peut souvent exprimer la MGF d'une variable aléatoire comme le produit des MGF de ses composantes.
+
+#pagebreak()
+
+= Central Limit Theorem
+
+is a formal statement of how normal distributions can approximate
+distributions of general sums or averages of i.i.d. random variables.
+
+The simple version of the central limit theorem that we give in this section says that whenever a random sample of size n is taken from any distribution with mean $mu$ and variance $sigma^2$, the sample average $X_n$ will have a distribution that is approximately normal with mean $mu$ and variance $sigma^2/n$.
+
+#pagebreak()
+
 
 == Joint random variables
 
@@ -146,15 +142,8 @@ Si on veut $Phi(1.51)$, on prend la ligne $1.5"(colonne)"$ et la colonne 1.
 
 $ f_(X \/ Y) (x \/ y) = integral_(- infinity)^(+ infinity) f_(X, Y)(x, y)f_Y (y) d y $
 
-== Covariance
+#pagebreak()
 
-Linéarité de la covariance : 
-$ "cov"(X+Y,Z+W)="cov"(X,Z)+"cov"(X,W)+"cov"(Y,Z)+"cov"(Y,W) $
+== Law of total variance
 
-$ "Cov"(X, Y) := E(X Y) - E(X)E(Y) $
-
-if $X, Y$ are independent then the covariance is zero (the converse is false!).
-
-$ "corr"(X, Y) = "cov"(X, Y)/({"var"(X)"var"(Y)}^(1/2)) $
-
-$ "var"(a + b X + c Y) = b^2"var"(X) + 2 b c "cov"(X, Y) + c 2 "var"(Y) $
+$ "var"(Z) = E_N ("var"(Z|N)) + "var"_N (E(Z|N)) $
