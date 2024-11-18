@@ -41,6 +41,10 @@ $ I("some expression") = cases(
   0 "otherwise"
 ) $
 
+== Conditional probability
+
+$ P(A|B) = P(A sect B) / P(B) $
+
 = Distributions
 
 - *probability mass function* pour les distributions discrètes (binomiale, poisson, etc), *probability density function* pour les distributions continues (exponentielle, normale, etc).
