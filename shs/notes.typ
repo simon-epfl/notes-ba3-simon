@@ -674,3 +674,74 @@ Fonctions étatiques :
 
   Le tribunal fédéral lui a donné raison.
 ]
+
+= La liberté de réunion
+
+Le droit pour toute personne de se rassembler avec d'autres, en vue d'échanger des idées et de les communiquer à des tiers par exemple.
+
+Peuvent être des manifestations statiques, cortèges, etc.
+
+== Réunions sur la voie publique
+
+Les manifestations avec un grand nombre de participants ont souvent lieu sur le domaine public : peut poser de nombreuses difficultés. Ainsi en Suisse elles sont soumises à des autorisations (*mesures préventives*). (objectif : pas la censure, mais que ce soit fait dans de bonnes dispositions).
+
+L'autorité peut refuser en se basant sur l'intérêt public (sécurité, tranquillité, santé), en respectant la proportionnalité.
+
+L'autorité ne doit pas prendre position sur les idées de la manifestation, etc.
+
+Ne pas interdire la manifestation, uniquement ? #sym.arrow non, aussi des prestations positives de l'Etat (déplacement de transports publics, aide à l'organisation, etc).
+
+== Réunions sur un terrain privé
+
+Sauf infractions, aucune autorisation à demander. Aucune mesure préventive (comme des autorisations).
+
+#example[
+  Un groupe de personnes veulent occuper un hall de banque pour dénoncer certaines pratiques.
+
+  Non, pas le droit d'occuper un terrain sans l'accord du propriétaire.
+]
+
+La quantité de personnes joue quand même, avec des milliers de milliers de personnes.
+
+== Restrictions des réunions
+
+#example[
+  Un conseil municipal a pris 3 dispositions :
+  - l'autorisation doit être demandée 72 heures avant la manifestation
+  - elle devait comprendre le nom des orateurs
+  - pas de manifestations pendant les jours fériés ou après 22h
+
+  Victoire lors d'un match, protestation après une décision de justice #sym.arrow perte de possibilité de manifester de façon spontanée.
+
+  Les gens qui ne sont pas sur la liste ne peuvent pas s'exprimer #sym.arrow on doit trouver d'autres moyens pour déterminer si la manifestation est à risque que de demander le nom des orateurs.
+
+  La troisième règle est en principe à respecter mais il peut y avoir des exceptions (p. ex. réunion d'association d'astronomie, etc).
+]
+
+#example[
+  Interdiction de diffusion avec haut-parleur avant les 4 semaines avant une élection à Bâle.
+
+  #sym.arrow problème car c'est important de pouvoir se réunir avant un vote et peu soucieuse du débat politique.
+]
+
+Il faut que les citoyens sachent ce qu'ils ont le droit de faire.
+
+#example[
+  À Genève siège de l'ONU. Durant une séance, association de méditation chinoise (interdite en Chine pour hérésie). Durant deux ans, elle a organisé des manifestations sans autorisation. La 3ème année, la présidente a demandé à manifester, elle ne reçoit pas de réponse positive, manifeste et est amendée. Pareil la 4ème année.
+
+  La 5ème année, nouveau refus, et cette fois elle recourt.
+
+  Arguments du conseil : chez nous on est à Genève et on essaye de privilégier les manifestations avec un fort ancrage local (#sym.arrow pas la possibilité de limiter le thème des manifestations). De plus vous profitez du fait qu'il y ait l'ONU et les journalistes. (#sym.arrow oui mais c'est justement l'intérêt).
+
+  Donc le conseil communal de Genève a tort.
+]
+
+#example[
+  Activistes de Greenpeace qui bloque les centrales nucléaires suisses. Les militants sont enchaînés au portail, font barrage, etc. pendant 11 jours les employés n'ont pas tous pu entrer, les trains n'ont pas pu transporter les déchets nucléaires.
+
+  Les gens ont été condamnés pour contrainte (obliger quelqu'un à faire ou ne pas faire quelque chose).
+
+  Débat de la désobéissance civile #sym.arrow tolérés ou non ?
+
+  Non, les gens ont des idées mais ce n'est pas de cette façon que cela doit se faire.
+]
