@@ -247,15 +247,29 @@ $ B(r) 2 pi r = mu_0 i $
 
 $ arrow(mu) = i arrow(A) $
 
-où $norm(arrow(A))$ est la surface que le câble entoure et $arrow(A)$ pointe hors de la surface (comme le vecteur de rotation).
+où $norm(arrow(A))$ est la surface que le câble entoure et $arrow(A)$ pointe hors de la surface (comme le vecteur de rotation). Il essaye de s'aligner avec le champ magnétique.
 
 == Loi de Lenz (flux magnétique)
 
 $ epsilon = -d(Phi_B)/(d t) $
-$ Phi_B = integral_S arrow(B) d arrow(S) $
+
+quand le flux change (la surface par exemple), la force élecromotrice doit générer un courant (donc un champ) qui s'oppose à celui qui la génère (donc à la différence de flux magnétique)
+
+$ Phi_B = integral_S arrow(B) d arrow(A) $
 Si B est constant sur la surface $Phi_B = B dot S$.
 
 == Vitesse angulaire
 
 $ omega = (2 pi)/T $
 $ f = 1/T $
+
+== Convertir et déplacer l'énergie
+
+=== Electricité vers force mécanique
+
+On met une bobine autour 
+on a $mu$ qui essaye de s'aligner avec $B$. mais comme on arrive avec une certaine vitesse, on dépasse un peu le point d'équilibre et on a une force de rappel. on inverse le courant pour inverser la force TODO
+
+== Force magnétique vers courant
+
+
