@@ -1,3 +1,4 @@
+#show link: underline
 #let intinf = $integral_(-infinity)^(+infinity)$
 
 #let stick-together(a, threshold: 3em) = {
@@ -150,4 +151,7 @@ $ f_(X \/ Y) (x \/ y) = integral_(- infinity)^(+ infinity) f_(X, Y)(x, y)f_Y (y)
 
 == Law of total variance
 
-$ "var"(Z) = E_N ("var"(Z|N)) + "var"_N (E(Z|N)) $
+$ "var"(Y) = E["Var"(Y|X)] + "Var"(E[Y|X]) $
+
+Le premier terme a du sens : la variance de $Y$ c'est la moyenne des variances de $Y$ sachant que $X$ est égal à une valeur particulière. Mais on doit aussi prendre en compte que le fait que $Y\/X$ varie beaucoup ou soit lisse influence aussi la variance de $Y$. \
+#link("https://math.stackexchange.com/questions/1742578/law-of-total-variance-intuition")[See this thread].
