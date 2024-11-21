@@ -155,3 +155,17 @@ $ "var"(Y) = E["Var"(Y|X)] + "Var"(E[Y|X]) $
 
 Le premier terme a du sens : la variance de $Y$ c'est la moyenne des variances de $Y$ sachant que $X$ est égal à une valeur particulière. Mais on doit aussi prendre en compte que le fait que $Y\/X$ varie beaucoup ou soit lisse influence aussi la variance de $Y$. \
 #link("https://math.stackexchange.com/questions/1742578/law-of-total-variance-intuition")[See this thread].
+
+#pagebreak()
+
+= Multivariate normal distributions
+
+Si on a $V = u + N(0, Omega) => V tilde N_p(u, Omega) $
+
+$D^(-1/2)u^t (V - u)$ donne une distrib normale $N(u, I)$
+
+= Markov inequality
+
+If $X$ takes only real positive values.
+Let $a in RR^star$. Then :
+$ P(X > a) <= E(X)/a $
