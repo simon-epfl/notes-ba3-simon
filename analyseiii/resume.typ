@@ -120,3 +120,17 @@ $ <= (b - a) sum_(i >= 0) max_(x in RR) abs(partial_x^i phi(x)) $
 
 Note : le support c'est le domaine de la fonction n'est pas zéro. \
 Note 2 : $T$ peut être négative et $phi$ aussi.
+
+Le produit scalaire mesure à quel point deux vecteurs vont dans la même direction :
+
+$ <X, Y> = sum_(i = 0)^n x_i y_i  $
+
+Généralisation pour les fonctions continues :
+
+$ <F_1, F_2> = integral_b^a F_1(x)F_2(x)d x $
+
+Distribution derivative :
+
+$ <f', phi> = - <f, phi'> = - integral f(x) phi'(x) d x $
+$ = - [f(x) phi(x)]_0^(infinity) + integral phi(x)d x " or " phi(infinity) = 0 " (TODO je crois que c'est parce qu'il est def en 0 en dehors de [a, b])" $
+$ = integral phi (x) d x $

@@ -265,11 +265,6 @@ $ f = 1/T $
 
 == Convertir et déplacer l'énergie
 
-=== Electricité vers force mécanique
+=== Transformateurs
 
-On met une bobine autour 
-on a $mu$ qui essaye de s'aligner avec $B$. mais comme on arrive avec une certaine vitesse, on dépasse un peu le point d'équilibre et on a une force de rappel. on inverse le courant pour inverser la force TODO
-
-== Force magnétique vers courant
-
-
+$ epsilon_"grand"/epsilon_"petit" = N_"grand"/N_"petit" $
