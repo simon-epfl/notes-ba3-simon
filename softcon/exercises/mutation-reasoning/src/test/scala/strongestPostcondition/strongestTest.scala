@@ -1,0 +1,3 @@
+package strongestPostcondition
+
+class strongestTest {}

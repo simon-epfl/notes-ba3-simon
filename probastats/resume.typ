@@ -102,9 +102,33 @@ $ "cov"(X+Y,Z+W)="cov"(X,Z)+"cov"(X,W)+"cov"(Y,Z)+"cov"(Y,W) $
 Nous permet de réécrire la variance de la somme de variables aléatoires :
 $ "var"(a + b X + c Y) = b^2"var"(X) + 2 b c "cov"(X, Y) + c 2 "var"(Y) $
 
+=== Covariance matrix
+
+Pour un vecteur de variables aléatoires $(X_1, ..., X_p)$
+
+$ "var"(X) = Omega = mat(
+  "var"(X_1), "cov"(X_1, X_2), ..., "cov"(X_1, X_p);
+  "cov"(X_2, X_1), "var"(X_2), ..., "cov"(X_2, X_p);
+  ..., ..., ..., ...;
+  "cov"(X_p, X_1), "cov"(X_p, X_2), ..., "var"(X_p);
+) $
+
+Sachant que $"cov"(X_i, X_j) = "(notamment)" "corr"(X_i, X_j) sigma_i sigma_j$
+
+Pour un vecteur $(X_1, X_2)$ de correlation $p$ et de variance $sigma_1, sigma_2$ :
+
+$ Omega = mat(
+  sigma_1^2, p sigma_1 sigma_2;
+  p sigma_1 sigma_2, sigma_2^2
+) $
+
 == Correlation
 
 $ "corr"(X, Y) = "cov"(X, Y)/({"var"(X)"var"(Y)}^(1/2)) $
+$ "corr"(X, Y) = (E(X Y) - E(X)E(Y)) / {"var"(X)"var"(Y)}^(1/2) $
+
+toujours entre -1 et 1. \
+une corrélation de 0 ne signifie pas que les variables sont indépendantes (il peut y avoir d'autres types de corrélation).
 
 #pagebreak()
 
@@ -164,8 +188,24 @@ Si on a $V = u + N(0, Omega) => V tilde N_p(u, Omega) $
 
 $D^(-1/2)u^t (V - u)$ donne une distrib normale $N(u, I)$
 
+=== Conditional
+
+Let $ X tilde cal(N)(mu_(p times 1), Omega_(p times p)) $ (en bref, $X$ est une variable aléatoire normale de dimension $p$).
+
+Maintenant, si on connaît une ou plusieurs des composantes (normales, donc) de $X$, on peut calculer la distribution conditionnelle des autres composantes. Et ce sera une distribution normale aussi.
+
+Mettons qu'on connaisse l'ensemble $cal(B)$ des composantes et qu'on cherche la distribution conditionnelle des autres, on obtient 
+$ X_cal(A)|X_cal(B) = x_(cal(B)) tilde cal(N)(mu_A + Omega_(A, B)Omega_(B, B)^(-1)(x_(cal(B)) - mu_B), Omega_(A, A) - Omega_(A, B)Omega_(B, B)^(-1)Omega_(B, A)) $
+
+où $Omega_(A, B)$ est la matrice des covariances où on garde les lignes $A$ et les colonnes $B$.
+
+#emoji.warning Parfois $Omega_(A, A)$ s'écrit $Omega_A$.
+
 = Markov inequality
 
 If $X$ takes only real positive values.
 Let $a in RR^star$. Then :
 $ P(X > a) <= E(X)/a $
+
+= Convolution
+

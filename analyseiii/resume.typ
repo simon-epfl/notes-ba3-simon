@@ -100,14 +100,32 @@ $ det = r$
 
 #pagebreak()
 
-== Distributions
+= Distributions
+
+La dérivée est trop "forte" pour considérer les fonctions avec des pics, mais alors comment dériver ces fonctions ?
+
+== Dirac H
+
+Par exemple, la Heaviside function : $H(x) = 1 " if " x >= 0 " else " 0$
+
+La dérivée $H'(x) = epsilon(x)$ sera quasiment partout 0 sauf en un point (le jump). Comment avoir une fonction $H'$ comme ça ? En fait on peut considérer cette fonction comme une distribution.
+
+On utilise ensuite une *test function* pour obtenir la densité entre deux points.
+
+#image("posts/phitest.png", width: 80%)
+
+$ phi arrow integral f(x) phi(x) d x $
+
+#image("posts/phidistrib.png", width: 70%)
 
 $D$ c'est l'ensemble des fonctions infinement dérivables (lisses) dont le support est contenu dans un certain intervalle.
 
-montrer que $T$ est finite :
+== Montrer que T est une distribution
+
+- montrer que $T$ est finite :
 $ forall phi in D : |T(phi)| < infinity $
 
-montrer que $T$ est continue :
+- montrer que $T$ est continue :
 $ forall [a, b] subset R " " exists C > 0 " (peut dépendre de a, b) t.q " forall phi in D " t.q supp" (phi) subset [a, b] : $
 
 $ |T(phi)| <= C sum_(i >= 0) max_(x in RR) |partial_x^i phi(x)| $
@@ -121,6 +139,8 @@ $ <= (b - a) sum_(i >= 0) max_(x in RR) abs(partial_x^i phi(x)) $
 Note : le support c'est le domaine de la fonction n'est pas zéro. \
 Note 2 : $T$ peut être négative et $phi$ aussi.
 
+== Distribution derivative
+
 Le produit scalaire mesure à quel point deux vecteurs vont dans la même direction :
 
 $ <X, Y> = sum_(i = 0)^n x_i y_i  $
@@ -132,5 +152,5 @@ $ <F_1, F_2> = integral_b^a F_1(x)F_2(x)d x $
 Distribution derivative :
 
 $ <f', phi> = - <f, phi'> = - integral f(x) phi'(x) d x $
-$ = - [f(x) phi(x)]_0^(infinity) + integral phi(x)d x " or " phi(infinity) = 0 " (TODO je crois que c'est parce qu'il est def en 0 en dehors de [a, b])" $
+$ = - [f(x) phi(x)]_0^(infinity) + integral phi(x)d x " or " phi(infinity) = 0 " (une test function vaut 0 en l'infini)" $
 $ = integral phi (x) d x $
