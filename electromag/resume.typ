@@ -268,3 +268,16 @@ $ f = 1/T $
 === Transformateurs
 
 $ epsilon_"grand"/epsilon_"petit" = N_"grand"/N_"petit" $
+
+== 
+
+$ L = phi_B/i $
+
+== Inductance mutuelle
+$M_(12) = M_(21) = phi_B_1/i_2$
+
+$U_L = 1/2 L i^2$
+
+$ (d U_L)/(d V) = 1/2 B^2/(mu_0)$
+
+circuit rl?
