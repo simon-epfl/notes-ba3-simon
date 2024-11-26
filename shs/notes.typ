@@ -745,3 +745,82 @@ Il faut que les citoyens sachent ce qu'ils ont le droit de faire.
 
   Non, les gens ont des idées mais ce n'est pas de cette façon que cela doit se faire.
 ]
+
+= La liberté de la presse
+
+Art 17 de la cst.
+
+Liberté de la presse s'applique aux produits d'imprimerie destinés à un large public.
+
+Un journaliste doit pouvoir receuillir des informations sans que le nom de la source soit publié. L'Etat ne peut pas contraindre un journaliste à révéler ses sources.
+
+Art 28. a, un journaliste ne peut pas se retrancher derrière le secret de la rédaction si cette information est indispensable à la résolution d'une infraction grave, ou qu'elle pourrait éviter une instruction grave.
+
+#example[
+  À Zurich, à l'hopital universitaire de Zurich, une dame devait recevoir une greffe du coeur et elle est décédée. En fait elle était donneuse universelle et pas receveuse universelle (et on lui avait transmis le mauvais groupe sanguin).
+
+  Un article sort et explique que selon 3 sources anonymes, les chirurgiens auraient voulu tenter une expérience avec des groupes sanguins différents (ils l'auraient fait volontairement, donc). Le tribunal fédéral affirme que tout le monde a été interrogé, qu'il n'y a pas besoin d'aller désanonymiser les sources. L'affaire est classée, et l'opinion de l'article n'est pas envisagée.
+]
+
+#example[
+  En France, des gens filmés à peine floutés, publiés dans des documentaires. En Suisse, c'est considéré violation de la vie privée, interdit.
+]
+
+#example[
+  Des journalistes filmaient un documentaire sur un groupe de migrants qui essayaient de rejoindre un groupe d'asile en Suisse en passant illégalement les frontières. Les journalistes ont été traduits en justice avec les migrants parce qu'ils ont "participé" et parce qu'ils sont aussi entrés illégalement.
+  
+  #sym.arrow Les mêmes règles s'appliquent aux journalistes qu'aux citoyens.
+]
+
+La question est parfois un peu plus difficile, quand l'Etat doit intervenir pour assurer la protection des particuliers. Parfois, certains articles parlent d'une personne particulière (p. ex. est-ce que Monsieur X a bien payé ses impôts sachant que son enfant est domicilié dans la ville Y ?, etc.). \
+#sym.arrow on doit respecter la sphère privée malgré la liberté de la presse. 
+
+art 163, réprime la diffamation (#sym.eq.not calomnie !), la diffamation c'est dans le cas d'une accusation ou d'un soupçon partagé sur une personne (exception : s'il en a la preuve et qu'il y a un intérêt public).
+
+#example[
+  Monsieur A a trompé sa compagne, même en prouvant que c'est vrai #sym.arrow diffamation, puni.
+
+  Monsieur B, qui va devenir le président du parlement, bat sa femme dans le cas de sa procédure de divorce. #sym.arrow pas de sanction.
+]
+
+#example[
+  Prof d'histoire, elle se fait remarquer en écrivant qu'il n'y avait pas de preuve sur l'existence des fours crématoires. Un journaliste a écrit sur cette prof, Marinette la brune, en faisant remarqué qu'elle adhérait à la pensée nazie.
+
+  Elle voulait que l'article soit supprimé. \
+  #sym.arrow interdiction de critiquer qqn en dehors du cadre de son travail (p. ex. on peut critiquer la cuisine d'un cuisinier, mais pas critiquer un guide sur le fait qu'il veuille gagner beaucoup d'argent sur le dos des clients).
+]
+
+#example[
+  Un journaliste écrit un article "je t'ouvre le ventre parce que tu es riche et ignorant". Le but était de montrer que les gens qui avaient la possibilité de se payer une assurance maladie privée avaient plus de chance de subir une opération (appât du gain qui guidaient les médecins).
+
+  Les médecins portent plainte #sym.arrow nous sommes diffamés.
+
+  Pas d'atteinte à une personne déterminée, pas de diffamation.
+]
+
+Droit de réponse : la personne mentionnée dans l'article peut brièvement s'exprimer sur la question évoquée, contester parce que X ou Y et le media n'a pas le droit de re-répondre.
+
+#example[
+  Un notaire s'occupe de la vente des immeubles. Il dispose de plusieurs biens immobiliers, est VP du club de football local. Une enquête sur des malversations a lieu.
+
+  La télévision romande a entreprise de faire un documentaire sur sa situation et de l'intitulé "Gloire et décadence du notaire T" (notaire Tornare). Il souhaite que le reportage ne soit pas diffusé.
+
+  #sym.arrow sous l'angle de la présomption d'innocence, pas de risque d'influencer l'opinion publique ou le tribunal.
+]
+
+Différents cas en fonction de la gravité de ce qui est en train d'être jugé.
+- public et presse
+- presse
+- huis clos
+
+#example[
+  Deux couples qui se rencontrent dans un centre de désintox. L'homme est jugé pour avoir essayé d'étrangler la femme.
+
+  Le magistrat a décidé que la presse pouvait venir mais sans public, et a demandé aux journalistes de prendre des mesures pour qu'il n'y ait pas d'identification possible de la victime ni de l'auteur.
+
+  Le journaliste affirme ne pas pouvoir prendre cet engagement, que les notes seront transmises à la rédaction et qu'eux prendre les décisions.
+
+  Le magistrat leur demande de sortir. Le journal porte plainte.
+
+  #sym.arrow le journaliste aurait pu prendre l'engagement.
+]
