@@ -209,3 +209,31 @@ $ P(X > a) <= E(X)/a $
 
 = Convolution
 
+TODO
+
+= Inequalities
+
+Let $X$ a random variable, $a > 0$, $h$ a non-negative function and $g$ a convex function.
+
+Basic inequality : $ P(h(X) > a) <= E(h(X))/a $
+Markov's inequality : $ P(|X| > a) <= E(|X|)/a $
+Chebyshov's inequality : $ P(|X| > a) <= E(X^2)/a^2 $
+Jensen's inequality : $ E(g(X)) >= g(E(X)) $
+
+= Convergence
+
+From the strongest to the weakest?
+
+== in mean square
+
+$ lim_(n -> infinity) E((X_n - X)^2) = 0 $ where $E(X_n^2), E(X^2) < infinity$
+
+== in probability
+
+$ lim_(n -> infinity) P(|X_n - X| > epsilon) = 0 $ for all $epsilon > 0$
+
+(square it and use Markov's inequality to prove that mean square convergence implies convergence in probability)
+
+== in distribution
+
+$ lim_(n -> infinity) F_n (x) = F(x) $ for all $x$ where $F$ is continuous.
