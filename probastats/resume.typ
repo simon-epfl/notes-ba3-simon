@@ -222,7 +222,7 @@ Jensen's inequality : $ E(g(X)) >= g(E(X)) $
 
 = Convergence
 
-From the strongest to the weakest?
+From the strongest to the weakest
 
 == in mean square
 
@@ -237,3 +237,7 @@ $ lim_(n -> infinity) P(|X_n - X| > epsilon) = 0 $ for all $epsilon > 0$
 == in distribution
 
 $ lim_(n -> infinity) F_n (x) = F(x) $ for all $x$ where $F$ is continuous.
+
+= Law of large numbers
+
+Let $X_1, X_2, ..., X_n$ be i.i.d. random variables with $E(X_i) = mu$ (finite), then the sample average $X_n = (X_1 + ... + X_n)/n$ converges in probability to $mu$.

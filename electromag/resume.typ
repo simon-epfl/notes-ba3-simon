@@ -168,7 +168,7 @@ $sum_n i_"in" = sum_n i_"out"$
 $sum_k Delta V_k = 0$ \ 
 On choisit un sens pour compter. \
 On ajoute les tensions (de batterie par exemple) dans le sens dans lequel on va. \
-On ajoute les résistances comme $plus.minus i_k dot R_k " "ohm$ en fonction du sens (si on compte dans le sens opposé au courant, on ajoute, sinon on enlève). donc le + des résistances est le - des tensions de batteries
+On ajoute les résistances et les inductances comme $plus.minus i_k dot R_k " "ohm$ en fonction du sens (si on compte dans le sens opposé au courant, on ajoute, sinon on enlève). donc le + des résistances est le - des tensions de batteries
 
 === Loi d'ohm
 
@@ -269,15 +269,36 @@ $ f = 1/T $
 
 $ epsilon_"grand"/epsilon_"petit" = N_"grand"/N_"petit" $
 
-== 
+== Inductance
 
-$ L = phi_B/i $
+Il faut vraiment voir L (l'inductance) comme une bobine qui créé un champ magnétique.
+
+$ L = Phi_B/i $
+
+force électromotrice :
+
+$ epsilon = - d(Phi_B)/(d t) = - d/(d t) i L = - L (d i)/(d t) $
 
 == Inductance mutuelle
-$M_(12) = M_(21) = phi_B_1/i_2$
 
-$U_L = 1/2 L i^2$
+Quand on met deux bobines à côté l'une de l'autre, le champ magnétique de l'une va influencer l'autre :
 
-$ (d U_L)/(d V) = 1/2 B^2/(mu_0)$
+$ M_(12) = M_(21) = Phi_B_1/i_2 $
 
-circuit rl?
+L'énergie stockée dans l'inductance (la bobine) :
+
+$ U_L = 1/2 L i^2 $
+
+= Circuits RL
+
+Un circuit RL est composé d'une résistance et d'une bobine. Lorsque le courant traverse la bobine, un champ magnétique est créé. Lorsque le courant est interrompu, le champ magnétique diminue jusqu'à zéro. Cela crée une force électromotrice qui s'oppose à la variation du courant.
+
+== Charge
+
+$ i(t) = (v_0/R) (1 - exp(-t/(L/R))) $
+$ V_L (t) = V_0exp(-t/(L/R)) $
+
+== Décharge
+
+$ i(t) = (V_0/R) exp(-t/(L/R)) $
+$ V_L (t) = - V_0 exp(-t/(L/R)) $

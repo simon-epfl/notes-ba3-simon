@@ -154,3 +154,50 @@ Distribution derivative :
 $ <f', phi> = - <f, phi'> = - integral f(x) phi'(x) d x $
 $ = - [f(x) phi(x)]_0^(infinity) + integral phi(x)d x " or " phi(infinity) = 0 " (une test function vaut 0 en l'infini)" $
 $ = integral phi (x) d x $
+
+== Fourier series
+
+Parseval's theorem :
+
+$ 2 / T integral_0^T f(x)^2 d x = a_0^2/2 + sum_(n >= 1) (a_n^2 + b_n^2) $
+
+== Dirichet
+
+Dirichlet conditions (general version) : the Fourier series at $x$ converges whenever $f(x)$ is continuous at $x$.
+
+$ F f(x_0) = lim_(h -> 0) 1/2 (f(x_0 + h) + f(x_0 - h)) $
+
+== Coefficients
+
+Pour trouver les coefficients :
+
+$ a_0 = 1 / T integral_0^T f(x) d x $
+$ a_n = 2 / T integral_0^T f(x) cos(2 pi n x / T) d x $
+$ b_n = 2 / T integral_0^T f(x) sin(2 pi n x / T) d x $
+
+parce que ça se simplifie quand on multiplie :
+
+$ integral_0^T cos((2 pi )/T n x) cos((2 pi )/T m x) d x $
+$ = integral_0^T sin((2 pi )/T n x) sin((2 pi )/T m x) d x $
+$ = cases(
+  0 " if " n != m,
+  T/2 " if " n = m
+) $
+
+== Complex Fourier series
+
+instead of $cos$ and $sin$ we use $e^(i x)$ and $e^(-i x)$.
+
+$ f(x) = 1/T integral_0^T e^(-i (2 pi)/T n x) f(x) d x $
+
+Liens entre $a_n$ et $b_n$ et $c_n$ :
+
+$ c_n = a_n - i b_n $
+$ a_n = (c_n + c_(-n))/2 $
+$ b_n = (c_n - c_(-n))/(2 i) $
+
+On peut aussi trouver 
+
+== Fourier Transform
+
+
