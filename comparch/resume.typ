@@ -174,4 +174,3 @@ ROB :
 - quel est le tag de l'instruction dans la RS ?
 
 on ne supprime pas de la RS tant que l'instruction est pas sortie du ROB (sinon la référence pourrait être incorrecte)
-a
