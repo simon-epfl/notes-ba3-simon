@@ -241,3 +241,11 @@ $ lim_(n -> infinity) F_n (x) = F(x) $ for all $x$ where $F$ is continuous.
 = Law of large numbers
 
 Let $X_1, X_2, ..., X_n$ be i.i.d. random variables with $E(X_i) = mu$ (finite), then the sample average $X_n = (X_1 + ... + X_n)/n$ converges in probability to $mu$.
+
+= Maximum and minimum distributions
+
+$ P(min(X_1, ..., X_n) < x) $
+$ = 1 - P(min(X_1, ..., X_n) >= x) $
+$ = 1 - P(X_1 >= x, ..., X_n >= x) $
+$ = 1 - P(X_1 >= x) ... P(X_n >= x) $
+$ = 1 - (1 - F(x))^n $
