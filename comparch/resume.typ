@@ -155,3 +155,23 @@ On a $2^32 dot "4 bytes" = 2^30 dot 4 dot 4 " bytes" = 16 "G bytes !"$
 === TLB
 
 #image("./posts/schematlb.png", width: 88%)
+
+== Scheduling
+
+commit -> passer du rob à la mémoire, etc. on garde l'ordre pour que quand une exception est levée tout soit bien ordonné
+
+avant de commit quand on a une instruction, on la met :
+- dans la bonne reservation station (mem, alu,...?)
+- dans le rob (avec le tag qu'on a choisi arbitrairement dans la reservation station)
+
+RS :
+- est-ce que l'instruction dépend de tags qui ne sont pas encore disponibles ? (pas de tag => l'instruction est prête)
+- est-ce que l'instruction a déjà été exécutée ?
+
+ROB :
+- est-ce qu'une exception a été levée pour l'instruction ?
+- où on doit l'écrire au moment du commit ?
+- quel est le tag de l'instruction dans la RS ?
+
+on ne supprime pas de la RS tant que l'instruction est pas sortie du ROB (sinon la référence pourrait être incorrecte)
+a
