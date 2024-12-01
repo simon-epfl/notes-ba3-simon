@@ -42,6 +42,12 @@ $ I("some expression") = cases(
   0 "otherwise"
 ) $
 
+== Analyse dimensionnelle
+
+Si on intègre $f_X$ on trouve une probabilité, donc par exemple une CDF.
+
+Si on intègre $f_(X Y)$ une fois, on trouve une autre fonction de densité de probabilité (de $X$ ou de $Y$), qu'on peut intégrer pour trouver une probabilité.21
+
 == Conditional probability
 
 $ P(A|B) = P(A sect B) / P(B) $
@@ -162,6 +168,8 @@ distributions of general sums or averages of i.i.d. random variables.
 
 The simple version of the central limit theorem that we give in this section says that whenever a random sample of size n is taken from any distribution with mean $mu$ and variance $sigma^2$, the sample average $X_n$ will have a distribution that is approximately normal with mean $mu$ and variance $sigma^2/n$.
 
+(la variance diminue avec la taille de l'échantillon)
+
 #pagebreak()
 
 
@@ -209,7 +217,9 @@ $ P(X > a) <= E(X)/a $
 
 = Convolution
 
-TODO
+$ f_Z(z) = integral_(- infinity)^(+ infinity) f_X (z - y) f_Y (y) d y $
+
+Intuition : $f_X$ is the pdf of $X$ and $f_Y$ is the pdf of $Y$. We want to know the pdf of $Z = X + Y$. So we take a value $z$ and we want to know the probability that $Z = z$. We can write $Z = X + Y$ so $X = z - Y$. We know the pdf of $X$ is $f_X$ so we can write $f_X (z - y)$. We also know the pdf of $Y$ is $f_Y$ so we can write $f_Y (y)$. We want to know the probability that $Z = z$ so we integrate over all possible values of $y$.
 
 = Inequalities
 

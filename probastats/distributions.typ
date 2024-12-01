@@ -30,6 +30,24 @@
   body, class: "Exemple", fill: rgb("#FFF4E0"), stroke: rgb("#F4B183")
 )
 
+== Unif
+
+#table(
+  columns: (auto, auto, auto, auto, auto, auto, auto),
+  inset: 10pt,
+  align: horizon,
+  table.header(
+    [], [*Description*], [*E*], [*Var*], [*PDF/PMF*], [*CDF*], [*MFG*],
+  ),
+  "Uniforme",
+  [Modélise une variable aléatoire *continue* qui prend des valeurs dans un intervalle $[a, b]$.],
+  [$ (a + b)/2 $],
+  [$ (b - a)^2/12 $],
+  [$ 1/(b - a) $],
+  [$ (x - a)/(b - a) $],
+  [$ (x - a)/(b - a) " si " a <= x <= b $],
+)
+
 == Exponentielle, Gamma et Poisson
 
 #table(
