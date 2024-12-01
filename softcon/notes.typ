@@ -95,3 +95,7 @@ trait Printer[-A] {
 val animalPrinter: Printer[Animal] = (animal: Animal) => println(s"Printing an animal: $animal")
 val dogPrinter: Printer[Dog] = animalPrinter // ok, Printer[Animal] is a supertype of Printer[Dog]
 ```
+
+== Mutations
+
+*invariants* : propriétés qui doivent être vraies à chaque étape de l'exécution du programme (p. ex. dans une fonction qui calcule le maximum, un invariant pourrait être que le maximum doit être plus grand que tous les éléments déjà traités dans la liste ET présent dans la liste déjà traitée).
