@@ -18,10 +18,10 @@ trait Decoder[T]:
 trait WireFormat[T] extends Encoder[T] with Decoder[T]
 
 def encodeWire[T](t: T)(using wt: WireFormat[T]): ujson.Value =
-  ???
+  wt.encode(t)
 
 def decodeWire[T](js: ujson.Value)(using wt: WireFormat[T]): Try[T] =
-  ???
+  wt.decode(js)
 
 object IdentityWire extends WireFormat[ujson.Value]:
   def encode(t: ujson.Value): Value = t

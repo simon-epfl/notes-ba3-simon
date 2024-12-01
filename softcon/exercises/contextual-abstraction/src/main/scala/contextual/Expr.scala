@@ -12,6 +12,12 @@ import Expr.*
 
 def evaluate(e: Expr): Int =
   def recur(e: Expr)(using ctx: Map[String, Int]): Int = e match
-    case _ => ???
+    case Num(value) => value
+    case Var(name) => ctx(name)
+    case Add(e1, e2) => recur(e1) + recur(e2)
+    case Sub(e1, e2) => recur(e1) - recur(e2)
+    case Mul(e1, e2) => recur(e1) * recur(e2)
+    case Let(name, value, body) =>
+      recur(body)(using ctx.updated(name, recur(value)))
 
   recur(e)(using Map.empty)

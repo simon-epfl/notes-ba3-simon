@@ -99,3 +99,38 @@ val dogPrinter: Printer[Dog] = animalPrinter // ok, Printer[Animal] is a superty
 == Mutations
 
 *invariants* : propriétés qui doivent être vraies à chaque étape de l'exécution du programme (p. ex. dans une fonction qui calcule le maximum, un invariant pourrait être que le maximum doit être plus grand que tous les éléments déjà traités dans la liste ET présent dans la liste déjà traitée).
+
+== Given and Using
+
+```scala
+/** Encodes an object of type [[T]] to a [[ujson.Value]] */
+trait Encoder[T]:
+  def encode(t: T): ujson.Value
+
+/** Decodes an object of type [[T]] from a [[ujson.Value]] */
+trait Decoder[T]:
+  def decode(json: ujson.Value): util.Try[T]
+
+/** Provides a way to decode and encode an object of type [[T]] to [[Value]] */
+trait WireFormat[T] extends Encoder[T] with Decoder[T]
+
+def encodeWire[T](t: T)(using wt: WireFormat[T]): ujson.Value =
+  wt.encode(t)
+
+def decodeWire[T](js: ujson.Value)(using wt: WireFormat[T]): Try[T] =
+  wt.decode(js)
+```
+
+```scala
+object OldBooleanWire extends WireFormat[Boolean]:
+  def encode(t: Boolean): Value = Bool(t)
+  def decode(js: Value): Try[Boolean] = Try(js.bool)
+```
+
+can be written as:
+
+```scala
+given WireFormat[Boolean] with
+  def encode(t: Boolean): Value = Bool(t)
+  def decode(js: Value): Try[Boolean] = Try(js.bool)
+```
