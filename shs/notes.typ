@@ -824,3 +824,92 @@ Différents cas en fonction de la gravité de ce qui est en train d'être jugé.
 
   #sym.arrow le journaliste aurait pu prendre l'engagement.
 ]
+
+== Les plateformes de discussion
+
+Forums, page facebook, etc.
+
+Si on ouvre une discussion (et qu'on héberge un site p. ex.), est-on responsable de ce que les autres commentent, etc. ?
+
+#example[
+  À Neuchatel, un ancien conseiller d'état tenait une page facebook sur lequel il relayait des articles de presse français sur une mosquée de la région lyonnaise, à laquelle il était reproché d'être sous l'influence idéologique du Qatar (et de prôner l'islamiste radical, proche du djihadisme).
+
+  Il commente "L'infection s'étend". Certains ont commenté, dont "emoji feu, nettoyez-moi toute cette merde".
+
+  Le conseiller a été libéré (le tribunal ayant jugé que le post commentait plutôt l'islamisme radical). Par contre, en tolérant ces messages sur sa page Facebook.
+
+  Jurisprudence CEDH : décision française, un titulaire de compte FB a été reconnu coupable de complicité pour avoir laissé des messages d'incitation à la haine sur son compte.
+
+  Décision : il n'a pas été prouvé qu'il avait bien vu ces messages, donc pas de sanction.
+]
+
+Critères :
+
+- pour les plateformes ouvertes à la discussion par un organe de presse, la responsabilité de veiller à ce que la discussion ne dérape pas est à l'organe de presse.
+- choix politique : est-ce aux citoyens de s'assurer que leur page facebook etc. reste OK ? Pour la France, il existe une base légale qui prévoit la punissabilité du directeur ou co-directeur de la publication en cas de débordement (sauf s'il n'a pas eu connaissance du message, ou qu'il l'a supprimé très rapidement). Pour la Suisse, non.
+
+= Liberté de l'art
+
+Artistes sont des provocateurs, et l'état est souvent conservateur #sym.arrow tensions.
+
+Art. 21. de la constitution, la liberté de l'art est garantie.
+
+Elle s'étend à toutes formes de création artistique (peintre, galleriste, musée, revendeurs, etc mais aussi auteur, libraire...).
+
+Elle impose à l'Etat de ne pas censurer les créations.
+
+mais en fait... c'est souvent l'Etat qui finance.
+
+#example[
+  Un conseiller n'a pas aimé une exposition à Paris faite par la Suisse #sym.arrow il a réduit de 1,000,000 chf les subventions pour ce groupe l'année suivante.
+]
+
+Article sur la pornographie contient :
+- interdite lorsque rendue accessible à une personne de moins de 16 ans, ou quelqu'un qui n'en voulait pas
+- qu'est-ce que la pornographie ? dans les statues de l'Antiquité, les organes génitaux étaient visibles #sym.arrow pas de la pornographie (quand la sexualité est un but en soit). un critère : l'oeuvre abaisse l'être humain à un simple être sexuel.
+
+#example[
+  Saisie d'un titre qui montre une horde de jeunes qui mutilent un policier.
+
+  L'oeuvre, même si violente, doit permettre aux spectacteurs doit permettre de réfléchir à la violence (ne pas les inciter à la violence, ne pas la banaliser).
+
+  Ici c'est une simple scène de boucherie.
+]
+
+#example[
+  Canton de Bâle, peinture d'une femme le visage souffrant sur une croix, les jambes écartées, le sexe apparent comme "prête à l'acte sexuelle". Cette image était mise sur la place principale de Bâle.
+
+  Il a été poursuivi pour pornographie et atteinte à la liberté religieuse.
+
+  #sym.arrow il n'a pas été condamné.
+]
+
+Critère de l'avertissement (s'il y a un avertissement pour la pornographie).
+
+fiction "toute coincidence avec des personnes existantes est purement fortuite" :
+on reconnaît parfois quand même les gens, même si l'auteur dit que ce n'est pas le cas.
+#sym.arrow ça ne suffit pas de se protéger derrière ça si la personne est reconnaissable par un tiers.
+
+= Droit de grève
+
+En Suisse, la liberté syndicale est garantie. La grève : refus collectif de 
+livrer la prestation à l'égard d'un employeur.
+
+- la grève doit porter uniquement sur des revendications qui relèvent des conditions de travail futures. (nous voulons une augmentation de salaire de X%). par contre, pas de grève politique.
+- il ne faut pas que la durée de la grève ait pour risque de mettre en danger la survie de l'entreprise.
+
+si un travailleur est licencié à cause de la grève, il peut bénéficier de son salaire jusqu'à la fin de son contrat + 6 mois de salaire.
+
+#example[
+  Dans le canton de Vaud, un groupement d'employeurs a annoncé sa volonté de sortir de la convention collective de travail. ("on va pas perdre du temps à négocier").
+
+  #sym.arrow colère des syndicats, qui décident de bloquer une imprimerie lorsqu'un journal devait sortir.
+
+  parmis les manifestants, aucun travailleur de l'imprimerie en question (que des syndicalistes).
+
+  #sym.arrow finalement, aucun travailleur donc seulement les empêcher de travailer, les marchandises, préjudices, etc., tout doit être remboursé par les syndicats.
+]
+
+Certains métiers sont essentiels, le syndicat devra assurer que les services vitaux de l'état doivent quand même fonctionner (que des gens ne meurent pas, que des incendies puissent être gérés, etc.).
+
+
