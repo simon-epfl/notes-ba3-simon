@@ -302,3 +302,55 @@ $ V_L (t) = V_0exp(-t/(L/R)) $
 
 $ i(t) = (V_0/R) exp(-t/(L/R)) $
 $ V_L (t) = - V_0 exp(-t/(L/R)) $
+
+= Circuits AC et impédance complexe
+
+On sait que :
+$ V(t) = V_0 (cos(w t) + sin(w t))$
+On peut écrire $V(t) = V_0 exp(i w t)$
+$ d/(d t) V(t) = i w V(t) $
+$ d^2/(d t^2) V(t) = - w^2 V(t) $
+
+Impédance complexe : $ Z(t) = V(t)/I(t) $
+
+== Pour la résistance :
+
+$ V - I(t)R = 0 $
+$ I(t) = V(t)/R $
+$ Z_R (t) = V(t)/I(t) = V(t)/(V(t) / R) = R $
+
+== Pour la capacité :
+
+$ I(t) = (d Q(t)) / (d t) = (d (C V(t)))/(d t) = C (i omega V(t)) $
+$ Z_C (t) = V(t) / (C i omega V (t)) = (1 dot i) / (i omega C dot i) = - i/(omega C) $
+
+== Pour l'inductance :
+
+$ V(t) - L (d I(t))/(d t) = 0 $
+$ I(t) = V(t) / (i omega L) = - (i V(t))/(omega L) $
+$ Z_L (t) = i L omega $
+
+== Dans un circuit avec une résistance, une capacité et une inductance :
+
+$ I(t) = V(t)/(Z_"tot" (t)) = V(t)/(R - i/(omega C) + i L omega) $
+$ = (V_0 exp(i omega t) exp(- i phi_Z))/(norm(Z_"tot")) $ 
+
+$norm(Z_"tot") = sqrt(R^2 + (omega L - 1/(omega C))^2) $
+
+l'impédance totale (en série) est la somme des impédances.
+
+En fonction des conditions initiales on décide si on garde la partie réelle (cos) ou la partie imaginaire (sin). p. ex. s'il n'y a pas de courant initialement, on prend la partie imaginaire.
+
+=== Conditions particulières
+
+//- quand $omega arrow 0$, $I(t) = V(t) IL EST PASSE OU LE R$
+//- quand $omega arrow infinity, I(t) = (V_0 e^(i omega t)e^(-i pi/2))/(omega L)$
+- quand $ omega L = 1/(omega C) = 0$, résonance, $I(t) = V(t)/R$
+
+= Dernière équation de Maxwell
+
+à revoir, to do
+
+$ integral.cont_"C (frontière)" arrow(B) d arrow(l) = mu_0 i_"entourés" + 1/C^2 d/(d t) (integral arrow(E) d arrow(A)) $
+
+$ integral.cont_"A (surface)" (arrow(nabla) times arrow(B)) d arrow(A) = integral integral mu_o J + 1/C^2 d/(d t) arrow(E) d arrow(A) $
