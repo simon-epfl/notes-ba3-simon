@@ -31,6 +31,14 @@
 
 = Rappels utiles
 
+== Théorème Spectral
+
+On peut décomposer une matrice symétrique $A$ en $A = Q Lambda Q^T$ où $Q$ est une matrice orthogonale (rotation) et $Lambda$ est une matrice diagonale (scalation).
+
+== Série de Taylor
+
+Expontielle : $ e^x = sum_(n=0)^(∞) x^n / n! $
+
 == Valeur d'une somme
 
 $ sum_(x=0)^(∞) q^x = 1/(1 - q) " si " |q| < 1 $
@@ -96,6 +104,8 @@ Standard deviation : $ sigma = sqrt("var"(X)) $
 if $X_1$ et $X_2$ independent:
 $ "var"(X_1 + a X_2) = "var"(X_1) + a^2"var"(X_2) $
 
+$ "var"(X + Y) = "var"(X) + "var"(Y) + 2 "cov"(X, Y) $
+
 == Covariance
 
 $ "cov"(X, Y) = E(X Y) - E(X)E(Y) $
@@ -146,6 +156,10 @@ On appelle $E(X^r)$ le $r$th moment de $X$.
 
 $ psi(t) = E(e^(t X)) $
 
+$ = E(sum_(n=0)^(∞) (X^n t^n) / n!) = sum_(n=0)^(∞) t^n/n! E(X^n) $
+
+(on peut sortir les $t$ et $n$ de l'espérance car ils ne dépendent pas de $X$)
+
 $ = integral_(-infinity)^(+infinity) e^(t x) f_X (x) d x $
 
 Comme on sait que dériver l'espérance de X revient à prendre l'espérance de la dérivée de X (ça apparemment ça marche pas dans tous les cas mais ici oui) :
@@ -158,6 +172,27 @@ $ E(X) = psi' (0) " et " E(X^2) = psi^'' (0) $
 $ "var"(X) = psi''(0) - (ψ'(0))^2 $
 
 On sait que si $X$ et $Y$ sont indépendantes alors $E(f(X) dot g(Y)) = E(f(X)) dot E(g(Y))$ (prouver avec l'intégrale de $x y f_(X,Y)(x, y)$) donc on peut souvent exprimer la MGF d'une variable aléatoire comme le produit des MGF de ses composantes.
+
+=== Pour un vecteur
+
+Soit $X in RR^p$ un vecteur aléatoire et $t in RR^p$ :
+
+En fait les $t$ c'est juste des points dans l'espace par rapport auxquels on va dériver. On utilise que $t = 0$ pour avoir la valeur.
+
+On transpose $t$ pour pouvoir faire le produit scalaire.
+
+$ psi(t) = E(e^(t^T X)) = E(e^(t_1 X_1 + ... + t_p X_p)) = E(e^(t_1 X_1)...e^(t_p X_p)) $
+$ = psi_1(t_1) ... psi_p (t_p) $
+
+L'espérance de la ième composante du vecteur $X$ : $ (partial psi(t)) / (partial t_i) |_(t = 0) = E(X_i)$ \
+Le vecteur d'espérance est : $nabla psi(t)|_(t = 0) = E(X)$
+
+=== Cumulant Generating Function
+
+$ K(t) = log(psi(t)) $
+
+Pratique car moins de calcul que la MGF pour trouver :
+$ K'(0) = E(X) = mu " et " K''(0) = "var"(X) = sigma^2 $
 
 #pagebreak()
 
@@ -192,9 +227,26 @@ Le premier terme a du sens : la variance de $Y$ c'est la moyenne des variances d
 
 = Multivariate normal distributions
 
-Si on a $V = u + N(0, Omega) => V tilde N_p(u, Omega) $
+Le vecteur $X$ suit une distribution normale multivariée si toute combinaison linéaire de ses composantes suit une distribution normale univariée, c-a-d $forall u in RR^p$:
 
-$D^(-1/2)u^t (V - u)$ donne une distrib normale $N(u, I)$
+$ u^T X tilde cal(N)(u^T mu, u^T Omega u) $
+
+== Combinaisons linéaires de normales
+
+Les combinaisons lin de variables normales sont normales :
+
+$ a_(r times 1) + B_(r times p) X tilde cal(N)(a + B mu, B Omega B^T) $
+
+== indépendants
+
+Si on a $X_1, .., X_n$ indépendants #sym.tilde $cal(N)(mu, sigma^2)$ then $X_(n times 1) = (X_1, ..., X_n)^T tilde cal(N)_n(mu 1_n, sigma^2 I_n)$
+
+Le $1_n$ c'est pour transformer la moyenne en un vecteur de taille $n$. \
+Le $I_n$ c'est pour avoir une matrice diagonale de taille $n$ (parce que comme les variables sont indépendantes, la matrice de covariance est diagonale).
+
+// Si on a $V = u + N(0, Omega) => V tilde N_p(u, Omega) $
+
+// $D^(-1/2)u^t (V - u)$ donne une distrib normale $N(u, I)$
 
 === Conditional
 
@@ -203,11 +255,20 @@ Let $ X tilde cal(N)(mu_(p times 1), Omega_(p times p)) $ (en bref, $X$ est une 
 Maintenant, si on connaît une ou plusieurs des composantes (normales, donc) de $X$, on peut calculer la distribution conditionnelle des autres composantes. Et ce sera une distribution normale aussi.
 
 Mettons qu'on connaisse l'ensemble $cal(B)$ des composantes et qu'on cherche la distribution conditionnelle des autres, on obtient 
-$ X_cal(A)|X_cal(B) = x_(cal(B)) tilde cal(N)(mu_A + Omega_(A, B)Omega_(B, B)^(-1)(x_(cal(B)) - mu_B), Omega_(A, A) - Omega_(A, B)Omega_(B, B)^(-1)Omega_(B, A)) $
+$ (X_cal(A)|X_cal(B) = x_(cal(B))) tilde cal(N)(mu_A + Omega_(A, B)Omega_(B, B)^(-1)(x_(cal(B)) - mu_B), Omega_(A, A) - Omega_(A, B)Omega_(B, B)^(-1)Omega_(B, A)) $
 
 où $Omega_(A, B)$ est la matrice des covariances où on garde les lignes $A$ et les colonnes $B$.
 
 #emoji.warning Parfois $Omega_(A, A)$ s'écrit $Omega_A$.
+
+= Transformations
+
+p. ex. on veut savoir si le res du dé est pair ou non :
+
+$ {1, 2, 3, 4, 5, 6} = g^-1(cal(B))$
+$ {0, 1} = cal(B)$
+
+On prend un sous-ensemble de $B$.
 
 = Markov inequality
 
