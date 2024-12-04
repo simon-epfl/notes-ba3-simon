@@ -200,4 +200,57 @@ On peut aussi trouver
 
 == Fourier Transform
 
+$ cal(F)[f](alpha) = 1/sqrt(2 pi) integral_(-infinity)^(infinity) f(x)e^(-i alpha x) d x $
+
+Inverse :
+
+$ f(x) = 1/sqrt(2 pi) integral_(-infinity)^(infinity) cal(F)[f](alpha)e^(i alpha x) d alpha $
+
+(the only change is the sign in the exponent)
+
+Transformée de Fourier pour un signal périodique :
+
+$ cal(F)[f'](alpha) = i alpha cal(F)[f](alpha) $
+
+#pagebreak()
+
+#table(
+  columns: (auto, auto),
+  inset: 10pt,
+  align: horizon,
+  table.header(
+    [*F*], [*$hat(f)$*],
+  ),
+  $ 1/(t^2 + omega^2) $, $ hat(f) (alpha) = sqrt(pi / 2) e^(- omega |alpha|) $,
+  $ e^(- omega |t|) / omega $, $ hat(f)(alpha) = sqrt(pi / 2) (1/(omega^2 + alpha^2)) $,
+  $ sin(omega t) / t $, $ hat(f)(alpha) = cases(
+    sqrt(pi / 2) " if " |alpha| < omega,
+    0 " otherwise"
+  ) $,
+  $ cases(
+    1 " if " |t| < b,
+    0 " otherwise"
+  ) $, $ hat(f)(alpha) = sqrt(pi / 2) sin(b alpha)/alpha $,
+  $ e^(- omega^2 t^2) $, $ hat(f)(alpha) = 1/(sqrt(2) omega) e^(- ) $,
+  $ t e^(- omega^2 t^2) $, $ hat(f)(alpha) = (- i alpha) / (2 sqrt(2) w^3) e^(- alpha^2 / (4 omega^2)) $,
+  $ (4 t^2)/(omega^2 + t^2)^2 $, $ hat(f)(alpha) = sqrt(2 pi) (1/omega - |alpha|)e^(- omega |alpha|) $,
+  $ cases(
+    1 "if" b < t < c,
+    0 "otherwise"
+  ) $, $ hat(f)(alpha) = (e^(- i b alpha) - e^(- i c alpha))/(i alpha sqrt(2 pi)) $,
+  $ cases(
+    e^(- omega t) "if" t > 0,
+    0 "otherwise"
+  ) $, $ hat(f)(alpha) = 1/sqrt(2 pi) 1/(omega + i alpha) $,
+  $ cases(
+    e^(- omega t) "if" t > 0,
+    0 "otherwise"
+  ) $, $ hat(f)(alpha) = 1/(sqrt(2 pi) ( omega + alpha)) (exp(-(omega + i alpha)b) - exp(-(omega + i alpha)c)) $,
+  $ cases(
+    e^(- i omega t) "if" t > 0,
+    0 "otherwise"
+  ) $, $ hat(f)(alpha) = 1/(i sqrt(2 pi) ( omega + alpha)) (exp(-i (omega + alpha)b) - exp(-i (omega + alpha)c)) $,
+)
+
+
 
