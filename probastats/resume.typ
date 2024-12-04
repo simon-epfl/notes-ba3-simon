@@ -280,7 +280,12 @@ $ P(X > a) <= E(X)/a $
 
 $ f_Z(z) = integral_(- infinity)^(+ infinity) f_X (z - y) f_Y (y) d y $
 
-Intuition : $f_X$ is the pdf of $X$ and $f_Y$ is the pdf of $Y$. We want to know the pdf of $Z = X + Y$. So we take a value $z$ and we want to know the probability that $Z = z$. We can write $Z = X + Y$ so $X = z - Y$. We know the pdf of $X$ is $f_X$ so we can write $f_X (z - y)$. We also know the pdf of $Y$ is $f_Y$ so we can write $f_Y (y)$. We want to know the probability that $Z = z$ so we integrate over all possible values of $y$.
+En fait là on cherche tous les moyens d'arriver à un certain $z$ donc on ne fait varier que $y$, et après on complète avec le $x$ qui reste.
+
+maintenant, si on cherche :
+
+$ F_Z(z) = P(Z <= z) $
+$ = integral_0^z integral_0^(z - y) f_X (z - y) f_Y (y) d x d y $
 
 = Inequalities
 
