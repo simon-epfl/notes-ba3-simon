@@ -325,3 +325,26 @@ $ = 1 - P(min(X_1, ..., X_n) >= x) $
 $ = 1 - P(X_1 >= x, ..., X_n >= x) $
 $ = 1 - P(X_1 >= x) ... P(X_n >= x) $
 $ = 1 - (1 - F(x))^n $
+
+= Statistics
+
+$Y_1, ..., Y_n$ are i.i.d. random variables and $y_1, ..., y_n$ are the observed values.
+
+We will assume that the distribution of $Y$ is $f(y, theta)$ where $theta$ is a parameter.
+
+== Method of moments
+
+We have this dataset from that we want to recover normal distribution parameters.
+
+We know that theorically $E(Y) = mu$ and that $ 1/n sum_(i=1)^(n) y_i = mu $.
+We also know that theorically $"var"(Y) = sigma^2$ and that $ 1/n sum_(i=1)^(n) (y_i - mu)^2 = sigma^2 $
+Therefore we can estimate $mu$ and $sigma^2$ from the dataset.
+
+== Maximum likelihood method
+
+The *likelihood* is defined as $L(theta) = f(x_1 sect x_2 sect ... sect x_n, theta) = product_(i=1)^(n) f(x_i, theta)$
+(since all the $x_i$ are independent)
+
+We want to find the value of $theta$ that maximizes the likelihood.
+
+(to do so, we usually take the log of the likelihood - because it's easier to work with and because the log is a monotonic function - and then we differentiate it).
