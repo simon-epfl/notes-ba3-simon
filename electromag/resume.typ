@@ -220,6 +220,8 @@ $ (m v^2)/r = q v B $
 donc :
 $ R = (m v)/(q B) " et " "freq" = 1/T = v/(2 pi r) = (q B)/(2 pi m) $
 
+$ omega = 2 pi f $
+
 à distance $r$ d'une charge, on a le champ magnétique $ arrow(B(r)) = mu_0/(4 pi) q 
 (arrow(v) times arrow(r))/(r^2) $
 
@@ -305,8 +307,16 @@ $ V_L (t) = - V_0 exp(-t/(L/R)) $
 
 = Circuits AC et impédance complexe
 
+L'impédance c'est une propriété du circuit, comme la résistance. Pour un rapport $V$ et $I$ donné, on a une impédance fixe.
+
+$ R_"juste de la résistance" = V_"bornes" / I_"circuit" $
+$ Z_"juste de la résistances" = R = V_"bornes" / I_"circuit" $
+$ Z_"tot" = V_"circuit" / I_"circuit" $
+
+En fait $Z$ c'est un peu une généralisation de la résistance pour tout un circuit, qui prend en compte les effets de la capacité et de l'inductance.
+
 On sait que :
-$ V(t) = V_0 (cos(w t) + sin(w t))$
+$ V(t) = V_0 (cos(w t) + i sin(w t))$
 On peut écrire $V(t) = V_0 exp(i w t)$
 $ d/(d t) V(t) = i w V(t) $
 $ d^2/(d t^2) V(t) = - w^2 V(t) $
@@ -354,3 +364,13 @@ En fonction des conditions initiales on décide si on garde la partie réelle (c
 $ integral.cont_"C (frontière)" arrow(B) d arrow(l) = mu_0 i_"entourés" + 1/C^2 d/(d t) (integral arrow(E) d arrow(A)) $
 
 $ integral.cont_"A (surface)" (arrow(nabla) times arrow(B)) d arrow(A) = integral integral mu_o J + 1/C^2 d/(d t) arrow(E) d arrow(A) $
+
+TODO on les trouve d'où ces énergies ?
+
+énergie magnétique :
+
+$ U_B = 1/(2 mu_0) integral_V B^2 $
+
+énergie électrique :
+
+$ U_E = 1/(2 epsilon_0) integral_V E^2 $

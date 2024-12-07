@@ -188,7 +188,7 @@ $ = cases(
 
 instead of $cos$ and $sin$ we use $e^(i x)$ and $e^(-i x)$.
 
-$ f(x) = 1/T integral_0^T e^(-i (2 pi)/T n x) f(x) d x $
+$ c_n = 1/T integral_0^T e^(-i (2 pi)/T n x) f(x) d x $
 
 Liens entre $a_n$ et $b_n$ et $c_n$ :
 
@@ -196,7 +196,28 @@ $ c_n = a_n - i b_n $
 $ a_n = (c_n + c_(-n))/2 $
 $ b_n = (c_n - c_(-n))/(2 i) $
 
-On peut aussi trouver 
+== Transformations de Fourier
+
+Soit $f(x)$ une série de Fourier de coefficient $c_n$ pour une fonction de période $T$. Si on a une forme similaire, l'objectif c'est de toujours trouver une fonction $g(x)$ qui s'exprime en fonction de $f$.
+
+Par exemple si on a :
+$ f(x) = cases(
+  2x " if " 0 < x < 0.5,
+  2 - 2x " if " 0.5 < x < 1
+) $
+
+et $ g(x) = cases(
+  x " if " 0 < x < pi,
+  2 pi - x " if " pi < x < 2 pi
+) $
+
+Là on peut trouver que $g(x) = pi dot f(x / 2 dot 1/pi)$.
+
+Le $1/(2 pi)$ c'est pour que la période soit $2 pi$.
+
+Multiplier par $pi$ parce qu'on veut que ça aille pas de zero à 1 mais de 0 à pi.
+
+Et on voit qu'en fait seule la multiplication par une constante change les coefficients de Fourier.
 
 == Fourier Transform
 
@@ -213,6 +234,8 @@ Transformée de Fourier pour un signal périodique :
 $ cal(F)[f'](alpha) = i alpha cal(F)[f](alpha) $
 
 #pagebreak()
+
+Transformée de Fourier :
 
 #table(
   columns: (auto, auto),
@@ -252,5 +275,5 @@ $ cal(F)[f'](alpha) = i alpha cal(F)[f](alpha) $
   ) $, $ hat(f)(alpha) = 1/(i sqrt(2 pi) ( omega + alpha)) (exp(-i (omega + alpha)b) - exp(-i (omega + alpha)c)) $,
 )
 
-
+== 
 

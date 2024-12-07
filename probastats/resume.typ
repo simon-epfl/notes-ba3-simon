@@ -205,6 +205,12 @@ The simple version of the central limit theorem that we give in this section say
 
 (la variance diminue avec la taille de l'échantillon)
 
+for sums of random variables, the central limit theorem says that the distribution of the sum will be approximately normal with mean $n mu$ and variance $n sigma^2$.
+
+#emoji.warning attention quand on approxime avec des nombres petits on doit faire attention à utiliser les bonnes bornes
+$ P(X <= x) eq.not 1 - P(X > x)$ mais $ P(X <= x) eq 1 - P(X < x + epsilon)$
+(ou $epsilon = 1$ dans le cas d'un entier)
+
 #pagebreak()
 
 
@@ -294,6 +300,7 @@ Let $X$ a random variable, $a > 0$, $h$ a non-negative function and $g$ a convex
 Basic inequality : $ P(h(X) > a) <= E(h(X))/a $
 Markov's inequality : $ P(|X| > a) <= E(|X|)/a $
 Chebyshov's inequality : $ P(|X| > a) <= E(X^2)/a^2 $
+or $ P(|X - E(X)| > a) <= "var"(X)/a^2 $
 Jensen's inequality : $ E(g(X)) >= g(E(X)) $
 
 = Convergence
@@ -340,11 +347,33 @@ We know that theorically $E(Y) = mu$ and that $ 1/n sum_(i=1)^(n) y_i = mu $.
 We also know that theorically $"var"(Y) = sigma^2$ and that $ 1/n sum_(i=1)^(n) (y_i - mu)^2 = sigma^2 $
 Therefore we can estimate $mu$ and $sigma^2$ from the dataset.
 
-== Maximum likelihood method
+== Maximum likelihood estimation (MLE)
 
 The *likelihood* is defined as $L(theta) = f(x_1 sect x_2 sect ... sect x_n, theta) = product_(i=1)^(n) f(x_i, theta)$
 (since all the $x_i$ are independent)
 
 We want to find the value of $theta$ that maximizes the likelihood.
 
-(to do so, we usually take the log of the likelihood - because it's easier to work with and because the log is a monotonic function - and then we differentiate it).
+To do so, we usually take the log of the likelihood - because it's easier to work with and because the log is a monotonic function - and then we differentiate it with respect to $theta$ (e.g. with respect to $mu$ and $sigma^2$) and set it to zero, then solve for $theta$.
+
+En fait en faisant ça on maximise la probabilité que les données observées soient générées par le modèle.
+
+== M-estimation 
+
+généralisation de la méthode du MLE
+
+On utilise pas forcément L, mais n'importe quelle fonction $rho$.
+Dans le cas du MLE $rho(x, theta) = log(f(x, theta))$.
+
+$rho$ est souvent concave (comme ça on a un seul maximum) et différentiable.
+
+On peut p. ex prendre $rho(x, theta) = -(x - mu)^2$ pour la "least squares estimation".
+
+== Bias
+
+$ "bias"(theta) = E(hat(theta)) - theta $
+
+p. ex. pour une distrib normale :
+$ "bias"(hat(mu)) = E(hat(mu)) - mu = E(1/n sum_(i=1)^(n) y_i) - mu = mu - mu = 0 $
+mais 
+$ "bias"(hat(sigma)^2) = E(hat(sigma)^2) - sigma^2 = ... = - sigma^2 / n $
