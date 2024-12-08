@@ -8,7 +8,15 @@ def reverseAppend(l1: List[Int], l2: List[Int]): List[Int] =
   else reverseAppend(l1.tail, l1.head :: l2)
 
 def reverseAppendLoop(l1: List[Int], l2: List[Int]): List[Int] =
-    ???
+  var lTmp = l1
+  var finalListTmp = l2
+  while true do
+    if lTmp.isEmpty then return finalListTmp
+    else
+      finalListTmp = lTmp.head :: finalListTmp
+      lTmp = lTmp.tail
+
+  throw new Exception("unreachable")
 
 @tailrec
 def sum(l: List[Int], acc: Int = 0): Int =
@@ -16,7 +24,14 @@ def sum(l: List[Int], acc: Int = 0): Int =
   else sum(l.tail, acc + l.head)
 
 def sumLoop(l: List[Int]): Int =
-    ???
+  var lTmp = l
+  var acc = 0
+  while true do
+    if lTmp.isEmpty then return acc
+    else
+      acc = lTmp.head + acc
+      lTmp = lTmp.tail
+  throw new Exception("unreachable")
 
 @tailrec
 def foldLeft(l: List[Int], acc: Int)(f: (Int, Int) => Int): Int =
@@ -24,7 +39,14 @@ def foldLeft(l: List[Int], acc: Int)(f: (Int, Int) => Int): Int =
   else foldLeft(l.tail, f(acc, l.head))(f)
 
 def foldLeftLoop(l: List[Int], startValue: Int)(f: (Int, Int) => Int): Int =
-    ???
+  var acc = startValue
+  var lTmp = l
+  while true do
+    if lTmp.isEmpty then return acc
+    else
+      acc = f(acc, lTmp.head)
+      lTmp = lTmp.tail
+  throw new Exception("unreachable")
 
 extension [T](l: List[T])
   def foldt(z: T)(op: (T, T) => T): T =
@@ -62,5 +84,9 @@ object MapContext:
       l: MutableList,
       f: Int => Int,
       acc: MutableList.Cons
-  ): Unit =
-    ???
+  ): Unit = // au début on a acc qui vaut Cons(f(1), Nil) puis acc = Cons(f(1), Cons(f(2), Nil)), etc.
+    l match
+      case Nil => acc
+      case Cons(hd, tail) =>
+        acc.tail = Cons(f(hd), Nil)
+        mapTRWorker(tail, f, acc.tail.asInstanceOf[Cons])

@@ -25,7 +25,16 @@ def isRightLineTree(t: Tree[Int]): Boolean =
     case _                    => false
 
 def sumRightLineTree(tr: Tree[Int]): Int =
-  ???
+  require(isRightLineTree(tr))
+  var sum = 0
+  var currentTree = tr
+  while true do
+    currentTree match
+      case Leaf(value) => return sum + value
+      case Node(Leaf(value), right) =>
+        sum += value
+        currentTree = right
+  throw new Exception()
 
 def sumRotate(tr: Tree[Int], acc: Int): Int =
   ???
@@ -47,18 +56,29 @@ trait MStackTrait[A]:
 
 case class MStack[A](var l: List[A] = Nil) extends MStackTrait[A]:
   def push(a: A): Unit =
-    ???
+    l = l.appended(a)
   def pop(): A =
-    ???
+    l = l.tail
   def isEmpty: Boolean =
-    ???
+    l.isEmpty
   def size: Int =
-    ???
+    l.size
   def contains(a: A): Boolean =
-    ???
+    l.contains(a)
 
 def postOrderTraversal[T](tr: Tree[T]): List[Tree[T]] =
-  ???
+  var toVIsit = MStack[Tree[T]]()
+  toVIsit.push(tr)
+  var postOrderNodes: List[Tree[T]] = Nil
+  while !toVIsit.isEmpty do
+    val n = toVIsit.pop()
+    postOrderNodes = n :: postOrderNodes
+    n match
+      case Leaf(value) =>
+      case Node(left, right) =>
+        toVIsit.push(left)
+        toVIsit.push(right)
+  postOrderNodes
 
 def reduceLoop[T](tr: Tree[T], f: (T, T) => T): T =
   ???

@@ -160,6 +160,10 @@ animals.add(new Dog)  // Ceci serait permis si `add` acceptait un `T`
 
 == Tail recursion
 
+On ajoute un accumulateur pour qu'il ne reste plus qu'une seule opération à faire à la fin (un seul appel récursif).
+
+On peut ajouter l'annotation `@tailrec` pour vérifier que la fonction est bien en tail recursion.
+
 Souvent on reverse la liste à la fin pour pouvoir utiliser `::` qui est en O(1) et pas `:+` qui est en O(n).
 
 == Parallelisation
