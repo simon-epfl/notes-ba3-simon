@@ -303,9 +303,11 @@ Chebyshov's inequality : $ P(|X| > a) <= E(X^2)/a^2 $
 or $ P(|X - E(X)| > a) <= "var"(X)/a^2 $
 Jensen's inequality : $ E(g(X)) >= g(E(X)) $
 
+#pagebreak()
+
 = Convergence
 
-From the strongest to the weakest
+From the strongest to the weakest.
 
 == in mean square
 
@@ -321,7 +323,31 @@ $ lim_(n -> infinity) P(|X_n - X| > epsilon) = 0 $ for all $epsilon > 0$
 
 $ lim_(n -> infinity) F_n (x) = F(x) $ for all $x$ where $F$ is continuous.
 
-#image("posts/conv.png")
+== conv. probability #sym.arrow.double.not conv. mean square
+
+On prend $X_n$ telle que la proba d'être zéro est forte et la proba d'être très grand est faible et $X = 0$.
+- $PP(X_n = 0) = 1 - 1/n$
+- $PP(X_n = n) = 1/n$
+
+On a $PP(|X_n - X| > epsilon) = PP(|X_n - 0| > epsilon) = P(1/n > epsilon)$ qui tend vers $0$ à l'infini donc $X_n$ converge en probabilité vers $0$.
+
+($E((X_n - X)^2) = E(X_n^2) = 1/n dot n^2 = n$ donc $X_n$ ne converge pas en moyenne quadratique).
+
+== conv. in distribution #sym.arrow.double.not conv. in probability
+
+On prend $X_0$ choisi uniformément entre $0$ et $1$ et $X_(2n) = X_0$ (donc $X_(2n)$ est constant). On prend $X_(2n + 1) = 1 - X_0$.
+
+$X_(2n)$ suit donc une distribution uniforme $tilde U[0, 1]$ et $X_(2n + 1) tilde U[0, 1]$ aussi (montrons-le avec la CDF, si on veut la probabilité que $X_(2n + 1) <= 0.2$ on veut la probabilité que $1 - X_0 <= 0.2$ on veut $X_0 >= 0.8$, or $X_0$ est uniforme donc $PP(X_0 <= 0.2) = PP(X_0 >= 0.8)$). Donc $X_n$ converge en distribution vers $X_0$.
+
+Par contre, $X_n$ ne converge pas en probabilité : $ PP(|X_n - X_0| > epsilon) = PP(|X_(2n) - X_0| > epsilon and |X_(2n + 1) - X| > epsilon) $
+$ = PP(|X_0 - X_0| > epsilon and |1 - X_0 - X_0| > epsilon) $
+$ = 0 + q $
+
+$q eq.not 0$ car il y a des exemples où $1- 2 X_0 eq.not 0$ (par exemple si $X_0 = 0.2$).
+
+Donc $X_n$ ne converge pas en probabilité.
+
+#pagebreak()
 
 = Law of large numbers
 
