@@ -321,6 +321,8 @@ $ lim_(n -> infinity) P(|X_n - X| > epsilon) = 0 $ for all $epsilon > 0$
 
 $ lim_(n -> infinity) F_n (x) = F(x) $ for all $x$ where $F$ is continuous.
 
+#image("posts/conv.png")
+
 = Law of large numbers
 
 Let $X_1, X_2, ..., X_n$ be i.i.d. random variables with $E(X_i) = mu$ (finite), then the sample average $X_n = (X_1 + ... + X_n)/n$ converges in probability to $mu$.
@@ -377,3 +379,9 @@ p. ex. pour une distrib normale :
 $ "bias"(hat(mu)) = E(hat(mu)) - mu = E(1/n sum_(i=1)^(n) y_i) - mu = mu - mu = 0 $
 mais 
 $ "bias"(hat(sigma)^2) = E(hat(sigma)^2) - sigma^2 = ... = - sigma^2 / n $
+
+For example,
+an estimator that is equally likely to underestimate g(θ) by 1,000,000 units or to
+overestimate g(θ ) by 1,000,000 units would be an unbiased estimator, but it would
+never yield an estimate close to g(θ). Therefore, the mere fact that an estimator is
+unbiased does not necessarily imply that the estimator is good or even reasonable.

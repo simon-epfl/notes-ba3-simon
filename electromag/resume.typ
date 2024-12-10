@@ -247,9 +247,19 @@ $ B(r) 2 pi r = mu_0 i $
 
 == Moment magnétique
 
+décrit la force et l'orientation d'un dipôle magnétique, comme une boucle de courant ou un aimant.
+
 $ arrow(mu) = i arrow(A) $
 
 où $norm(arrow(A))$ est la surface que le câble entoure et $arrow(A)$ pointe hors de la surface (comme le vecteur de rotation). Il essaye de s'aligner avec le champ magnétique.
+
+== Couple magnétique
+
+la force de rotation exercée sur un dipôle magnétique placé dans un champ magnétique non uniforme ou incliné.
+
+$ arrow(tau) = arrow(mu) times arrow(B) $
+
+Le couple magnétique tend à aligner le moment magnétique avec le champ magnétique.
 
 == Loi de Lenz (flux magnétique)
 
@@ -357,13 +367,25 @@ En fonction des conditions initiales on décide si on garde la partie réelle (c
 //- quand $omega arrow infinity, I(t) = (V_0 e^(i omega t)e^(-i pi/2))/(omega L)$
 - quand $ omega L = 1/(omega C) = 0$, résonance, $I(t) = V(t)/R$
 
-= Dernière équation de Maxwell
+== Courant de déplacement
+
+$ i_D = epsilon_0 d/(d t) epsilon_A arrow(E) dot d(arrow(A)) $
+
+== Dernière équation de Maxwell
 
 à revoir, to do
 
 $ integral.cont_"C (frontière)" arrow(B) d arrow(l) = mu_0 i_"entourés" + 1/C^2 d/(d t) (integral arrow(E) d arrow(A)) $
 
 $ integral.cont_"A (surface)" (arrow(nabla) times arrow(B)) d arrow(A) = integral integral mu_o J + 1/C^2 d/(d t) arrow(E) d arrow(A) $
+
+avant :
+
+$  arrow(nabla) times arrow(B) = mu_0 arrow(J) $
+
+après avoir ajouté le courant de déplacement :
+
+$  arrow(nabla) times arrow(B) = mu_0 arrow(J) + 1/(C^2) d/(d t) arrow(E) $
 
 TODO on les trouve d'où ces énergies ?
 
@@ -374,3 +396,31 @@ $ U_B = 1/(2 mu_0) integral_V B^2 $
 énergie électrique :
 
 $ U_E = 1/(2 epsilon_0) integral_V E^2 $
+
+TODO :
+
+== Ondes électromagnétiques
+
+$ (partial^2 E_x)/(partial z^2) = 1/(C^2) (partial^2 E)/2(partial t^2) $
+
+$ E_X(z, t) = g(z - c t) + h(z + c t) $
+
+La forme de l'onde reste la même :
+
+On veut que $g(z_1 - c t_1) = g(z_1 + delta z - c(t_1 + delta t))$. On a donc $delta z = c delta t$.
+
+$ E(z, t) = E_0 cos(k z - omega t) $
+
+Soit $lambda$ la longueur d'onde, on a $lambda = c T$.
+
+Numéro d'onde : $ k = (2 pi) / lambda$
+
+=== Densité d'énergie dans une onde électromagnétique
+
+Densité des champs électromagnétique : $ u = 1/(2 mu_0) B^2 + 1/2 epsilon_0 E^2 $
+
+mais dans les ondes électromagnétiques, on a $ B = E/c $, donc : $ u = epsilon_0 E^2$
+
+Vecteur de Pointing : $ arrow(S) = 1/(mu_0) arrow(E) times arrow(B) $
+
+$arrow(S)$ mesure le flux instantané d'énergie.
