@@ -60,6 +60,8 @@ Si on intègre $f_(X Y)$ une fois, on trouve une autre fonction de densité de p
 
 $ P(A|B) = P(A sect B) / P(B) $
 
+#pagebreak()
+
 = Distributions
 
 - *probability mass function* pour les distributions discrètes (binomiale, poisson, etc), *probability density function* pour les distributions continues (exponentielle, normale, etc).
@@ -360,6 +362,8 @@ $ = 1 - P(min(X_1, ..., X_n) >= x) $
 $ = 1 - P(X_1 >= x, ..., X_n >= x) $
 $ = 1 - P(X_1 >= x) ... P(X_n >= x) $
 $ = 1 - (1 - F(x))^n $
+
+#pagebreak()
 
 = Statistics
 
