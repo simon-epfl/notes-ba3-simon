@@ -913,3 +913,64 @@ si un travailleur est licencié à cause de la grève, il peut bénéficier de s
 Certains métiers sont essentiels, le syndicat devra assurer que les services vitaux de l'état doivent quand même fonctionner (que des gens ne meurent pas, que des incendies puissent être gérés, etc.).
 
 
+= Liberté économique
+
+Art 27 de la cst. et 94 de la cst.
+
+protéger les ativités économiques privées tendant à la production de gains et toute activite exercée par une personne dans un but lucratif. pas de pendant, équivalent, dans la CEHD.
+
+3 fonctions :
+- individuelle (art 27), qui permet à tout individu d'être protégé à l'encontre des mesures restrictives de l'Etat (le droit de choisir le travail qu'il souhaite faire et de l'exercer comme il le souhaite, le droit de ne pas travailler)
+- institutionnelle système économique libéral, basé sur la libre concurrence.
+- fédérale, les cantons n'ont pas le droit de mettre en place des mesures protectionnistes.
+
+Restrictions :
+- certaines professions demandent un examen, un diplôme, etc. (p. ex. médecin, avocat, etc.)
+- horaires d'ouverture des magasins
+- les médecins ne peuvent pas faire de publicité (contraire à l'image qu'un avocat, qu'un médecin doit donner)
+
+le profit doit être recherché, peu importe qu'il soit atteint ou que les coûts nécessaires à sa recherche ne soit pas couverts.
+
+#example[
+  La mendicité n'est pas une activité économique, donc pas protégée par la liberté économique. #sym.arrow le but en soit n'est pas de chercher un profit.
+]
+
+#example[
+  Certaines professions jugées immorales par la société (téléphone rose, etc.) sont quand même protégées par la liberté économique.
+]
+
+#example[
+  Certaines professions nommées par l'Etat (#sym.eq.not privées) ne sont pas protégées par la liberté économique. Les médecins dans les hopitaux publics p. ex. ne peuvent pas invoquer la liberté économique (p. ex. facturer à un autre tarif ou recevoir des patients très tard le soir, soumis à des horaires, etc.).
+]
+
+Libre choix d'une profession (bibliothécaire, professeur, etc.) on est pas dans une économie planifiée où l'Etat décide de ce que les gens doivent faire *mais* la liberté économique ne garanti pas qu'on puisse exercer la profession qu'on souhaite (p. ex. pour faire maçon il faut faire un CFC, être embauché, etc.).
+
+Libre exercice de la profession (le faire de la manière qu'il le fait - travailler 7j/7, où ça, etc.).
+
+#example[
+  À Neuchatel, un employeur faisait timbrer ses employés quand ils devaient aller aux toilettes (et le tribunal cantonal avait dit que c'était conforme à la loi sur le travail - ils avaient assimilé ça à un temps de pause). L'employeur a invoqué la liberté économique en disant que c'est son entreprise, il fait ce qu'il veut.
+]
+
+Comme pour les droits politiques, uniquement les personnes de nationalité suisse et les ressortissants étrangers détenteurs d'un permis C ou ceux de l'UE peuvent invoquer la liberté économique.
+
+Uniquement les personnes qui produisent peuvent invoquer la liberté économique (pas les consommateurs).
+
+Restriction de politique sociale : mesures qui visent à améliorer les conditions de vie de la population (en restreignant la liberté économique de certains acteurs).
+
+#example[
+  Horaires d'ouverture des magasins, le dimanche.. mesures qui visent à favoriser le bien-être des employés.
+]
+
+#example[
+  Le salaire minimum, introduit à Neuchatel puis dans d'autres cantons (à l'époque de 20 francs de l'heure). Des recours ont été déposés par les organisations patronales (sur le plan individuel), mais le tribunal fédéral a affirmé qu'il y avait un intérêt public, les gens n'arrivent plus à vivre dans des conditions de vie décentes.
+]
+
+Restrictions liées au respect de l'environnement, à la protection des consommateurs, à la protection de la santé publique.
+
+Dérogations au principe de la libre concurrence (elles doivent forcément être dans la constitution) avantager certaines entreprises, activités. p. ex. les agriculteurs recevoient une somme d'argent, les cinémas, etc.
+
+Commission de la concurrence : lutte contre les ententes cartellaires, les abus de position dominante, etc.
+
+#example[
+  Les professions médicales sont soumises au droit "disciplinaire", une surveillance de la profession. Les médecins qui ne respectent pas les règles de la profession peuvent être sanctionnés. Un soin apporté à un enfant qui a une colique non conventionnel (et sans vérifier que l'enfant prenait bien son traitement conventionnel) #sym.arrow l'enfant va a l'hopital et le médecin est sanctionné.
+]
