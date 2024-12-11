@@ -275,5 +275,20 @@ Transformée de Fourier :
   ) $, $ hat(f)(alpha) = 1/(i sqrt(2 pi) ( omega + alpha)) (exp(-i (omega + alpha)b) - exp(-i (omega + alpha)c)) $,
 )
 
-== 
+#pagebreak()
 
+Poisson problem : $ -Delta u = f$ with $a < x < b $ and $ u(a) = g_a$ and $ u(b) = g_b$.
+
+Two auxiliary problems :
+- $- Delta u^g (x) = 0$ with $u^g (a) = g_a $ and $ u^g (b) = g_b$. Le rôle de cette équation est de satisfaire les conditions limites. (I)
+- $- Delta u^f (x) = f(x) $ with $u^f (a) = 0 $ and $ u^f (b) = 0$. Le rôle de cette équation est de satisfaire $- Delta u  = f$ sans modifier les conditions limites. (II)
+
+If we solve these two problems, we can find the solution to the Poisson problem by $ u(x) = u^g (x) + u^f (x) $.
+
+(I)
+We know $- u'' (x) = 0 $ for all $x$ in $[a, b]$. So $u'(x) = c_1 $ and $u^g(x) = c_1 x + c_2 $. We can find $c_1$ and $c_2$ by the boundary conditions.
+
+$ g_a = C_1 a + C_2$ and $g_b = C_1 b + C_2 $.
+
+(II)
+We use the Fourier series to solve this! For simplicity assume $[a,b] = [0, L]$ we extend $F$ to an odd period function with period $T=2L$. Odd periodic #sym.arrow only has sine terms. So we can write $f(x) = sum_(n >= 1) b_n sin(2 pi n x / T) $. Useful because odd function automatically satisfies $u^f (0) = u^f (L) = 0$. (because $sin(0) = 0$ and $sin(n pi) = 0$).
