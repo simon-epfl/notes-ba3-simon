@@ -36,6 +36,8 @@ $arrow(L_O) = sum_i arrow(r_i) times m_i arrow(v_i)$
 
 == Champ électrique
 
+Dans le cas d'un champ uniforme : $E = V / L$.
+
 Seule la direction importe, le sens sera apporté par la charge sur laquelle on "appliquera" le champ.
 
 Quand on a une surface avec une forme facile (symmétrique) on peut utiliser Gauss :
@@ -421,6 +423,14 @@ Densité des champs électromagnétique : $ u = 1/(2 mu_0) B^2 + 1/2 epsilon_0 E
 
 mais dans les ondes électromagnétiques, on a $ B = E/c $, donc : $ u = epsilon_0 E^2$
 
-Vecteur de Pointing : $ arrow(S) = 1/(mu_0) arrow(E) times arrow(B) $
+Vecteur de Pointing, indique dans quelle direction se propage l'énergie d'une onde électromagnétique : $ arrow(S) = 1/(mu_0) arrow(E) times arrow(B) $
 
 $arrow(S)$ mesure le flux instantané d'énergie.
+
+== Longueur d'onde
+
+$ lambda = c / f $
+
+différence entre la vitesse angulaire en rad/s et la fréquence en Hz (cycle par seconde) :
+
+$ (2 omega) / (2 pi) = f $

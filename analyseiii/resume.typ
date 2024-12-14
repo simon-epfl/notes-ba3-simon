@@ -229,9 +229,28 @@ $ f(x) = 1/sqrt(2 pi) integral_(-infinity)^(infinity) cal(F)[f](alpha)e^(i alpha
 
 (the only change is the sign in the exponent)
 
-Transformée de Fourier pour un signal périodique :
+En fait dans un sens on décompose notre fonction $f$ en une somme de fonctions périodiques avec des fréquences différentes (et on obtient une fonction $cal(F)[f](alpha)$ qui nous donne les coefficients de Fourier de ces fonctions périodiques en fonction de la fréquence). Et dans l'autre sens on reconstruit notre fonction $f$ en sommant ces fonctions périodiques.
+
+== Dérivée
+
+Transformée de Fourier à condition que $f$ tendent à 0 en l'infini (la preuve utilise l'intégration par partie et on utilise que $f(infinity) = f(-infinity) =  0$).
 
 $ cal(F)[f'](alpha) = i alpha cal(F)[f](alpha) $
+
+== Modulation
+
+$ g(t) = e^(-i b t) f(a t) $
+
+$ arrow hat(g)(alpha) = 1/(|a|) hat(f)((alpha + b)/a)$
+
+Si on connaît $cal(F)[f](alpha)$. Soit $g(x) = f(2x)$.
+
+$ cal(F)[g(x)](alpha) = 1/sqrt(2 pi) integral_(-infinity)^(infinity) f(2x)e^(-i alpha x) d x $
+
+On pose $y = 2x$ donc $x = y/2$ et $d x = 1/2 d y$.
+
+$ = 1/sqrt(2 pi) integral_(-infinity)^(infinity) f(y)e^(-i alpha y/2) 1/2 d y = 1/sqrt(2 pi) 1/2 integral_(-infinity)^(infinity) f(y)e^(-i alpha y/2) d y $
+donc $alpha' = alpha / a$ et on multiplie par $1/(|a|)$.
 
 #pagebreak()
 
@@ -245,7 +264,7 @@ Transformée de Fourier :
     [*F*], [*$hat(f)$*],
   ),
   $ 1/(t^2 + omega^2) $, $ hat(f) (alpha) = sqrt(pi / 2) e^(- omega |alpha|) $,
-  $ e^(- omega |t|) / omega $, $ hat(f)(alpha) = sqrt(pi / 2) (1/(omega^2 + alpha^2)) $,
+  $ e^(- omega |t|) / omega $, $ hat(f)(alpha) = sqrt(2 / pi) (1/(omega^2 + alpha^2)) $,
   $ sin(omega t) / t $, $ hat(f)(alpha) = cases(
     sqrt(pi / 2) " if " |alpha| < omega,
     0 " otherwise"
