@@ -364,7 +364,7 @@ Le droit ordinaire encadre la liberté d'expression.
 
 Quand l'honneur d'une personne est touchée, elle peut déposer plainte pour diffamation (ça peut être vrai mais ça rabaisse l'honneur de la personne) et calomnie (on sait que c'est faux).
 
-TODO: orientation sexuelle, communauté, etc. voir article deux six un bis
+orientation sexuelle, communauté, etc. voir art. 261 bis
 
 #example[
   Un nationaliste turc affirme que le génocide arménien est un mensonge international. Il a été condamné par la Suisse.
@@ -439,7 +439,9 @@ Il intervient si 50,000 personnes avec le droit de vote signent la demande de re
 Il y a les mêmes conditions que l'initiative mais aussi le fait que la question soit formulée de manière à ne pas influencer les électeurs et ne pas les induire en erreur.
 
 #example[
-  Une votation populaire à Zurich, la question était "voulez-vous recommander aux ". TODO
+  Une votation populaire à Zurich, la question était "Voulez-vous
+  recommander aux autorités fédérales compétentes, dans l'intérêt de
+la garantie de l'approvisionnement en énergie électrique, d'approuver la construction de la centrale nucléaire de Kaiseraugst ?"
 
   En matière d'énergie nucléaire, les cantons doivent donner leur avis (via une votation).
   La présence de "dans l'intérêt" donne un argument dans la question #sym.arrow refusée.
