@@ -381,11 +381,11 @@ Le fait de bafouer les convictions d'autri, incitation au crime et à la violenc
 
 On peut voter au niveau communal, cantonal, ou fédéral.
 
-Article 136 de la constitution, droit politique : le droit d'élire et d'être élu
+Article 136 de la constitution, droit politique : le droit d'élire et d'être élu.
 
-== TODO: système bicaméral ?
+Système bicaméral : deux chambres du parlement ont les mêmes compétences.
 
-Système bicaméral : les deux chambres du parlement ont les deux compétences.
+Absence de *mandat impératif* : un élu n'est pas obligé de voter selon la volonté de ses électeurs.
 
 #example[
   Une candidate décide de changer de partie juste après avoir été élue.
@@ -394,7 +394,7 @@ Système bicaméral : les deux chambres du parlement ont les deux compétences.
   Le tribunal fédéral décide de tout de même autoriser ce changement de parti.
 ]
 
-Élections qui se jouent sur deux tours.
+*Suffrage universel* : tout citoyen suisse a le droit de vote (depus 1991 pour les femmes).
 
 == Initiative populaire (au niveau fédéral)
 
@@ -410,7 +410,7 @@ Ce sont des personnes qui vont se mettre ensemble autour d'un projet. Ils doiven
 
 *Unité de la forme :* l'initiative populaire peut être sous la forme du projet rédigé (un comité soumet un article déjà écrit), ou sous la forme d'un projet général (le parlement doit rédiger l'article).
 
-*Unité de la matière :* : l'initiative populaire ne porte que sur un aspect.
+*Unité de la matière :* l'initiative populaire ne porte que sur un aspect.
 
 #example[
   Une initiative du PDC (parti démocrate chrétien) contre la fiscalisation du mariage, qui vise à supprimer la fiscalisation des couples mariés comme une seule personne fiscale. (ils voulaient que + de gens soient mariés).
@@ -460,9 +460,9 @@ La constatation d'un manquement, d'une irrégularité lors d'un vote n'implique 
 
 Vote par correspondance : nécessite deux enveloppes.
 
-Le principe n'est pas absolu, dans le canton d'Appenzell, les votations ont lieu sur la place du village, et les chefs de famille votent avec leur épée => pas de secret.
+Le principe de secret du vote n'est pas absolu, dans le canton d'Appenzell, les votations ont lieu sur la place du village, et les chefs de famille votent avec leur épée #sym.arrow pas de secret.
 
-= Le droit international et le droit interne
+= Le droit interne et le droit international
 
 == Rappel sur l'organisation interne de la Suisse
 
@@ -487,7 +487,7 @@ Voir article 190 de la cst.
 
 == Le rang du droit international
 
-Quel est la primauté entre le droit international et le droit interne en cas de conflit ?
+Quelle est la primauté entre le droit international et le droit interne en cas de conflit ?
 
 Le principe général est la primauté du droit international... mais pas absolu :
 
