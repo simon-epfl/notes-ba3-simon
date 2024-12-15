@@ -239,9 +239,13 @@ $ cal(F)[f'](alpha) = i alpha cal(F)[f](alpha) $
 
 == Modulation
 
+=== Scale in/out
+
 $ g(t) = e^(-i b t) f(a t) $
 
-$ arrow hat(g)(alpha) = 1/(|a|) hat(f)((alpha + b)/a)$
+$ arrow hat(g)(alpha) = 1/(|a|) hat(f)((alpha + b)/a) $
+
+=== Intuition
 
 Si on connaît $cal(F)[f](alpha)$. Soit $g(x) = f(2x)$.
 
@@ -251,6 +255,21 @@ On pose $y = 2x$ donc $x = y/2$ et $d x = 1/2 d y$.
 
 $ = 1/sqrt(2 pi) integral_(-infinity)^(infinity) f(y)e^(-i alpha y/2) 1/2 d y = 1/sqrt(2 pi) 1/2 integral_(-infinity)^(infinity) f(y)e^(-i alpha y/2) d y $
 donc $alpha' = alpha / a$ et on multiplie par $1/(|a|)$.
+
+Si on a $g(x) = f(x - b)$ alors $alpha' = alpha$ et on multiplie par $e^(-i b alpha)$.
+
+=== Décalage
+
+$ g(x) = f(x - b) $
+$ arrow hat(g)(alpha) = e^(-i b alpha) hat(f)(alpha) $
+
+=== Intuition
+
+$ cal(F)[f(x - b)](alpha) = 1/sqrt(2 pi) integral_(-infinity)^(infinity) f(x - b)e^(-i alpha x) d x $
+
+On pose $y = x - b$ donc $x = y + b$ et $d x = d y$.
+
+$ = 1/sqrt(2 pi) integral_(-infinity)^(infinity) f(y)e^(-i alpha (y + b)) d y = 1/sqrt(2 pi) e^(-i b alpha) integral_(-infinity)^(infinity) f(y)e^(-i alpha y) d y $
 
 #pagebreak()
 
