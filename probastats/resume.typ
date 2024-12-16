@@ -213,6 +213,14 @@ for sums of random variables, the central limit theorem says that the distributi
 $ P(X <= x) eq.not 1 - P(X > x)$ mais $ P(X <= x) eq 1 - P(X < x + epsilon)$
 (ou $epsilon = 1$ dans le cas d'un entier)
 
+== Continuity Correction
+
+When we use the normal approximation to the binomial distribution, we often use a continuity correction. This means that we adjust the boundaries of the interval by 0.5 in each direction.
+
+For instance, let's say that we want to find $P(X <= 3)$ where $X$ is a binomial random variable with parameters $n = 10$ and $p = 0.3$. We can use the normal approximation to find $P(X <= 3.5)$.
+
+En fait je pense que c'est lié au fait que la valeur $3.5$ n'existe pas dans la binomiale mais elle existe bien dans la normale. Il faut donc rattacher tout ce qui va de $3$ à $3.5$ à $3$.
+
 #pagebreak()
 
 
