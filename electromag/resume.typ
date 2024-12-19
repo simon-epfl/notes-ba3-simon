@@ -433,4 +433,4 @@ $ lambda = c / f $
 
 différence entre la vitesse angulaire en rad/s et la fréquence en Hz (cycle par seconde) :
 
-$ (2 omega) / (2 pi) = f $
+$ omega / (2 pi) = f $
