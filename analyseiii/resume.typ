@@ -315,6 +315,10 @@ Transformée de Fourier :
 
 #pagebreak()
 
+== Poisson problem
+
+=== Le petit.
+
 Poisson problem : $ -Delta u = f$ with $a < x < b $ and $ u(a) = g_a$ and $ u(b) = g_b$.
 
 Two auxiliary problems :
@@ -331,13 +335,29 @@ $ g_a = C_1 a + C_2$ and $g_b = C_1 b + C_2 $.
 (II)
 We use the Fourier series to solve this! For simplicity assume $[a,b] = [0, L]$ we extend $F$ to an odd period function with period $T=2L$. Odd periodic #sym.arrow only has sine terms. So we can write $f(x) = sum_(n >= 1) b_n sin(2 pi n x / T) $. Useful because odd function automatically satisfies $u^f (0) = u^f (L) = 0$. (because $sin(0) = 0$ and $sin(n pi) = 0$).
 
+=== Le méchant.
+
+$ - laplace u(x) + k^2 u(x) = f(x) $
+
+On applique la Transformée de Fourier :
+
+$ - cal(F)[laplace u(x)](alpha) + k^2 cal(F)[u(x)](alpha) = cal(F)[f(x)](alpha) $
+
+$ - (i alpha)^2 cal(F)[u(x)](alpha) + k^2 cal(F)[u(x)](alpha) = cal(F)[f(x)](alpha) $
+
+On factorise :
+
+$ cal(F)[u(x)](alpha) = (cal(F)[f(x)](alpha)) dot 1 / (k^2 + alpha^2) $
+
+On cherche $u(x)$ donc on applique la transformée inverse :
+
+$ u(x) = 1 / sqrt(2 pi) integral_(-infinity)^(infinity) (cal(F)[f(x)](alpha)) dot 1 / (k^2 + alpha^2) e^(i alpha x) d alpha $
+
 == Convolutions
 
 On veut calculer $ integral_(-infinity)^(+infinity) f(z)g(x - z) d z $.
 
-Là on choisit une fonction qui bouge, et une fonction qui reste fixe. On sait que pour que $f(z)g(x - z)$ soit non nul, il faut que les deux se chevauchent.
-
-On va donc séparer notre intégrale en plusieurs intervalles.
+Là on choisit une fonction qui bouge, et une fonction qui reste fixe. On va donc séparer notre intégrale en plusieurs intervalles.
 
 On sait qu'on veut $"borne_g_bas" <= x-z <= "borne_g_haut"$.
 

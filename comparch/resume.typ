@@ -174,3 +174,32 @@ ROB :
 - quel est le tag de l'instruction dans la RS ?
 
 on ne supprime pas de la RS tant que l'instruction est pas sortie du ROB (sinon la référence pourrait être incorrecte)
+
+on vire l'instruction du ROB dès que le write est fait
+
+== Pipelines
+
+- si on utilise $s_0$ pour store et après qu'on load un truc dans $s_0$, on peut decode et exécute en même temps.
+
+== Cache coherence
+
+=== Snoopy Cache
+
+Chaque processeur a son propre cache. Le protocole de snooping permet à chaque cache de surveiller le bus pour voir si une adresse est modifiée par un autre processeur.
+
+write-through : on écrit à chaque fois dans le cache et dans la mémoire.
+write-back : on écrit dans le cache et on met un bit dirty, puis on écrit dans la mémoire quand on doit écrire autre chose à la place (demande des states M, S, I).
+
+==== MSI
+
+- on a 3 états : M (modified), S (shared), I (invalid)
+
+#image("./posts/msi.png", width: 70%)
+
+Quand on veut lire avec intention de modifier (*RdX*), tous les autres doivent passer en invalide.
+
+Quand il y a un *BusRd* ou *BusRdX*, le cache qui est en *M* (modified) doit faire un *WriteBack*.
+
+*MESI* ajoute un état *E* (exclusive) qui est un peu comme *S* mais on sait qu'on est le seul à avoir cette valeur (sans l'avoir modifiée).
+
+=== Directory-Based
