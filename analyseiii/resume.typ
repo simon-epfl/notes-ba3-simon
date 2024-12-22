@@ -175,6 +175,8 @@ $ a_0 = 1 / T integral_0^T f(x) d x $
 $ a_n = 2 / T integral_0^T f(x) cos(2 pi n x / T) d x $
 $ b_n = 2 / T integral_0^T f(x) sin(2 pi n x / T) d x $
 
+(on intègre toujours là où la fonction est définie proprement, par exemple si on étend une fonction définie sur un intervalle fini, on étend de $-L$ à $L$ et pas de $0$ à $2L$, où il va y avoir un saut).
+
 parce que ça se simplifie quand on multiplie :
 
 $ integral_0^T cos((2 pi )/T n x) cos((2 pi )/T m x) d x $
@@ -364,3 +366,8 @@ On sait qu'on veut $"borne_g_bas" <= x-z <= "borne_g_haut"$.
 à partir de ça on sait que $ - "borne_g_haut" + x >= z >= - "borne_g_haut" + x $
 
 (et on sait que le centre est en $x$). donc on va déplacer $x$ de telle sorte à ce que $- "borne_g_haut" + x <= x <= "borne_g_bas" + x$ soit sur une même définition de fonction de $g$.
+
+=== Convolution Theorem
+
+La transformée de Fourier de $f * g$ est $sqrt(2 pi) hat(f)(alpha) hat(g)(alpha)$. \
+Et la transformée de Fourier de $cal(F)(f g)$ est $1/sqrt(2 pi) hat(f)(alpha) * hat(g)(alpha)$.
