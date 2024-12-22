@@ -423,3 +423,54 @@ an estimator that is equally likely to underestimate g(θ) by 1,000,000 units or
 overestimate g(θ ) by 1,000,000 units would be an unbiased estimator, but it would
 never yield an estimate close to g(θ). Therefore, the mere fact that an estimator is
 unbiased does not necessarily imply that the estimator is good or even reasonable.
+
+#pagebreak()
+
+== Pivotal
+
+Un pivot c'est p. ex. le maximum d'une distribution uniforme $[0, theta]$ divisé par $theta$. En fait on normalise pour que notre variable ne dépende plus de $theta$.
+
+== Confidence intervals
+
+On a des données $Y = (Y_1, ..., Y_n)$, on a estimé un paramètre. On construit un intervalle de confiance :
+- lower confidence bound $L$
+- upper confidence bound $U$
+
+$L = l(Y)$, $U = u(Y)$. They do not depend on the parameter.
+
+Si on veut un intervalle de confiance de $95%$, on prend $alpha = 0.05, alpha_U = 0.025 = alpha_L$.
+
+- find a pivotal quantity $Q(Y, theta)$
+- obtain the associated quantiles $q_U$ and $q_L$ of $Q(Y, theta)$
+
+#image("posts/quantiles.png", width: 50%)
+
+- transform the equation $P(q_(alpha_U) <= Q(Y, theta) <= q_(alpha_L)) = (1 - alpha_L) - alpha_U$ into $P(L <= theta <= U) = 1 - alpha_L - alpha_U$
+
+$q_alpha_U$ c'est la valeur telle que $P(Q <= q_alpha_U) = alpha_U$.
+
+=== On a pas de pivot simple #sym.arrow normal approximation
+
+On utilise la normal approximation, on passe notre variable aléatoire en une normale, puis une normale standard, et on trouve le $z$ telle que $P(Z <= z) = 1 - alpha_L$ (si on a un intervalle de confiance de $95%$ on prend $alpha_L = 0.025$, donc $z = 1.96$ pour une normale).
+
+https://en.wikipedia.org/wiki/97.5th_percentile_point
+
+$Y$ doit être une variable aléatoire normale ou peut être approximée à une normale en faisant une approximation avec le théroème central limite. 
+
+$ overline(Y) tilde cal(N)(mu, sigma^2 / n) $
+
+$ Z = (overline(Y) - mu)/(sqrt(sigma^2 / n)) tilde cal(N)(0, 1) " on isole " mu = overline(Y) - Z sqrt(sigma^2 / n) $
+
+ça nous permet de trouver un intervalle de confiance pour $mu$ (sachant que $Y$ n'est pas forcément centrée en zéro) :
+
+$ overline(Y) - z_(alpha/2)sqrt(sigma^2 / n) <= mu <= overline(Y) + z_(1 - alpha/2)sqrt(sigma^2 / n) $
+
+$ overline(Y) - 1.96 sqrt(sigma^2 / n) <= mu <= overline(Y) + 1.96sqrt(sigma^2 / n) $
+
+Si on a $alpha = 0.05$ (on veut un intervalle de confiance de $0.95$), on prend $Phi^(-1)(0.025) = -1.96$ et $Phi^(-1)(0.975) = 1.96$.
+
+#image("posts/phimoins1.png", width: 60%)
+
+=== Améliorer l'intervalle de confiance
+
+pour diviser l'intervalle de confiance, ce qui compte c'est le terme $+- d$. Même si le $hat(Y)$ bouge, ce qui compte pour la longueur de l'intervalle donc si on fait 4 fois plus de mesures $n' = 4 dot n$, la longueur de l'intervalle sera divisée par 2.
