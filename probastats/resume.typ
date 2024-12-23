@@ -476,7 +476,7 @@ pour diviser l'intervalle de confiance, ce qui compte c'est le terme $+- d$. Mê
 
 #pagebreak()
 
-== Hypothesis testing
+= Hypothesis testing
 
 null hypothesis $H_0$ and alternative hypothesis $H_1$. Elle couvre toutes les possibilités non couvertes par $H_1$, car, pour que la logique soit respectée $(not H_1 arrow H_0)$.
 
@@ -490,3 +490,72 @@ null hypothesis $H_0$ and alternative hypothesis $H_1$. Elle couvre toutes les p
 
 Simple hypothesis entirely specifies the distribution of the data while composite hypothesis does not.
 
+== Pearson/Chi-Square statistics
+
+$ T = sum_(i = 1)^k (O_i - E_i)^2/E_i $
+
+$ T tilde cal(X)^2_(k-1) $
+
+avec $k-1 = v$ le degré de liberté. Ici le degré de liberté est $k - 1$ car on a $k$ catégories et on a fixé la somme des $O_i$ (on sait que $O_1 + ... + O_k = n$).
+
+On a une table qui nous donne, pour un degré de liberté donné, la valeur de la cumulative de la distrib. du chi-square.
+
+$p_"obs" = PP_0(T >= t_"obs")$ avec $t_"obs"$ la valeur calculée comme $sum_(i = 1)^k (O_i - E_i)^2/E_i$.
+
+// == Most powerful test
+
+
+// Neyman-Pearson lemma.
+
+// On définit une statistique de test $R = sum_(j = 1)^n Y_j$.
+
+// On définit :
+// $ g(r) = (f_1(y))/(f_0(y)) = (f_1(y_1) dot f_1(y_2) dot ... dot f_1(y_n))/(f_0(y_1) dot f_0(y_2) dot ... dot f_0(y_n)) $
+
+// (on fait bien le produit, on ne fait pas la somme car on veut que $y_1$ soit probable sous l'hypothèse 1 ET que $y_2$ soit probable sous l'hypothèse 1, etc.).
+
+// On définit $g(r)$ et pas $g(y)$. ($g$ de la somme des variables et pas $g$ en fonction de chaque variable).
+
+// $ g(r) = (f_1(y))/(f_0(y)) > t $
+
+// Maintenant, on se pose la question, si on augmente notre $r$ (c'est-à-dire qu'on augmente globalement la valeur de nos Ys), est-ce que ça augmente la probabilité d'accepter $H_1$ ? Si oui, on va chercher la valeur seuil à partir de laquelle le $r$ est trop grand (conduit à un $H_1$ vraiment plus probable que notre $H_0$) pour qu'on garde $H_0$. À l'inverse, peut-être que diminuer $r$ va augmenter la probabilité d'accepter $H_1$ et dans ce cas on va trouver la valeur $r_alpha$ à partir de laquelle elle est trop petite pour qu'on garde $H_0$.
+
+// On choisit notre probabilité de faux positifs $alpha$ (p. ex. $0.05$). Ensuite, on va trouver $r_alpha$ (observé) tel que la probabilité que la somme $R$ soit plus grande est très faible (de probabilité $alpha$) ou que la somme $R$ soit plus petite est très faible (ça on choisit en fonction de si $g(r)$ est croissant ou décroissant).
+
+// $P_(H_0) (R >= r_alpha) = alpha$ (la probabilité de faux positif). Ici comme $R$ est généralement une somme de variables aléatoires indépendantes, on peut l'approximer grâce au théorème central limite.
+
+// p. ex.
+
+// $ PP_(H_0)(R >= r_alpha) = PP_(H_0) ((R - n dot mu)/sqrt(n dot sigma^2) >= (r_alpha - n dot mu)/sqrt(n dot sigma^2)) = 1 - Phi((r_alpha - n dot mu)/sqrt(n dot sigma^2)) = alpha $
+
+// Maintenant nous ce qu'on cherche c'est bien quel $r_alpha$ il faut mettre pour avoir cette proba, donc on isole en fonction de $r_alpha$ (on applique $Phi^(-1)$).
+
+== Neyman-Pearson lemma
+
+On définit une statistique de test $R = sum_(j=1)^n Y_j$.
+
+On introduit la fonction :
+
+$ g(r) = (f_1(y)) / (f_0(y)) = (f_1(y_1) dot f_1(y_2) dot ... dot f_1(y_n)) / (f_0(y_1) dot f_0(y_2) dot ... dot f_0(y_n)) $
+
+Notez qu'il s'agit d'un produit, et non d'une somme, car nous voulons que $y_1$, $y_2$, ..., $y_n$ soient chacun probables sous $H_1$.
+
+On définit $g(r)$ en fonction de la somme des variables, et non de chaque variable individuelle :
+
+$ g(r) = (f_1(y)) / (f_0(y)) > t $
+
+Ensuite, nous nous demandons : si $r$ augmente (c'est-à-dire que la valeur globale des $Y$ augmente), la probabilité d'accepter $H_1$ augmente-t-elle ? Si oui, nous déterminons le seuil $r_alpha$ au-delà duquel $H_1$ devient significativement plus probable que $H_0$. À l'inverse, si diminuer $r$ augmente la probabilité d'accepter $H_1$, nous trouvons le seuil $r_alpha$ en dessous duquel $H_0$ est rejeté.
+
+Nous choisissons une probabilité de faux positifs $alpha$ (par exemple, $0.05$). Ensuite, nous trouvons $r_alpha$ tel que la probabilité sous $H_0$ que $R$ dépasse (ou est inférieure) $r_alpha$ est égale à $alpha$ :
+
+$ P_(H_0)(R >= r_alpha) = alpha. $
+
+Comme $R$ est typiquement une somme de variables aléatoires indépendantes, nous pouvons l'approximer à l'aide du théorème central limite :
+
+$
+P_(H_0)(R >= r_alpha) = P_(H_0)((R - n dot mu) / sqrt(n dot sigma^2) >= (r_alpha - n dot mu) / sqrt(n dot sigma^2))
+                  = 1 - Phi((r_alpha - n dot mu) / sqrt(n dot sigma^2))
+                  = alpha.
+$
+
+Pour trouver $r_alpha$, on l'isole en utilisant l'inverse de la fonction de répartition cumulative $Phi^(-1)$.
