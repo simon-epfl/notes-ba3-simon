@@ -199,16 +199,25 @@ $ K'(0) = E(X) = mu " et " K''(0) = "var"(X) = sigma^2 $
 
 = Central Limit Theorem
 
-is a formal statement of how normal distributions can approximate
-distributions of general sums or averages of i.i.d. random variables.
+$X_1, X_2, ..., X_n$ est une suite de variables aléatoires indépendantes et identiquement distribuées (i.i.d.) avec une moyenne $mu$ et une variance $sigma^2$.
 
-The simple version of the central limit theorem that we give in this section says that whenever a random sample of size n is taken from any distribution with mean $mu$ and variance $sigma^2$, the sample average $X_n$ will have a distribution that is approximately normal with mean $mu$ and variance $sigma^2/n$.
+== Somme de IIDs #sym.arrow normale
 
-(on fait la moyenne des variances : $n dot "var"(1/n (X_1 + ... + X_n)) = 1/n dot "var"(X_1)$, comme les variables sont indépendantes avec une variance égale).
+Soit $S = X_1 + ... + X_n$. \
+Le résultat le plus important : $ S tilde cal(N)(n mu, n sigma^2) $
+
+À partir de ça, on peut retrouver une normale centrée en zéro et de variance 1 (on décale de $n$ fois la moyenne)
+
+$ Z_n = (S_n - n mu)/(sigma sqrt(n)) tilde cal(N)(0, 1) $
+
+- on décale de $n dot mu$ la moyenne
+- on normalise car $"var"(1/(sigma sqrt(n)) S_n) = 1/(sigma^2 n) "var"(S_n) = 1/(sigma^2 n) n sigma^2 = 1 $.
+
+Et en moyenne, $ overline(X_n) = (S_n)/n = (X_1 + ... + X_n)/n $.
+
+On retrouve $ Z_n = (overline(X_n) - mu)/(sigma / sqrt(n)) $
 
 (la variance diminue avec la taille de l'échantillon)
-
-for sums of random variables, the central limit theorem says that the distribution of the sum will be approximately normal with mean $n mu$ and variance $n sigma^2$.
 
 #emoji.warning attention quand on approxime avec des nombres petits on doit faire attention à utiliser les bonnes bornes
 $ P(X <= x) eq.not 1 - P(X > x)$ mais $ P(X <= x) eq 1 - P(X < x + epsilon)$
