@@ -103,10 +103,9 @@ donc, quand continue : $ "var"(X) = intinf f_D (x) x^2 d x - E(X)^2 $
 
 Standard deviation : $ sigma = sqrt("var"(X)) $
 
-if $X_1$ et $X_2$ independent:
-$ "var"(X_1 + a X_2) = "var"(X_1) + a^2"var"(X_2) $
-
 $ "var"(X + Y) = "var"(X) + "var"(Y) + 2 "cov"(X, Y) $
+
+$ "var"(a X + Y) = a^2 "var"(X) + 2 a "cov"(X, Y) + "var"(Y) $
 
 == Covariance
 
@@ -204,6 +203,8 @@ is a formal statement of how normal distributions can approximate
 distributions of general sums or averages of i.i.d. random variables.
 
 The simple version of the central limit theorem that we give in this section says that whenever a random sample of size n is taken from any distribution with mean $mu$ and variance $sigma^2$, the sample average $X_n$ will have a distribution that is approximately normal with mean $mu$ and variance $sigma^2/n$.
+
+(on fait la moyenne des variances : $n dot "var"(1/n (X_1 + ... + X_n)) = 1/n dot "var"(X_1)$, comme les variables sont indépendantes avec une variance égale).
 
 (la variance diminue avec la taille de l'échantillon)
 
@@ -317,7 +318,7 @@ Jensen's inequality : $ E(g(X)) >= g(E(X)) $
 
 = Convergence
 
-From the strongest to the weakest.
+From the strongest to the weakest. Note that these are examples in the general cases, but there are exceptions (for instance conv. in distrib. #sym.arrow conv. in probability if they converge to a constant).
 
 == in mean square
 
@@ -451,8 +452,6 @@ $q_alpha_U$ c'est la valeur telle que $P(Q <= q_alpha_U) = alpha_U$.
 
 === On a pas de pivot simple #sym.arrow normal approximation
 
-On utilise la normal approximation, on passe notre variable aléatoire en une normale, puis une normale standard, et on trouve le $z$ telle que $P(Z <= z) = 1 - alpha_L$ (si on a un intervalle de confiance de $95%$ on prend $alpha_L = 0.025$, donc $z = 1.96$ pour une normale).
-
 https://en.wikipedia.org/wiki/97.5th_percentile_point
 
 $Y$ doit être une variable aléatoire normale ou peut être approximée à une normale en faisant une approximation avec le théroème central limite. 
@@ -474,3 +473,20 @@ Si on a $alpha = 0.05$ (on veut un intervalle de confiance de $0.95$), on prend 
 === Améliorer l'intervalle de confiance
 
 pour diviser l'intervalle de confiance, ce qui compte c'est le terme $+- d$. Même si le $hat(Y)$ bouge, ce qui compte pour la longueur de l'intervalle donc si on fait 4 fois plus de mesures $n' = 4 dot n$, la longueur de l'intervalle sera divisée par 2.
+
+#pagebreak()
+
+== Hypothesis testing
+
+null hypothesis $H_0$ and alternative hypothesis $H_1$. Elle couvre toutes les possibilités non couvertes par $H_1$, car, pour que la logique soit respectée $(not H_1 arrow H_0)$.
+
+=== Faux positifs et faux négatifs
+
+- false positive : on dit que $H_0$ est fausse alors qu'elle est vraie. (en fait un *positif* revient à détecter une valeur bizarre qui va faire rejeter $H_0$).
+
+- false negative : on dit que $H_0$ est vraie alors qu'elle est fausse. (une valeur aurait dû être détectée et nous faire rejeter $H_0$).
+
+=== Simple/Composite hypothesis
+
+Simple hypothesis entirely specifies the distribution of the data while composite hypothesis does not.
+
