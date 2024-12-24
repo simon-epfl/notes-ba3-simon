@@ -151,3 +151,26 @@ aussi appelée "courbe de Gauss", distribution Gaussienne, en cloche :
 Si on veut $Phi(1.51)$, on prend la ligne $1.5"(colonne)"$ et la colonne 1.
 
 #image("posts/tablenorm.png")
+
+#table(
+  columns: (auto, auto, auto, auto, auto, auto, auto),
+  inset: 10pt,
+  align: horizon,
+  table.header(
+    [], [*Description*], [*E*], [*Var*], [*PDF/PMF*], [*CDF*], [*MFG*],
+  ),
+  "Multinomiale",
+  [Modélise la répartition de $n$ essais dans $k$ catégories avec probabilité $p_1, ..., p_k$],
+  [$ (p_1 dot n, ..., p_k dot n) $],
+  [],
+  [],
+  [],
+  [],
+  "Multivariate normale",
+  [Un vecteur $X$ de normales suit une normale s'il existe des coefficients $u$ tel que $u^T X$ (la combinaison linéaire des normales) suit une normale $cal(N)(u^T mu, u^T Omega u)$],
+  [$ (mu_1, ..., mu_k) $],
+  [$ Omega $],
+  [],
+  [],
+  [$ exp(t^T mu + 1/2 t^T Omega t) $],
+)

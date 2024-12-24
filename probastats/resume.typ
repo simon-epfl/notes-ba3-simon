@@ -151,6 +151,8 @@ $ "corr"(X, Y) = (E(X Y) - E(X)E(Y)) / {"var"(X)"var"(Y)}^(1/2) $
 toujours entre -1 et 1. \
 une corrélation de 0 ne signifie pas que les variables sont indépendantes (il peut y avoir d'autres types de corrélation).
 
+On a $X,Y "gaussiennes jointes" arrow.double.long (X, Y " indépendantes" arrow.l.r.double.long "cov"(X, Y) = 0)$
+
 #pagebreak()
 
 = Moments
