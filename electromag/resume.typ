@@ -1,4 +1,4 @@
-== Tricks généraux
+= Tricks généraux
 
 - utiliser le principe de superposition : quand il n'y a pas de charge, on peut dire qu'il y a en fait une charge positive et une négative.
 - toujours justifier que le champ est uniforme car la distance entre les plaques est faible et les plaques sont grandes
@@ -6,15 +6,13 @@
 - faire des matrices pour les équations loi mailles/noeuds
 - dans une trajectoire circulaire, une force de $(m v^2)/R$ doit tirer vers le centre (centripète).
 
-== Force électrostatique
+= La loi de Coulomb (force électrique)
 
-$ arrow(F) = k (q_a q_b)/(r^2) $
-
-$ k = 1/(4 pi epsilon_0) $
+$ arrow(F)_(q_1 arrow q_2) = k (q_a q_b)/(r^2) arrow(r)_(1 arrow 2) " avec " k = 1/(4 pi epsilon_0) $
 
 Méthode pour calculer la force exercée par la barre sur $q_0$.
 
-#image("posts/exo1.png", width: 40%)
+#image("posts/exo1.png")
 
 - écrire l'expression de la force selon un vecteur $arrow(r)$.
 - ici, on sait que la force sur $y$ va se compenser, donc on intègre la force selon $arrow(x)$ pour trouver $F_"tot"$.
@@ -22,23 +20,40 @@ Méthode pour calculer la force exercée par la barre sur $q_0$.
 Attention, quand on intègre, il ne faut pas oublier de décomposer le vecteur $arrow(r)$ selon les différentes composantes (qui seront dans le calcul de l'intégrale !) :
 $ arrow(r) = (D_1 arrow(e_r) + D_2 arrow(e_z))/(sqrt(D_1^2 + D_2^2)) $
 
-== Dipôle électrique
+= Le champ électrique
 
-Moment dipolaire : $ arrow(p) = q arrow(d)$,  décrit la séparation des charges
+Champ électrique produit par une charge $Q$ (avec $arrow(r)$ le vecteur unitaire dirigé radialement, sortant de la source) :
+$ arrow(E) = k Q/r^2 arrow(r) = integral_"distribution des charges" k (d q)/r^2 arrow(r) $
 
-La force sur un dipôle dans un champ électrique E (externe): $arrow(F) = (arrow(p) dot arrow(nabla)) arrow(E)$
+Seule la direction importe, le sens sera apporté par la charge sur laquelle on "appliquera" le champ.
 
-Moment de force : $arrow(tau) = arrow(r) times arrow(E)$, permet de décrire la rotation du dipôle (une fois que le dipôle est parallèle à E, le moment de force devient nul).
-
-Théorème du moment cinétique : $arrow(tau) = (d L_O)/(d t)$
-
-$arrow(L_O) = sum_i arrow(r_i) times m_i arrow(v_i)$
-
-== Champ électrique
+$arrow(E) = 0$ à l'intérieur des conducteurs. Les lignes de champ vont de + à -.
 
 Dans le cas d'un champ uniforme : $E = V / L$.
 
-Seule la direction importe, le sens sera apporté par la charge sur laquelle on "appliquera" le champ.
+= Les dipôles électriques
+
+Un dipôle c'est deux charges opposées séparées par une distance $d$ constante. Si on place un dipôle dans un champ électrique, il y a un moment de force (couple).
+
+Moment dipolaire : $ arrow(p) = q arrow(d)$, il décrit la séparation des charges
+
+Moment de force : $arrow(tau) = arrow(p) times arrow(E)$, il décrit la rotation que subit le dipôle
+
+La force sur un dipôle dans un champ électrique E (externe): $arrow(F) = (arrow(p) dot arrow(nabla)) arrow(E)$, donc nulle si E uniforme.
+
+Moment de force : $arrow(tau) = arrow(r) times arrow(E)$, permet de décrire la rotation du dipôle (une fois que le dipôle est parallèle à E, le moment de force devient nul).
+
+Théorème du moment cinétique : $arrow(tau) = (d L_O)/(d t)$ avec $arrow(L_O) = sum_i arrow(r_i) times m_i arrow(v_i)$.
+
+= Le flux électrique
+
+Le flux électrique est une mesure de la "quantité de champ" qui est interceptée par une surface A.
+
+$ Phi_E = integral.cont_"surface S" arrow(E) dot d arrow(A) $
+
+$arrow(A)$ est la normale à la surface, orientée vers l'extérieur.
+
+== Gauss
 
 Quand on a une surface avec une forme facile (symmétrique) on peut utiliser Gauss :
 
@@ -47,7 +62,11 @@ $ Phi_E = integral arrow(E(r)) dot d arrow(S) = Q_"int"/epsilon_0 $
 En fait on va entourer nos charges avec une forme (par exemple une sphère), donc on aura $Q_"int"$ et on va calculer 
 $d arrow(S)$ est toujours orthogonal à la surface par laquelle les charges passent (donc si le champ est dans le même sens alors le produit scalaire fera 1).
 
-Dans le cas d'un condensateur plan : $E = sigma/(2 epsilon_0)$.
+Ça simplifie le calcul de $E$; si on connaît $Q_"int"$ et que $Q$ est distribué uniformément alors on peut utiliser la formule vue plus haut.
+
+attention à bien compter toutes les surfaces. ici pour le flux on ajoute un facteur 2 parce que si on ne considère que la surface A, on trouvera un champ deux fois trop petit :
+
+#image("posts/2eps.png")
 
 == Potentiel électrique 
 
