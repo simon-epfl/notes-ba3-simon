@@ -74,7 +74,7 @@
   [$ 1 - e^(-lambda t) $],
   [$ lambda/(lambda - t) " si " t < lambda $],
   "Gamma",
-  [La distribution gamma est utilisée pour modéliser le temps d'attente avant $alpha$ évènements dans un processus de Poisson. L'exponentielle est un cas particulier de la gamma avec $alpha = 1$. $beta$ est le taux.],
+  [La distribution gamma est utilisée pour modéliser le temps d'attente avant $alpha$ évènements dans un processus de Poisson. L'exponentielle est un cas particulier de la gamma avec $alpha = 1$. $beta$ est le taux. $Gamma(alpha) = (alpha - 1)!$ si $alpha$ est un entier.],
   [$ alpha/beta $],
   [$ alpha/(beta^2) $],
   [$ (lambda^alpha)/(Gamma(alpha)) x^(alpha - 1)e^(-lambda x) $ si x > 0 sinon 0],

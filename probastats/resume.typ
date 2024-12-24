@@ -29,7 +29,7 @@
   body, class: "Exemple", fill: rgb("#FFF4E0"), stroke: rgb("#F4B183")
 )
 
-= Rappels utiles
+= Rappels
 
 == Théorème Spectral
 
@@ -59,6 +59,10 @@ Si on intègre $f_(X Y)$ une fois, on trouve une autre fonction de densité de p
 == Conditional probability
 
 $ P(A|B) = P(A sect B) / P(B) $
+
+== McLaurin series
+
+$ e^t = sum_(n=0)^(∞) t^n / n! $
 
 #pagebreak()
 
@@ -494,6 +498,14 @@ null hypothesis $H_0$ and alternative hypothesis $H_1$. Elle couvre toutes les p
 - false positive : on dit que $H_0$ est fausse alors qu'elle est vraie. (en fait un *positif* revient à détecter une valeur bizarre qui va faire rejeter $H_0$).
 
 - false negative : on dit que $H_0$ est vraie alors qu'elle est fausse. (une valeur aurait dû être détectée et nous faire rejeter $H_0$).
+
+La taille d'un test c'est la probabilité de faux positifs (rejeter $H_0$ alors qu'elle est vraie).
+
+La puissance d'un test c'est $1 - P_("faux negatifs")$. C'est la capacité du test à rejeter $H_0$ quand elle est fausse.
+
+#image("posts/truepositive.png", width: 70%)
+
+On ne peut pas minimiser les false positive sans commencer à rendre notre test incapable de détecter les true positive.
 
 === Simple/Composite hypothesis
 
