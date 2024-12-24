@@ -6,6 +6,8 @@
 - faire des matrices pour les équations loi mailles/noeuds
 - dans une trajectoire circulaire, une force de $(m v^2)/R$ doit tirer vers le centre (centripète).
 - vitesse angulaire $ omega = (2 pi)/T " et " f = 1/T$
+- puissance dissipée : $P = R i^2$
+- longueur d'onde : $lambda = c / f $
 
 = La loi de Coulomb (force électrique)
 
@@ -153,6 +155,50 @@ Calculer la capacité des condensateurs en parallèle :
 
 $ C_"tot" = sum_"capacité du condensateur i" C_i $
 
+= Circuits (pdv général)
+
+La tension va généralement du - au + d'un générateur.
+
+== Règle des noeuds (pour un noeud donné)
+
+$sum_k i_k = 0$ \
+$sum i_"in" = sum i_"out"$ 
+
+== Règle des mailles (autour de chaque maille fermée)
+
+$sum_k Delta V_k = 0$ \ 
+On choisit un sens pour compter. \
+On ajoute les tensions (de batterie par exemple) dans le sens dans lequel on va. \
+On ajoute les résistances et les inductances comme $plus.minus i_k dot R_k " "ohm$ en fonction du sens (si on compte dans le sens opposé au courant, on ajoute, sinon on enlève). donc le + des résistances est le - des tensions de batteries
+
+== Loi d'ohm
+
+$V = R i$ (elle s'applique aux bornes d'un dipôle)
+
+= Circuits RC
+
+== Charger un condensateur
+
+temps caractéristique d'un condensateur $tau = R C$.
+
+On a qu'à l'état d'équilibre (quand le condensateur est chargé), le courant est nul :
+
+$ C V = q arrow.r.double C (d V)/(d t) = (d q)/(d t) = i $
+$ "donc " i = C (d q)/(d t) $
+
+== Retrouver l'équation de charge
+
+Partir de la loi $V_c$ (le générateur) $ + V_r$ (la tension générée par la résistance du condensateur) $ = 0$.
+
+$ V_c + R C (d V)/(d t) = 0 $
+$ Q / (R C) = (d V)/(d t) $
+Résoudre. 
+
+Exemples d'équation charge/décharge :
+
+$ V_C (t) = epsilon (1 - exp(-t / (R C))) $
+$ V_C (t) = epsilon exp(-t / (R C)) $
+
 #pagebreak()
 
 == Conservation de l'énergie
@@ -178,51 +224,6 @@ $ W_(A arrow B) = Delta U $
 (par exemple en méca $W_(A arrow B) = m g h_a - m g h_b$)
 
 Si $nabla V = 0$, le potentiel est constant, ça signifie que le champ est nul dans la direction dans laquelle on effectue le travail, mais on peut avoir un champ perpendiculaire à la direction.
-
-=== Puissance dissipée
-
-$P = R i^2$
-
-== Circuits
-
-La tension va généralement du - au + d'un générateur.
-
-=== Règle des noeuds (pour un noeud donné)
-$sum_k i_k = 0$ \
-$sum_n i_"in" = sum_n i_"out"$ 
-
-=== Règle des mailles (autour de chaque maille fermée)
-
-$sum_k Delta V_k = 0$ \ 
-On choisit un sens pour compter. \
-On ajoute les tensions (de batterie par exemple) dans le sens dans lequel on va. \
-On ajoute les résistances et les inductances comme $plus.minus i_k dot R_k " "ohm$ en fonction du sens (si on compte dans le sens opposé au courant, on ajoute, sinon on enlève). donc le + des résistances est le - des tensions de batteries
-
-=== Loi d'ohm
-
-$V = R i$ (elle s'applique aux bornes d'un dipôle)
-
-== Charger un condensateur
-
-temps caractéristique d'un condensateur $tau = R C$.
-
-On a qu'à l'état d'équilibre (quand le condensateur est chargé), le courant est nul :
-
-$ C V = q arrow.r.double C (d V)/(d t) = (d q)/(d t) = i $
-$ "donc " i = C (d q)/(d t) $
-
-- partir de la loi $V_c$ (le générateur) $ + V_r$ (la tension générée par la résistance du condensateur) $ = 0$.
-- $ V_c + R C (d V)/(d t) = 0 $
-- $ Q / (R C) = (d V)/(d t) $
-Résoudre. 
-
-=== Charge
-
-$ V_C(t) = epsilon (1 - exp(-t / (R C))) $
-
-=== Décharge
-
-$ V_C(t) = epsilon exp(-t / (R C)) $
 
 == Champ magnétique
 
@@ -448,11 +449,3 @@ mais dans les ondes électromagnétiques, on a $ B = E/c $, donc : $ u = epsilon
 Vecteur de Pointing, indique dans quelle direction se propage l'énergie d'une onde électromagnétique : $ arrow(S) = 1/(mu_0) arrow(E) times arrow(B) $
 
 $arrow(S)$ mesure le flux instantané d'énergie.
-
-== Longueur d'onde
-
-$ lambda = c / f $
-
-différence entre la vitesse angulaire en rad/s et la fréquence en Hz (cycle par seconde) :
-
-$ omega / (2 pi) = f $
