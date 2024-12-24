@@ -5,6 +5,7 @@
 - $P = E/(d t)$
 - faire des matrices pour les équations loi mailles/noeuds
 - dans une trajectoire circulaire, une force de $(m v^2)/R$ doit tirer vers le centre (centripète).
+- vitesse angulaire $ omega = (2 pi)/T " et " f = 1/T$
 
 = La loi de Coulomb (force électrique)
 
@@ -68,25 +69,91 @@ attention à bien compter toutes les surfaces. ici pour le flux on ajoute un fac
 
 #image("posts/2eps.png")
 
-== Potentiel électrique 
+= Potentiel électrique 
 
-Ce n'est pas un vecteur. C'est comparable à la hauteur en méca.
+Ce n'est pas un vecteur. C'est comparable au potentiel gravitationnel en méca (à la hauteur).
+
+== Rappels travail/énergie
+
+$W_(A arrow B) = U(A) - U(B) = - Delta U$
+
+Énergie potentielle : $U(r) = k (q_0 Q)/r$
+
+== Calculer le potentiel
+
+$ V(r) = U(r)/q_0 = (k Q)/r $
+
+Comment calculer $V$ *en un point* ? Charge(s) ponctuelle(s) ou surface continue.
+
+$ V(r) = sum_i^n k Q_i/r_i " ou " V(r) = integral_S k d_q/r $
 
 $ E = - nabla V arrow.double.r.l V = integral E arrow(d l) $
 
-On en déduit :
+Si dans un circuit on a une différence de potentiel entre la borne + d'une résistance et la borne -, on sait qu'elle augmente/diminue linéairement (le champ étant constant).
 
-Comment calculer $V$ *en un point* ? Charge(s) ponctuelle(s) :
+== Surfaces équipotentielles
 
-$ V(r) = sum_i^n k Q_i/r_i $
+=== Effet de pointe
 
-Pour une surface avec une distribution de charges continue :
+Deux sphères (une A petite, une B grande) connectées. Elles ont donc le même potentiel, mais une accumule une plus grande densité de charges !
 
-$ V(r) = integral_S k d_q/r $
+=== Poisson
 
-Attention $V$ est un scalaire, pas un vecteur !
+On part de la formule de Gauss:
 
-TODO clarify avec Valerio : Si dans un circuit on a une différence de potentiel entre la borne + d'une résistance et la borne -, on sait qu'elle augmente/diminue linéairement (le champ est constant).
+$ integral_S arrow(E) dot d arrow(S) = Q_"int"/epsilon_0 $
+
+Intégrer sur la surface c'est comme intégrer sur le volume en dérivant le vecteur :
+
+$ arrow.double.r.l integral_V arrow(nabla) dot arrow(E) dot d V = Q_"int"/epsilon_0 $
+
+On retrouve la charge :
+
+$ arrow.double.r.l arrow(nabla) dot arrow(E) integral_V d V = 1/epsilon_0 integral_V rho dot d V arrow.double.r.l arrow(nabla) dot arrow(E) integral_V d V = rho/epsilon_0 integral_V d V arrow.double.r.l arrow(nabla) dot arrow(E) = rho/epsilon_0 $
+
+$ arrow.double.r.l arrow(nabla)^2dot arrow(V) = rho/epsilon_0 $
+
+= Capacité électrique
+
+Plus de charge on met dans une sphère, plus on augmente son potentiel. Mais au fur et à mesure qu'on met de la charge, il devient de plus en plus difficile d'en mettre encore, parce qu'on doit la pousser pour vaincre la répulsion.
+
+La capacité est définie du matériau et du milieu (p. ex. pour une sphère $C = 4 pi epsilon_0 R$ dans le vide -- avec $R$ le rayon).
+
+On a la relation suivante : $C = Q/V$. Comme $C$ est constante, si on augmente le nombre de charges, on doit aussi augmenter le potentiel.
+
+== Capacité électrique et stockage d'énergie
+
+condensateur : deux conducteurs séparés par un isolant (ou par la vide).
+
+$ C = (epsilon A)/d " ou plus exactement " C = (epsilon_0 epsilon_r A)/d $
+
+$epsilon_r$ (ou $K_f$) est la constante diaélectrique relative du matériau.
+$A$ est l'aire des plaques, $d$ la distance entre elles, $epsilon_0$ la permissivité du vide.
+
+$ U_"stockée" = 1/2 C V^2 = "(généralement) " 1/2 epsilon_0 E^2 A d $
+$ arrow.double (d U)/(d V) = "densité énergie" = 1/2 epsilon_0 E^2 $
+
+Si on veut l'énergie totale, on intègre $ integral_V 1/2 epsilon_0 E^2$.
+
+$ E = E_0 / K_f " avec " K_f = epsilon_r = 1 + chi $
+
+$E_0$ le champ électrique si on était dans l'air \
+$K$ la constante diélectrique du milieu
+
+Calculer une différence de potentiel avec différents milieux:
+
+$ V(A) - V(B) = integral_0^("fin du milieu A") arrow(E) d arrow(l) + integral_"fin du milieu A"^"fin du milieu B" arrow(E) d arrow(l) $
+$ arrow.double.r.l V(A) - V(B) = E_0/K_A(d_A) + E_0/K_B(d_B) $
+
+Calculer la capacité des condensateurs en série :
+
+$ 1/C_"tot" = sum_"capacité du condensateur i" 1/C_i $
+
+Calculer la capacité des condensateurs en parallèle :
+
+$ C_"tot" = sum_"capacité du condensateur i" C_i $
+
+#pagebreak()
 
 == Conservation de l'énergie
 
@@ -115,66 +182,6 @@ Si $nabla V = 0$, le potentiel est constant, ça signifie que le champ est nul d
 === Puissance dissipée
 
 $P = R i^2$
-
-== Propriété des conducteurs dans un cas électrostatique
-
-- $arrow(E) = 0$ à l'intérieur
-- à l'intérieur ce n'est pas chargé (il y a un équilibre)
-- $arrow(E)$ est $perp$, car c'est à la surface que toutes les charges se trouvent (et toute composante du champ parallèle ferait bouger les charges, ce qui n'est pas autorisé). 
-
-== Formule de Poisson
-
-On part de la formule de Gauss:
-
-$ integral_S arrow(E) dot d arrow(S) = Q_"int"/epsilon_0 $
-
-Intégrer sur la surface c'est comme intégrer sur le volume en dérivant le vecteur :
-
-$ arrow.double.r.l integral_V arrow(nabla) dot arrow(E) dot d V = Q_"int"/epsilon_0 $
-
-On retrouve la charge :
-
-$ arrow.double.r.l arrow(nabla) dot arrow(E) integral_V d V = 1/epsilon_0 integral_V rho dot d V $
-
-$ arrow.double.r.l arrow(nabla) dot arrow(E) integral_V d V = rho/epsilon_0 integral_V d V $
-
-*$ arrow.double.r.l arrow(nabla) dot arrow(E) = rho/epsilon_0 $*
-
-$ arrow.double.r.l arrow(nabla)^2dot arrow(V) = rho/epsilon_0 $
-
-== Capacité
-
-Dans le cas d'un condensateur, $Q = C dot V$
-
-Ou $Q = C/(Delta V)$ pour un condensateur, avec $Delta V$ la différence de potentiel entre les deux plaques.
-
-$ C = (epsilon A)/d  $
-plus exactement :
-$ C = (epsilon K_f A)/d $
-
-donc C ne dépend que de la géométrie du condensateur
-
-$d$ distance entre les plaques (en mètres) \
-$A$ l'aire des plaques (en mètres carrés) \ 
-$epsilon$ permissivité du milieu entre les plaques (la capacité ne dépend donc pas uniquement de la géométrie mais aussi du facteur $chi_i$ du matériau)
-
-$ E = E_0 / K $
-
-$E_0$ le champ électrique si on était dans l'air \
-$K$ la constante diélectrique du milieu
-
-Calculer une différence de potentiel avec différents milieux:
-
-$ V(A) - V(B) = integral_0^("fin du milieu A") arrow(E) d arrow(l) + integral_"fin du milieu A"^"fin du milieu B" arrow(E) d arrow(l) $
-$ arrow.double.r.l V(A) - V(B) = E_0/K_A(d_A) + E_0/K_B(d_B) $
-
-Calculer la capacité des condensateurs en série :
-
-$ 1/C_"tot" = sum_"capacité du condensateur i" 1/C_i $
-
-Calculer la capacité des condensateurs en parallèle :
-
-$ C_"tot" = sum_"capacité du condensateur i" C_i $
 
 == Circuits
 
@@ -291,10 +298,6 @@ quand le flux change (la surface par exemple), la force élecromotrice doit gén
 $ Phi_B = integral_S arrow(B) d arrow(A) $
 Si B est constant sur la surface $Phi_B = B dot S$.
 
-== Vitesse angulaire
-
-$ omega = (2 pi)/T $
-$ f = 1/T $
 
 == Convertir et déplacer l'énergie
 
