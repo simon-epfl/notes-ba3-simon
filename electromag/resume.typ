@@ -18,6 +18,7 @@
 - vitesse angulaire $ omega = (2 pi)/T " et " f = 1/T$
 - puissance dissipée : $P = R i^2$
 - longueur d'onde : $lambda = c / f $
+- volume d'une sphère de rayon $R$ : $V = 4/3 pi R^3$, surface : $S = 4 pi R^2$
 
 == Coordonnées
 
@@ -26,11 +27,15 @@
 $ arrow(r) = rho arrow(e_(rho)) + z arrow(e_z) $
 intégration : $ integral.triple f(x, y, z) d x d y d z = integral.triple f(r cos (theta), r sin (theta), z) r d r d theta d z $
 
+Un petit élément de surface est donné par $ d arrow(S) = r d r d theta arrow(e_r) times arrow(e_theta) $
+
 === Sphériques
 
 $ arrow(r) = r arrow(e_r) $
 
 intégration : $ integral.triple f(x, y, z) d x d y d z = integral.triple f(r sin (theta) cos (phi), r sin (theta) sin (phi), r cos (theta)) r^2 sin (theta) d r d theta d phi $
+
+Un petit élément de surface est donné par $ d arrow(S) = r^2 sin (theta) d r d theta d phi arrow(e_r) $
 
 = Électrostatique
 
