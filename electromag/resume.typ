@@ -21,6 +21,7 @@
 - volume d'une sphère de rayon $R$ : $V = 4/3 pi R^3$, surface : $S = 4 pi R^2$
 - produit vectoriel $arrow(a) times arrow(b) = norm(arrow(a)) norm(arrow(b)) sin(theta) arrow(n)$ avec $arrow(n)$ le vecteur normal à $arrow(a)$ et $arrow(b)$.
 - produit scalaire $arrow(a) dot arrow(b) = norm(arrow(a)) norm(arrow(b)) cos(theta)$
+- oscillateur harmonique : $dot.double(theta) = -Omega^2 sin(theta)$, $Omega$ est la fréquence des oscillations
 
 == Coordonnées
 

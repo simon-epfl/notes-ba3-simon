@@ -22,4 +22,8 @@ $ arrow(r) = (D_1 arrow(e_r) + D_2 arrow(e_z))/(sqrt(D_1^2 + D_2^2)) $
 
 == Série 2
 
-On veut calculer la valeur du champ $E$ engendré par une barre le long de l'axe $x$ sur une droite parallèle. En fait on peut le calculer en un point (avec comme coordonnées $x = L + d, y = 0$)! Ce sera la même valeur pour tous les points de la droite.
+Exo 1 : On veut calculer la valeur du champ $E$ engendré par une barre le long de l'axe $x$ sur une droite parallèle. En fait on peut le calculer en un point (avec comme coordonnées $x = L + d, y = 0$)! Ce sera la même valeur pour tous les points de la droite.
+
+Exo 4 : placer le point O au centre du dipole pour calculer son moment cinétique.
+
+Exo 6 : utiliser Gauss pour calculer E !
