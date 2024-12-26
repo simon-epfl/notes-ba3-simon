@@ -19,6 +19,8 @@
 - puissance dissipée : $P = R i^2$
 - longueur d'onde : $lambda = c / f $
 - volume d'une sphère de rayon $R$ : $V = 4/3 pi R^3$, surface : $S = 4 pi R^2$
+- produit vectoriel $arrow(a) times arrow(b) = norm(arrow(a)) norm(arrow(b)) sin(theta) arrow(n)$ avec $arrow(n)$ le vecteur normal à $arrow(a)$ et $arrow(b)$.
+- produit scalaire $arrow(a) dot arrow(b) = norm(arrow(a)) norm(arrow(b)) cos(theta)$
 
 == Coordonnées
 
@@ -74,9 +76,9 @@ Moment de force : $arrow(tau) = arrow(p) times arrow(E)$, il décrit la rotation
 
 La force sur un dipôle dans un champ électrique E (externe): $arrow(F) = (arrow(p) dot arrow(nabla)) arrow(E)$, donc nulle si E uniforme.
 
-Moment de force : $arrow(tau) = arrow(r) times arrow(E)$, permet de décrire la rotation du dipôle (une fois que le dipôle est parallèle à E, le moment de force devient nul).
+Moment de force : $arrow(tau) = arrow(p) times arrow(E)$, permet de décrire la rotation du dipôle (une fois que le dipôle est parallèle à E, le moment de force devient nul).
 
-Théorème du moment cinétique : $arrow(tau) = (d L_O)/(d t)$ avec $arrow(L_O) = sum_i arrow(r_i) times m_i arrow(v_i)$.
+Théorème du moment cinétique : $arrow(tau) = (d arrow(L_O))/(d t)$ avec $arrow(L_O) = sum_i arrow(r_i) times m_i arrow(v_i)$.
 
 == Le flux électrique
 
