@@ -1,3 +1,13 @@
+#set text(font: "DejaVu Sans")
+#show heading.where(level: 1): contents => text(size: 20pt, contents)
+#show heading: contents => pad(bottom: 10pt, contents)
+#set quote(block: true)
+#set heading(numbering: (ignore_first, ..n) => {
+  if (n.pos().len() != 0) {
+    numbering("1.1.", ..n)
+  }
+})
+
 = Tricks généraux
 
 - utiliser le principe de superposition : quand il n'y a pas de charge, on peut dire qu'il y a en fait une charge positive et une négative.
@@ -9,7 +19,9 @@
 - puissance dissipée : $P = R i^2$
 - longueur d'onde : $lambda = c / f $
 
-= La loi de Coulomb (force électrique)
+= Électrostatique
+
+== La loi de Coulomb (force électrique)
 
 $ arrow(F)_(q_1 arrow q_2) = k (q_a q_b)/(r^2) arrow(r)_(1 arrow 2) " avec " k = 1/(4 pi epsilon_0) $
 
@@ -23,7 +35,7 @@ Méthode pour calculer la force exercée par la barre sur $q_0$.
 Attention, quand on intègre, il ne faut pas oublier de décomposer le vecteur $arrow(r)$ selon les différentes composantes (qui seront dans le calcul de l'intégrale !) :
 $ arrow(r) = (D_1 arrow(e_r) + D_2 arrow(e_z))/(sqrt(D_1^2 + D_2^2)) $
 
-= Le champ électrique
+== Le champ électrique
 
 Champ électrique produit par une charge $Q$ (avec $arrow(r)$ le vecteur unitaire dirigé radialement, sortant de la source) :
 $ arrow(E) = k Q/r^2 arrow(r) = integral_"distribution des charges" k (d q)/r^2 arrow(r) $
@@ -34,7 +46,7 @@ $arrow(E) = 0$ à l'intérieur des conducteurs. Les lignes de champ vont de + à
 
 Dans le cas d'un champ uniforme : $E = V / L$.
 
-= Les dipôles électriques
+== Les dipôles électriques
 
 Un dipôle c'est deux charges opposées séparées par une distance $d$ constante. Si on place un dipôle dans un champ électrique, il y a un moment de force (couple).
 
@@ -48,7 +60,7 @@ Moment de force : $arrow(tau) = arrow(r) times arrow(E)$, permet de décrire la 
 
 Théorème du moment cinétique : $arrow(tau) = (d L_O)/(d t)$ avec $arrow(L_O) = sum_i arrow(r_i) times m_i arrow(v_i)$.
 
-= Le flux électrique
+== Le flux électrique
 
 Le flux électrique est une mesure de la "quantité de champ" qui est interceptée par une surface A.
 
@@ -56,7 +68,7 @@ $ Phi_E = integral.cont_"surface S" arrow(E) dot d arrow(A) $
 
 $arrow(A)$ est la normale à la surface, orientée vers l'extérieur.
 
-== Gauss
+=== Gauss
 
 Quand on a une surface avec une forme facile (symmétrique) on peut utiliser Gauss :
 
@@ -71,17 +83,17 @@ attention à bien compter toutes les surfaces. ici pour le flux on ajoute un fac
 
 #image("posts/2eps.png")
 
-= Potentiel électrique 
+== Potentiel électrique 
 
 Ce n'est pas un vecteur. C'est comparable au potentiel gravitationnel en méca (à la hauteur).
 
-== Rappels travail/énergie
+=== Rappels travail/énergie
 
 $W_(A arrow B) = U(A) - U(B) = - Delta U$
 
 Énergie potentielle : $U(r) = k (q_0 Q)/r$
 
-== Calculer le potentiel
+=== Calculer le potentiel
 
 $ V(r) = U(r)/q_0 = (k Q)/r $
 
@@ -115,7 +127,7 @@ $ arrow.double.r.l arrow(nabla) dot arrow(E) integral_V d V = 1/epsilon_0 integr
 
 $ arrow.double.r.l arrow(nabla)^2dot arrow(V) = rho/epsilon_0 $
 
-= Capacité électrique
+== Capacité électrique
 
 Plus de charge on met dans une sphère, plus on augmente son potentiel. Mais au fur et à mesure qu'on met de la charge, il devient de plus en plus difficile d'en mettre encore, parce qu'on doit la pousser pour vaincre la répulsion.
 
@@ -123,7 +135,7 @@ La capacité est définie du matériau et du milieu (p. ex. pour une sphère $C 
 
 On a la relation suivante : $C = Q/V$. Comme $C$ est constante, si on augmente le nombre de charges, on doit aussi augmenter le potentiel.
 
-== Capacité électrique et stockage d'énergie
+=== Capacité électrique et stockage d'énergie
 
 condensateur : deux conducteurs séparés par un isolant (ou par la vide).
 
@@ -155,7 +167,15 @@ Calculer la capacité des condensateurs en parallèle :
 
 $ C_"tot" = sum_"capacité du condensateur i" C_i $
 
-= Circuits (pdv général)
+#pagebreak()
+
+= Courant électrique
+
+Fin de l'électrostatique : dorénavant les charges peuvent bouger. L'argument utilisé pour conclure que $arrow(E) = 0$ dans les conducteurs n'est plus valable.
+
+$E = V/L$ dans le cas d'un champ uniforme.
+
+$i = (d Q)/(d t)$, courant électrique, un scalaire.
 
 La tension va généralement du - au + d'un générateur.
 
