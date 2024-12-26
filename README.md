@@ -5,6 +5,7 @@ Mes notes du semestre 3 de bachelor informatique à l'EPFL.
 ## Électromagnétisme
 
 * Notes : [PDF](./electromag/resume.pdf)
+* Tricks série : [PDF](./electromag/tricks-series.pdf)
 * Formulaire Midterm : [PDF](./electromag/formulaire%20midterm%20electromag.pdf)
 
 ## État et droits humains (SHS)
