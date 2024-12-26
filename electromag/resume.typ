@@ -19,6 +19,19 @@
 - puissance dissipée : $P = R i^2$
 - longueur d'onde : $lambda = c / f $
 
+== Coordonnées
+
+=== Cylindriques
+
+$ arrow(r) = rho arrow(e_(rho)) + z arrow(e_z) $
+intégration : $ integral.triple f(x, y, z) d x d y d z = integral.triple f(r cos (theta), r sin (theta), z) r d r d theta d z $
+
+=== Sphériques
+
+$ arrow(r) = r arrow(e_r) $
+
+intégration : $ integral.triple f(x, y, z) d x d y d z = integral.triple f(r sin (theta) cos (phi), r sin (theta) sin (phi), r cos (theta)) r^2 sin (theta) d r d theta d phi $
+
 = Électrostatique
 
 == La loi de Coulomb (force électrique)
