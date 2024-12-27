@@ -123,6 +123,10 @@ Comment calculer $V$ *en un point* ? Charge(s) ponctuelle(s) ou surface continue
 $ V(r) = sum_i^n k Q_i/r_i " ou " V(r) = integral_S k d_q/r $
 
 $ E = - nabla V arrow.double.r.l V = integral E arrow(d l) $
+$ V(B) - V(A) = - integral_A^B arrow(E)arrow(d l) $
+
+
+En pratique on prend souvent le point A à l’infini, avec la convention $V (infinity) = 0$.
 
 Si dans un circuit on a une différence de potentiel entre la borne + d'une résistance et la borne -, on sait qu'elle augmente/diminue linéairement (le champ étant constant).
 
@@ -147,6 +151,29 @@ On retrouve la charge :
 $ arrow.double.r.l arrow(nabla) dot arrow(E) integral_V d V = 1/epsilon_0 integral_V rho dot d V arrow.double.r.l arrow(nabla) dot arrow(E) integral_V d V = rho/epsilon_0 integral_V d V arrow.double.r.l arrow(nabla) dot arrow(E) = rho/epsilon_0 $
 
 $ arrow.double.r.l arrow(nabla)^2dot arrow(V) = rho/epsilon_0 $
+
+== Conservation de l'énergie
+
+$ E = K + U $
+
+L'énergie cinétique et l'énergie potentielle d'une charge $q$ dans un potentiel électrique $V$ créé par d'autres charges :
+
+$ K = 1/2 m v^2 " et " U = V dot q $
+
+dans un circuit on considère que la vitesse est nulle dans un conducteur donc :
+$ P = E/(d t) = (d U)/(d t) = V dot i $
+
+U s'exprime toujours comme une énergie potentielle entre une charge et une ou plusieurs autres charges.
+
+En méca, l'énergie potentielle dépend du champ dans lequel la charge est introduite (en méca $U = m g h$). En électromag pareil, elle dépend des autres charges présentes autour.
+
+L'énergie potentielle est définie à une constante près. En méca on dit que $U("surface de la Terre") = 0$ pour simplifier les calculs. En électromag on dit $U(infinity) = 0$ (quand les deux charges sont éloignées à l'infini alors l'énergie potentielle est nulle).
+
+$ W_(A arrow B) = Delta U $
+
+(par exemple en méca $W_(A arrow B) = m g h_a - m g h_b$)
+
+Si $nabla V = 0$, le potentiel est constant, ça signifie que le champ est nul dans la direction dans laquelle on effectue le travail, mais on peut avoir un champ perpendiculaire à la direction.
 
 == Capacité électrique
 
@@ -241,30 +268,6 @@ $ V_C (t) = epsilon (1 - exp(-t / (R C))) $
 $ V_C (t) = epsilon exp(-t / (R C)) $
 
 #pagebreak()
-
-== Conservation de l'énergie
-
-$ E = K + U $
-
-L'énergie cinétique et l'énergie potentielle d'une charge $q$ dans un potentiel électrique $V$ créé par d'autres charges :
-
-$ K = 1/2 m v^2 $
-$ U = V dot q $
-
-dans un circuit on considère que la vitesse est nulle dans un conducteur donc :
-$ P = E/(d t) = (d U)/(d t) = V dot i $
-
-U s'exprime toujours comme une énergie potentielle entre une charge et une ou plusieurs autres charges.
-
-En méca, l'énergie potentielle dépend du champ dans lequel la charge est introduite (en méca $U = m g h$). En électromag pareil, elle dépend des autres charges présentes autour.
-
-L'énergie potentielle est définie à une constante près. En méca on dit que $U("surface de la Terre") = 0$ pour simplifier les calculs. En électromag on dit $U(infinity) = 0$ (quand les deux charges sont éloignées à l'infini alors l'énergie potentielle est nulle).
-
-$ W_(A arrow B) = Delta U $
-
-(par exemple en méca $W_(A arrow B) = m g h_a - m g h_b$)
-
-Si $nabla V = 0$, le potentiel est constant, ça signifie que le champ est nul dans la direction dans laquelle on effectue le travail, mais on peut avoir un champ perpendiculaire à la direction.
 
 == Champ magnétique
 

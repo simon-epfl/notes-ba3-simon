@@ -27,3 +27,11 @@ Exo 1 : On veut calculer la valeur du champ $E$ engendré par une barre le long 
 Exo 4 : placer le point O au centre du dipole pour calculer son moment cinétique.
 
 Exo 6 : utiliser Gauss pour calculer E !
+
+== Série 3
+
+Exo 1 : effet de pointe
+
+Exo 2 : pour trouver le potentiel électrique dans une sphère on fait $V(r) = integral_r^(+infinity) E d r $.
+
+Exo 3 : poser le zéro de l'axe $x$ au centre du côté :)
