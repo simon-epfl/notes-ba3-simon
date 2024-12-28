@@ -293,7 +293,7 @@ Transformée de Fourier :
   $ cases(
     1 " if " |t| < b,
     0 " otherwise"
-  ) $, $ hat(f)(alpha) = sqrt(pi / 2) sin(b alpha)/alpha $,
+  ) $, $ hat(f)(alpha) = sqrt(2 / pi) sin(b alpha)/alpha $,
   $ e^(- omega^2 t^2) $, $ hat(f)(alpha) = 1/(sqrt(2) omega) e^(- ) $,
   $ t e^(- omega^2 t^2) $, $ hat(f)(alpha) = (- i alpha) / (2 sqrt(2) w^3) e^(- alpha^2 / (4 omega^2)) $,
   $ (4 t^2)/(omega^2 + t^2)^2 $, $ hat(f)(alpha) = sqrt(2 pi) (1/omega - |alpha|)e^(- omega |alpha|) $,
