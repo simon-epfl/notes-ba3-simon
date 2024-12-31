@@ -1,10 +1,10 @@
-== Line integrals
+= Line integrals
 
 On veut intégrer $f(x, y) = z$ (en bleu) selon le cercle, que l'on paramétrise comme $arrow(r)(t) = g(t)arrow(i) + h(t)arrow(j)$.
 
 #image("./posts/res_lineintegrals_bef.png", width: 50%)
 
-On peut d'abord réécrire notre fonction comme $f(t) = f(g(t), h(t))$. Pourquoi ? Parce que les seuls points qui nous intéressent sont ceux selon $g(h), h(t)$ !
+On peut d'abord réécrire notre fonction comme $f(t) = f(g(t), h(t))$. Pourquoi ? Parce que les seuls points qui nous intéressent sont ceux selon $g(t), h(t)$ !
 
 #image("./posts/res_lineintegrals_mid.png", width: 50%)
 
