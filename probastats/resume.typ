@@ -355,7 +355,7 @@ On prend $X_n$ telle que la proba d'être zéro est forte et la proba d'être tr
 - $PP(X_n = 0) = 1 - 1/n$
 - $PP(X_n = n) = 1/n$
 
-On a $PP(|X_n - X| > epsilon) = PP(|X_n - 0| > epsilon) = P(1/n > epsilon)$ qui tend vers $0$ à l'infini donc $X_n$ converge en probabilité vers $0$.
+On a $PP(|X_n - X| > epsilon) = PP(|X_n - 0| > epsilon) = 1/n$ qui tend vers $0$ à l'infini donc $X_n$ converge en probabilité vers $0$.
 
 ($E((X_n - X)^2) = E(X_n^2) = 1/n dot n^2 = n$ donc $X_n$ ne converge pas en moyenne quadratique).
 
