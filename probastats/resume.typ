@@ -221,13 +221,28 @@ $ Z_n = (S_n - n mu)/(sigma sqrt(n)) tilde cal(N)(0, 1) $
 
 Et en moyenne, $ overline(X_n) = (S_n)/n = (X_1 + ... + X_n)/n $.
 
-On retrouve $ Z_n = (overline(X_n) - mu)/(sigma / sqrt(n)) $
+On retrouve $ Z_n = (overline(X_n) - mu)/(sigma / sqrt(n)) = sqrt(n) dot (overline(X_n) - mu)/sigma tilde cal(N)(0, 1) $
 
-(la variance diminue avec la taille de l'échantillon)
+(la variance augmente avec la taille de l'échantillon, et on doit multiplier par $sqrt(n)$ pour "rescale" -- voir les captures dessous).
+
+#image("posts/3b1b_clt_rescale.png")
 
 #emoji.warning attention quand on approxime avec des nombres petits on doit faire attention à utiliser les bonnes bornes
 $ P(X <= x) eq.not 1 - P(X > x)$ mais $ P(X <= x) eq 1 - P(X < x + epsilon)$
 (ou $epsilon = 1$ dans le cas d'un entier)
+
+== Intuition
+
+Quand on calcule une somme de variables aléatoires, la moyenne est multipliée par $n$:
+
+#image("posts/3b1b_clt_mu.png")
+
+mais change également la standard deviation :
+
+#image("posts/3b1b_clt_sd.png")
+#image("posts/3b1b_clt_sd_qt.png")
+
+Du résultat ci-dessus, on sort : $sigma_(X + Y)^2 = sigma_X^2 + sigma_Y^2$ donc pour $n$, on a $sigma_(X + X + ... + X)^2 = n sigma_X^2$.
 
 == Continuity Correction
 
@@ -477,7 +492,7 @@ $ Z = (overline(Y) - mu)/(sqrt(sigma^2 / n)) tilde cal(N)(0, 1) " on isole " mu 
 
 ça nous permet de trouver un intervalle de confiance pour $mu$ (sachant que $Y$ n'est pas forcément centrée en zéro) :
 
-$ overline(Y) - z_(alpha/2)sqrt(sigma^2 / n) <= mu <= overline(Y) + z_(1 - alpha/2)sqrt(sigma^2 / n) $
+$ overline(Y) + z_(alpha/2)sqrt(sigma^2 / n) <= mu <= overline(Y) + z_(1 - alpha/2)sqrt(sigma^2 / n) $
 
 $ overline(Y) - 1.96 sqrt(sigma^2 / n) <= mu <= overline(Y) + 1.96sqrt(sigma^2 / n) $
 
