@@ -2,6 +2,13 @@
 
 Mes notes du semestre 3 de bachelor informatique à l'EPFL.
 
+Pour contribuer ou modifier les fichiers de notes : les `.typ` peuvent être compilés directement avec Typst. Les fichiers `.md` sont à ouvrir avec Obsidian et le plugin Wypst (pour le support de Typst).
+
+## Analyse III
+
+* Notes : [PDF](./analyseiii/Notes_Analyse_III_Simon.pdf) [[source](./analyseiii/Analyse%20III.md)]
+* Formulaire : [PDF](./analyseiii/Formulaire_Analyse_III_Simon.pdf)
+
 ## Électromagnétisme
 
 * Notes : [PDF](./electromag/resume.pdf)

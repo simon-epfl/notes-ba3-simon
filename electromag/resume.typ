@@ -23,6 +23,12 @@
 - produit scalaire $arrow(a) dot arrow(b) = norm(arrow(a)) norm(arrow(b)) cos(theta)$
 - oscillateur harmonique : $dot.double(theta) = -Omega^2 sin(theta)$, $Omega$ est la fréquence des oscillations
 
+== Unités
+
+Capacité : $C = 1 "farad" = 1 "coulomb"/"volt"$ \
+Énergie : $1 "joule" = 1 "coulomb" dot "volt"$ \
+Charge : $1 "coulomb" = 6.24 dot 10^18 "électrons"$ \
+
 == Coordonnées
 
 === Cylindriques
@@ -63,9 +69,9 @@ $ arrow(E) = k Q/r^2 arrow(r) = integral_"distribution des charges" k (d q)/r^2 
 
 Seule la direction importe, le sens sera apporté par la charge sur laquelle on "appliquera" le champ.
 
-$arrow(E) = 0$ à l'intérieur des conducteurs. Les lignes de champ vont de + à -.
+$arrow(E) = 0$ à l'intérieur des conducteurs. Les lignes de champ vont des charges positives + vers les charges négatives -.
 
-Dans le cas d'un champ uniforme : $E = V / L$.
+Dans le cas d'un champ uniforme (par exemple entre les deux plaques d'un condensateur sont très grandes et la distance est petite) : $E = V / L$.
 
 == Les dipôles électriques
 
@@ -93,9 +99,9 @@ $arrow(A)$ est la normale à la surface, orientée vers l'extérieur.
 
 Quand on a une surface avec une forme facile (symmétrique) on peut utiliser Gauss :
 
-$ Phi_E = integral arrow(E(r)) dot d arrow(S) = Q_"int"/epsilon_0 $
+$ Phi_E = integral.cont_"surface S" arrow(E(r)) dot d arrow(S) = Q_"int"/epsilon_0 $
 
-En fait on va entourer nos charges avec une forme (par exemple une sphère), donc on aura $Q_"int"$ et on va calculer 
+En fait on va entourer nos charges avec une forme *fermée* (par exemple une sphère), donc on aura $Q_"int"$ et on va calculer 
 $d arrow(S)$ est toujours orthogonal à la surface par laquelle les charges passent (donc si le champ est dans le même sens alors le produit scalaire fera 1).
 
 Ça simplifie le calcul de $E$; si on connaît $Q_"int"$ et que $Q$ est distribué uniformément alors on peut utiliser la formule vue plus haut.
