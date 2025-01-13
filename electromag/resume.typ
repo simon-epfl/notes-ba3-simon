@@ -156,7 +156,11 @@ On retrouve la charge :
 
 $ arrow.double.r.l arrow(nabla) dot arrow(E) integral_V d V = 1/epsilon_0 integral_V rho dot d V arrow.double.r.l arrow(nabla) dot arrow(E) integral_V d V = rho/epsilon_0 integral_V d V arrow.double.r.l arrow(nabla) dot arrow(E) = rho/epsilon_0 $
 
-$ arrow.double.r.l arrow(nabla)^2dot arrow(V) = rho/epsilon_0 $
+Or on sait que :
+
+$ arrow(E) = - arrow(nabla) dot arrow(V) 
+
+$ arrow.double.r.l arrow(nabla)^2dot arrow(V) = - rho/epsilon_0 $
 
 == Conservation de l'énergie
 
