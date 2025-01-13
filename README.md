@@ -6,7 +6,7 @@ Pour contribuer ou modifier les fichiers de notes : les `.typ` peuvent être com
 
 ## Analyse III
 
-* Notes : [PDF](./analyseiii/Notes_Analyse_III_Simon.pdf) [[source](./analyseiii/Analyse%20III.md)]
+* Notes : [PDF](./analyseiii/Notes_Analyse_III_Simon.pdf)
 * Formulaire : [PDF](./analyseiii/Formulaire_Analyse_III_Simon.pdf)
 
 ## Électromagnétisme
