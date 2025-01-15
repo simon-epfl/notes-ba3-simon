@@ -49,11 +49,10 @@ Dans un V/F, on peut parfois borner l'intégrale (avec le théorème de la moyen
 ### Coordonnées cylindriques
 **Ne pas oublier le Jacobien!**
 $$ \vec{r} = \rho \vec{e_{\rho}} + z \vec{e_z} $$
-intégration : $$ integral.triple f(x, y, z) d x d y d z = integral.triple f(r cos (theta), r sin (theta), z) r d r d theta d z $$Un petit élément de surface est donné par $d \vec{S} = r d r d \theta \vec{e_r} \times \vec{e_\theta}$
-
+intégration : $$ integral.triple f(x, y, z) d x d y d z = integral.triple f(r cos (theta), r sin (theta), z) r d r d theta d z $$Un petit élément de **surface** est donné par $d \vec{S} = r d r d \theta \vec{e_r} \times \vec{e_\theta}$
 ### Coordonnées Sphériques
 $$ \vec{r} = r \vec{e_r} $$
-intégration : $$ integral.triple f(x, y, z) d x d y d z = integral.triple f(r sin (theta) cos (phi), r sin (theta) sin (phi), r cos (theta)) r^2 sin (theta) d r d theta d phi $$Un petit élément de surface est donné par $d \vec{S} = r^2 \sin (\theta) d r d \theta d \phi \vec{e_r}$
+intégration : $$ integral.triple f(x, y, z) d x d y d z = integral.triple f(r sin (theta) cos (phi), r sin (theta) sin (phi), r cos (theta)) r^2 sin (theta) d r d theta d phi $$Un petit élément de **surface** est donné par $d \vec{S} = r^2 \sin (\theta) d \theta d \phi \vec{e_r}$
 ### Identités trigonométriques
 
 - $sin(A + B) = sin(A)cos(B) + cos(A)sin(B)$
@@ -430,4 +429,3 @@ $$ f(x) = 1/2 + sum_(n = 1)^infinity -1/(pi n) sin( 2 pi n x) $$
 
 $$ g(x) = cases(1 "        si " 0 <= x < 1/2, -1 "     si " 1/2 <= x < 1) $$
 $$ g(x) = sum_(n = 1)^infinity b_n^g sin(2 pi n x) " et "  b_n^g = 4/(pi n) " si " n "odd" $$
-$$$$
