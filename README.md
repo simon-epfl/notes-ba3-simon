@@ -6,18 +6,18 @@ Pour contribuer ou modifier les fichiers de notes : les `.typ` peuvent être com
 
 ## Analyse III
 
-* Notes : [PDF](./analyseiii/Notes_Analyse_III_Simon.pdf)
-* Formulaire : [PDF](./analyseiii/Formulaire_Analyse_III_Simon.pdf)
+* Notes de cours : [PDF](./analyseiii/Notes_Analyse_III_Simon.pdf)
+* Formulaire examen final : [PDF](./analyseiii/Formulaire_Analyse_III_Simon.pdf)
 
 ## Électromagnétisme
 
-* Notes : [PDF](./electromag/resume.pdf)
-* Tricks série : [PDF](./electromag/tricks-series.pdf)
-* Formulaire Midterm : [PDF](./electromag/formulaire%20midterm%20electromag.pdf)
+* Formulaire examen final : [PDF](./electromag/Formulaire_Final_Electromagnetisme_Simon.pdf)
+* Formulaire examen de mi-semestre : [PDF](./electromag/Formulaire_Midterm_Electromagnetisme_Simon.pdf)
+* Tricks des séries : [PDF](./electromag/Tricks_Series_Electromagnetisme_Simon.pdf)
 
 ## État et droits humains (SHS)
 
-* Notes : [PDF](./shs/notes.pdf)
+* Notes de cours : [PDF](./shs/notes.pdf)
 * Constitution Fédérale : [PDF](./shs/constitution-federale.pdf)
 
 ## Probability and Statistics
