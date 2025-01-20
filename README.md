@@ -22,9 +22,9 @@ Pour contribuer ou modifier les fichiers de notes : les `.typ` peuvent être com
 
 ## Probability and Statistics
 
-* Notes (résumé) : [PDF](./probastats/resume.pdf)
-* Notes (distributions) : [PDF](./probastats/distributions.pdf)
-* Morris (book) : [PDF](./probastats/Morris_H_DeGroot_Mark_J_Schervish_Probability_and_statistics_Pearson.pdf)
+* Notes (méthodes, tricks, un peu de cours) : [PDF](./probastats/Probastats_Simon_Notes_Tricks.pdf)
+* Notes (distributions) : [PDF](./probastats/Probastats_Simon_Distributions.pdf)
+* Morris (book) : [PDF](./probastats/Probastats_Morris_Book.pdf)
 
 ## Software Construction
 
