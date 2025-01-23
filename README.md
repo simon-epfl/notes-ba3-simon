@@ -15,6 +15,13 @@ Pour contribuer ou modifier les fichiers de notes : les `.typ` peuvent être com
 * Formulaire examen de mi-semestre : [PDF](./electromag/Formulaire_Midterm_Electromagnetisme_Simon.pdf)
 * Tricks des séries : [PDF](./electromag/Tricks_Series_Electromagnetisme_Simon.pdf)
 
+## Computer Architecture
+
+* Notes de cours (jusqu'au midterm) : [PDF](./comparch/Notes_Comparch_Midterm_Simon.pdf)
+* Notes de cours (Pipelining) : [PDF](./comparch/Notes_Comparch_Pipelining_Simon.pdf)
+* Notes de cours (Multiprocessors) : [PDF](./comparch/Notes_Comparch_Multiprocessors_Simon.pdf)
+* Notes (exercices pipelining et multiprocesseurs) : [PDF](./comparch/Notes_Comparch_Exercices_Simon.pdf)
+
 ## État et droits humains (SHS)
 
 * Notes de cours : [PDF](./shs/notes.pdf)
@@ -32,9 +39,7 @@ Pour contribuer ou modifier les fichiers de notes : les `.typ` peuvent être com
 * Notes (final) : [PDF](./softcon/final.pdf)
 * Exercises : [PDF](./softcon/exercises/)
 
-## Computer Architecture
-
-* Notes : [PDF](./comparch/resume.pdf)
+## Computer Architecture Setup
 
 ### Setup the RISC-V Toolchain
 
