@@ -24,8 +24,8 @@ Pour contribuer ou modifier les fichiers de notes : les `.typ` peuvent être com
 
 ## État et droits humains (SHS)
 
-* Notes de cours : [PDF](./shs/notes.pdf)
-* Constitution Fédérale : [PDF](./shs/constitution-federale.pdf)
+* Notes de cours : [PDF](./etat-droits-humains-shs/notes.pdf)
+* Constitution Fédérale : [PDF](./etat-droits-humains-shs/constitution-federale.pdf)
 
 ## Probability and Statistics
 
