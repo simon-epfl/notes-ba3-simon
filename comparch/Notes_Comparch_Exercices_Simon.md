@@ -14,7 +14,7 @@ addi t0, ---
 addi t1, t0, t2
 addi t2, t0, t0
 ```
-- on fait une flèche du dépendent vers la dépendance (3 $arrow$ 1) 
+- on fait une flèche du dépendant vers la dépendance (3 $arrow$ 1)
 - ne pas oublier qu'à la dernière itération on doit aussi stall le temps que la branche soit connue
 - ne pas faire dessiner de "forwarding" depuis E quand la branche est connue
 - on doit prioriser le **M** sur le **F**.
@@ -39,7 +39,7 @@ addi t2, t0, t0
 ## Chapter V
 
 **Exo 1**
-- "holds 32 bytes of data" $arrow$ on est en byte-addressable (donc chaque adresse comme 3000 fait un byte). Avec 32 bytes on peut stocker 32 adresses donc 32/4 = 8 words. 3000, 3004, 3008, 30
+- "holds 32 bytes of data" $arrow$ on est en byte-addressable (donc chaque adresse comme 3000 fait un byte). Avec 32 bytes on peut stocker 32 adresses donc 32/4 = 8 words. 3000, 3004, 3008, 3012...
 - on considère une ligne invalide même si elle n'est pas présente dans le cache (invalide c'est non caché **ou** caché et invalidé).
 - on peut faire un **W** et un **D** en même temps (contrairement aux autres path forwarding)
 - pour **sw** une ligne non cachée on utilise **Mx** (**BusReadX**)

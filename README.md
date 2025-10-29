@@ -49,7 +49,7 @@ Pour contribuer ou modifier les fichiers de notes : les `.typ` peuvent être com
 
 ### Setup Verilator
 
-If verilator can not be built on your computer, you can use the docker image:
+If verilator cannot be built on your computer, you can use the docker image:
 ```bash
 sudo docker run -ti -v ${PWD}:/work --user root:root \ 
 verilator/verilator:latest --timescale 1ns/1ns --top-module tb \
@@ -58,7 +58,7 @@ verilator/verilator:latest --timescale 1ns/1ns --top-module tb \
 
 ### Setup Verible Verilog Linter
 
-If you can not build verible on your computer, you can use my docker image:
+If you cannot build verible on your computer, you can use my docker image:
 ```bash
 sudo docker run -ti -v ${PWD}:/work --user root:root androz2091/verible:sha-2195809 verible-verilog-lint
 ```
