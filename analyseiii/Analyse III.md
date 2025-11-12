@@ -25,7 +25,7 @@ La première coordonnée du rotationnel donne l'intensité de la rotation autour
 
 $$ \Delta f(\vec{x}) = \sum_{i = 1}^n \frac{\partial^2 f}{\partial x_i^2}(\vec{x}) $$
 
-Si le laplacien est strictement négatif, alors $f(x_0)$ est plus grande que sa valeur moyenne au tour de $x_0$, si le laplacien est strictement positif, alors $f(x_0)$ est plus petite que sa moyenne.  
+Si le laplacien est strictement négatif, alors $f(x_0)$ est plus grande que sa valeur moyenne autour de $x_0$, si le laplacien est strictement positif, alors $f(x_0)$ est plus petite que sa moyenne.  
 
 Un ensemble $Omega subset.eq RR^n$ est dit **ouvert** si, pour tout point $x in Omega$, il existe une petite "boule" autour de $x$ qui est entièrement contenue dans $Omega$.
 
@@ -154,7 +154,7 @@ Un domaine $Omega subset.eq RR^2$ est **régulier** s'il existe $Omega_0, ..., O
 - tous les $Omega_i$ sont contenus dans $Omega_0$
 - ils ne se chevauchent pas
 - $Omega = Omega_0 backslash U _(i = 1)^n overline(Omega_i)$ (on part de $Omega_0$ et on enlève les trous).
-- $Gamma_j$ est une courbe fermée, simple et régulìere.
+- $Gamma_j$ est une courbe fermée, simple et régulière.
 ![[domaine_regulier.webp|364]]
 
 #### Formule de Green
@@ -166,7 +166,7 @@ $$ integral.double_Omega "rot" F (x, y) d x d y = integral_(diff Omega) F dot d 
 Soit $Omega subset.eq RR^2$ un domaine régulier et $x_0 in diff Omega$. Alors $nu_(x_0) in RR^2$ est la normale extérieure (le vecteur unité perpendiculaire au domaine, qui pointe vers l'extérieur). Il respecte les propriétés suivantes :
 - $||nu_P|| = 1$
 - si $gamma$ est une paramétrisation du bord et que $gamma(t_0) = x_0$ alors $gamma quote.single (t_0) dot nu_(x_0) = 0$ . (comme $gamma quote.single$ est le vecteur tangent au domaine)
-- pour tout $epsilon > 0$, $P + epsilon nu_(x_0) in.not Omega$ (il va faire l'extérieur)
+- pour tout $epsilon > 0$, $P + epsilon nu_(x_0) in.not Omega$ (il va vers l'extérieur)
 
 ![[vecteur_normale_unit.webp|275]]
 

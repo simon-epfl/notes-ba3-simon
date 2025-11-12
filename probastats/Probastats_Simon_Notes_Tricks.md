@@ -2,7 +2,7 @@
 
 Problème 76. On veut calculer :
 $$P(A C <= x) = integral_0^1 integral_0^(x/a) f_A (a) f_C (c) d c d a$$
-naïvement on peut se dire qu'on peut remplacer les deux par 1 comme elles sont uniformes mais non ! parce que quand $a$ est tout petit $x/a$ est bien plus grand que $1$ donc $f_C (c) = 0$ ! On doit faire une disjonction de cas :
+naïvement on peut se dire qu'on peut remplacer les deux par 1 comme elles sont uniformes mais non ! parce que quand $a$ est tout petit, $x/a$ est bien plus grand que $1$ donc $f_C (c) = 0$ ! On doit faire une disjonction de cas :
 $$ P(A C <= x) = integral_0^x integral_0^1 1 d c d a + integral_x^1 integral_0^(x / a) 1 d c d a = x - x ln(x)$$
 https://math.stackexchange.com/questions/659254/product-distribution-of-two-uniform-distribution-what-about-3-or-more 
 ### Calculer l'espérance comme l'intégrale de 1 - cumulative 
@@ -188,7 +188,7 @@ $$ T = sum_(i = 1)^k ((O_i - E_i)/sqrt("var"(O_i)))^2 tilde cal(X)^2_(k - 1) app
 
 avec $k-1 = v$ le degré de liberté. Ici le degré de liberté est $k - 1$ car on a $k$ catégories et on a fixé la somme des $O_i$ (on sait que $O_1 + ... + O_k = n$). On a une table qui nous donne, pour un degré de liberté donné, la valeur de la cumulative de la distribution du chi-square.
 
-$p_"obs" = PP_0(T >= t_"obs")$ avec $t_"obs"$ la valeur calculée comme $sum_(i = 1)^k (O_i - E_i)^2/E_i$. Ce calcule facilement parce qu'on a la table pour les $cal(X)^2$.
+$p_"obs" = PP_0(T >= t_"obs")$ avec $t_"obs"$ la valeur calculée comme $sum_(i = 1)^k (O_i - E_i)^2/E_i$. Cela se calcule facilement parce qu'on a la table pour les $cal(X)^2$.
 
 **Confidence intervals**
 
@@ -217,7 +217,7 @@ On ne sait pas encore si on va décider de rejeter pour un $z$ observé inférie
 $$ h(R) = product_(i = 0)^n (L_(H_1) (y_i, theta_0))/(L_(H_0) (y_i, theta_1)) = (f_1(y_1) dot f_1(y_2) dot ... dot f_1(y_n)) / (f_0(y_1) dot f_0(y_2) dot ... dot f_0(y_n)) > k$$
 Il s'agit d'un produit, et non d'une somme, car nous voulons que $y_1$, $y_2$, ..., $y_n$ soient chacun probables sous $H_1$. On cherche à voir si, quand on augmente **une certaine quantité $R$** (par exemple la somme des $y_i$ ou la moyenne des $y_i$, la $cal(X)^2$, est-ce que le ratio augmente (on se rapproche de $H_1$) ou diminue.
 
-Nous choisissons donc la taille du test, c'es-à-dire une probabilité de faux positifs $alpha$ (par exemple, $0.05$). Ensuite, nous trouvons $z_alpha$ tel que la probabilité sous $H_0$ que la quantité trouvée dépasse (ou est inférieure) $r_alpha$ est égale à $alpha$ :  
+Nous choisissons donc la taille du test, c'est-à-dire une probabilité de faux positifs $alpha$ (par exemple, $0.05$). Ensuite, nous trouvons $z_alpha$ tel que la probabilité sous $H_0$ que la quantité trouvée dépasse (ou est inférieure à) $r_alpha$ est égale à $alpha$ :  
 $$ P_(H_0)(R >= r_alpha) = alpha " ou le cas " <= " (en fonction de la croissance de " h(R)) $$
 Comme $R$ est typiquement une somme de variables aléatoires indépendantes, (mais ce n'est pas forcément le cas !) nous pouvons par exemple l'approximer à l'aide du théorème central limite :
 $$P_(H_0)(R >= r_alpha) = P_(H_0)((R - n dot mu) / sqrt(n dot sigma^2) >= (r_alpha - n dot mu) / sqrt(n dot sigma^2))

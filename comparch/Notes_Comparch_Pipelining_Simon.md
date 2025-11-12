@@ -49,7 +49,7 @@ comment gérer ça dans une pipeline ? un moyen simple de supporter les deux ins
 
 `FETCH` $arrow$ `DECODE` $arrow$ `EXECUTE` $arrow$ `LOAD1` $arrow$ `LOAD2` 
 
-but... it increases latency. and throughput.
+but... it increases latency and throughput.
 
 ### Dependencies
 

@@ -54,6 +54,6 @@ On prend cette surface de Gauss :
 
 **Exo 2** : bien penser à voir que le champ magnétique ne va pas être tout à fait perpendiculaire à la surface (on doit faire une projection).
 
-**Exo 3** : le i du $Z_L = i w L$ c'est pas le courant... revoir théorie
+**Exo 3** : le i du $Z_L = i w L$ ce n'est pas le courant... revoir théorie
 
 **Exo 4** : fréquence $arrow$ Fourier

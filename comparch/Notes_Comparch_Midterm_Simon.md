@@ -31,7 +31,7 @@ Même si on sait que la fonction `b` que notre fonction `a` va appeler ne modifi
 # mettre à jour le stack pointer (on le fait remonter dans la mémoire)
 addi sp, sp, -12
 sw ra, 0(sp)
-sw s1 4(sp)
+sw s1, 4(sp)
 sw s2, 8(sp) # 8... + 4 = 12 bytes libérés utilisés
 
 # blabla
